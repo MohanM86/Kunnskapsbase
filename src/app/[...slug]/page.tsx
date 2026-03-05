@@ -79,9 +79,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const categoryTree = getCategoryTree();
   const catSlug = slug[0];
-  const cat = categoryTree[catSlug] || CATEGORIES.find((c) => c.slug === catSlug);
-  if (cat) {
-    const label = 'label' in cat ? cat.label : cat.label;
+  const catFromTree = categoryTree[catSlug];
+  const catFromRegistry = CATEGORIES.find((c) => c.slug === catSlug);
+  const catLabel = catFromTree?.label ?? catFromRegistry?.label;
+  if (catLabel) {
+    const label = catLabel;
     const url = `${BASE_URL}/${catSlug}`;
     return {
       title: label,
