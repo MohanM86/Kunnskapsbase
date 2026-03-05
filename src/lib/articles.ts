@@ -5,213 +5,145 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
-import rehypeHighlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
 import rehypeStringify from 'rehype-stringify';
 import readingTime from 'reading-time';
-import type { Article, ArticleMeta, CategoryTree, ArticleFrontmatter } from './types';
+import type { Article, ArticleMeta, ArticleFrontmatter, SearchDoc } from './types';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
-export function getAllArticleSlugs(): string[][] {
-  const slugPaths: string[][] = [];
+// ── File discovery ──────────────────────────────────────────
 
+export function getAllSlugPaths(): string[][] {
+  const results: string[][] = [];
   function walk(dir: string, parts: string[]) {
     if (!fs.existsSync(dir)) return;
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
-    for (const entry of entries) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       if (entry.isDirectory()) {
         walk(path.join(dir, entry.name), [...parts, entry.name]);
-      } else if (entry.name.endsWith('.md') && entry.name !== 'index.md') {
-        slugPaths.push([...parts, entry.name.replace(/\.md$/, '')]);
-      } else if (entry.name === 'index.md' && parts.length > 0) {
-        slugPaths.push([...parts]);
+      } else if (entry.name.endsWith('.md')) {
+        results.push([...parts, entry.name.replace(/\.md$/, '')]);
       }
     }
   }
-
   walk(CONTENT_DIR, []);
-  return slugPaths;
+  return results;
 }
 
-export async function getArticleBySlug(slugPath: string[]): Promise<Article | null> {
-  // Try direct file match
+// ── Single article ──────────────────────────────────────────
+
+export async function getArticle(slugPath: string[]): Promise<Article | null> {
   const filePath = path.join(CONTENT_DIR, ...slugPath) + '.md';
-  const indexPath = path.join(CONTENT_DIR, ...slugPath, 'index.md');
+  if (!fs.existsSync(filePath)) return null;
 
-  let fileContent: string;
-  try {
-    if (fs.existsSync(filePath)) {
-      fileContent = fs.readFileSync(filePath, 'utf8');
-    } else if (fs.existsSync(indexPath)) {
-      fileContent = fs.readFileSync(indexPath, 'utf8');
-    } else {
-      return null;
-    }
-  } catch {
-    return null;
-  }
-
-  const { data, content } = matter(fileContent);
-  const frontmatter = data as ArticleFrontmatter;
-
-  const htmlContent = await markdownToHtml(content);
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const { data, content } = matter(raw);
+  const fm = data as ArticleFrontmatter;
   const rt = readingTime(content);
 
+  const html = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeSlug)
+    .use(rehypeStringify)
+    .process(content);
+
   return {
-    slug: slugPath[slugPath.length - 1],
     slugPath,
-    frontmatter,
+    frontmatter: { ...fm, readingTime: Math.ceil(rt.minutes) },
     content,
-    htmlContent,
+    htmlContent: String(html),
     readingTime: `${Math.ceil(rt.minutes)} min lesetid`,
   };
 }
 
-async function markdownToHtml(markdown: string): Promise<string> {
-  const result = await unified()
-    .use(remarkParse as any)
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeHighlight)
-    .use(rehypeStringify)
-    .process(markdown);
-  return result.toString();
+// ── Article listing ─────────────────────────────────────────
+
+function readMeta(slugPath: string[]): ArticleMeta | null {
+  const filePath = path.join(CONTENT_DIR, ...slugPath) + '.md';
+  if (!fs.existsSync(filePath)) return null;
+  const { data } = matter(fs.readFileSync(filePath, 'utf8'));
+  const fm = data as ArticleFrontmatter;
+  return {
+    slugPath,
+    title: fm.title,
+    description: fm.description,
+    definition: fm.definition,
+    category: fm.category,
+    categorySlug: fm.categorySlug,
+    subcategory: fm.subcategory,
+    subcategorySlug: fm.subcategorySlug,
+    tags: fm.tags || [],
+    publishedAt: fm.publishedAt,
+    updatedAt: fm.updatedAt,
+    featured: fm.featured,
+    difficulty: fm.difficulty,
+  };
 }
 
 export function getAllArticlesMeta(): ArticleMeta[] {
-  const slugPaths = getAllArticleSlugs();
-  const articles: ArticleMeta[] = [];
-
-  for (const slugPath of slugPaths) {
-    const filePath = path.join(CONTENT_DIR, ...slugPath) + '.md';
-    const indexPath = path.join(CONTENT_DIR, ...slugPath, 'index.md');
-
-    let fileContent: string;
-    try {
-      if (fs.existsSync(filePath)) {
-        fileContent = fs.readFileSync(filePath, 'utf8');
-      } else if (fs.existsSync(indexPath)) {
-        fileContent = fs.readFileSync(indexPath, 'utf8');
-      } else {
-        continue;
-      }
-    } catch {
-      continue;
-    }
-
-    const { data } = matter(fileContent);
-    const frontmatter = data as ArticleFrontmatter;
-
-    articles.push({
-      title: frontmatter.title,
-      slug: slugPath[slugPath.length - 1],
-      slugPath,
-      description: frontmatter.description,
-      category: frontmatter.category,
-      subcategory: frontmatter.subcategory,
-      tags: frontmatter.tags || [],
-      updatedAt: frontmatter.updatedAt,
-      featured: frontmatter.featured,
-    });
-  }
-
-  return articles.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
+  return getAllSlugPaths()
+    .map(readMeta)
+    .filter(Boolean) as ArticleMeta[];
 }
 
-export function getCategoryTree(): CategoryTree {
-  const articles = getAllArticlesMeta();
-  const tree: CategoryTree = {};
-
-  const categoryLabels: Record<string, string> = {
-    domener: 'Domener',
-    dns: 'DNS',
-    epost: 'E-post',
-    nettsider: 'Nettsider',
-  };
-
-  for (const article of articles) {
-    const catSlug = article.category.toLowerCase().replace(/\s+/g, '-');
-    const catLabel = categoryLabels[catSlug] || article.category;
-
-    if (!tree[catSlug]) {
-      tree[catSlug] = {
-        label: catLabel,
-        slug: catSlug,
-        subcategories: {},
-        articles: [],
-      };
-    }
-
-    if (article.subcategory) {
-      const subSlug = article.subcategory.toLowerCase().replace(/\s+/g, '-');
-      if (!tree[catSlug].subcategories[subSlug]) {
-        tree[catSlug].subcategories[subSlug] = {
-          label: article.subcategory,
-          slug: subSlug,
-          articles: [],
-        };
-      }
-      tree[catSlug].subcategories[subSlug].articles.push(article);
-    } else {
-      tree[catSlug].articles.push(article);
-    }
-  }
-
-  return tree;
+export function getArticlesByCategory(categorySlug: string): ArticleMeta[] {
+  return getAllArticlesMeta().filter((a) => a.categorySlug === categorySlug);
 }
 
-export function getRelatedArticles(current: ArticleMeta, all: ArticleMeta[], limit = 4): ArticleMeta[] {
-  const scored = all
-    .filter((a) => a.slug !== current.slug)
+export function getArticlesBySubcategory(categorySlug: string, subcategorySlug: string): ArticleMeta[] {
+  return getAllArticlesMeta().filter(
+    (a) => a.categorySlug === categorySlug && a.subcategorySlug === subcategorySlug
+  );
+}
+
+export function getFeaturedArticles(limit = 6): ArticleMeta[] {
+  return getAllArticlesMeta()
+    .filter((a) => a.featured)
+    .slice(0, limit);
+}
+
+export function getRecentArticles(limit = 12): ArticleMeta[] {
+  return getAllArticlesMeta()
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, limit);
+}
+
+export function getRelatedArticles(current: ArticleMeta, limit = 4): ArticleMeta[] {
+  const all = getAllArticlesMeta();
+  return all
+    .filter((a) => a.slugPath.join('/') !== current.slugPath.join('/'))
     .map((a) => {
       let score = 0;
-      if (a.category === current.category) score += 3;
-      if (a.subcategory && a.subcategory === current.subcategory) score += 2;
-      const sharedTags = (a.tags || []).filter((t) => (current.tags || []).includes(t));
-      score += sharedTags.length;
-      return { article: a, score };
+      if (a.categorySlug === current.categorySlug) score += 3;
+      if (a.subcategorySlug === current.subcategorySlug) score += 2;
+      score += (a.tags || []).filter((t) => (current.tags || []).includes(t)).length;
+      return { a, score };
     })
     .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score)
+    .sort((x, y) => y.score - x.score)
     .slice(0, limit)
-    .map((x) => x.article);
-
-  return scored;
+    .map((x) => x.a);
 }
 
-export function getAllArticlesForSearch(): Array<{ slug: string; slugPath: string[]; title: string; description: string; content: string; category: string; tags: string[] }> {
-  const slugPaths = getAllArticleSlugs();
-  const results = [];
+// ── Search ──────────────────────────────────────────────────
 
-  for (const slugPath of slugPaths) {
+export function getAllSearchDocs(): SearchDoc[] {
+  return getAllSlugPaths().map((slugPath) => {
     const filePath = path.join(CONTENT_DIR, ...slugPath) + '.md';
-    const indexPath = path.join(CONTENT_DIR, ...slugPath, 'index.md');
-
-    let fileContent: string;
-    try {
-      if (fs.existsSync(filePath)) {
-        fileContent = fs.readFileSync(filePath, 'utf8');
-      } else if (fs.existsSync(indexPath)) {
-        fileContent = fs.readFileSync(indexPath, 'utf8');
-      } else {
-        continue;
-      }
-    } catch {
-      continue;
-    }
-
-    const { data, content } = matter(fileContent);
-    const frontmatter = data as ArticleFrontmatter;
-    results.push({
-      slug: slugPath[slugPath.length - 1],
+    const { data, content } = matter(fs.readFileSync(filePath, 'utf8'));
+    const fm = data as ArticleFrontmatter;
+    return {
       slugPath,
-      title: frontmatter.title,
-      description: frontmatter.description,
-      content: content.replace(/#{1,6}\s/g, '').replace(/\*\*/g, '').replace(/\*/g, '').slice(0, 500),
-      category: frontmatter.category,
-      tags: frontmatter.tags || [],
-    });
-  }
-
-  return results;
+      title: fm.title,
+      description: fm.description,
+      definition: fm.definition || '',
+      content: content.replace(/#{1,6}\s/g, '').replace(/\*\*/g, '').slice(0, 1000),
+      category: fm.category,
+      categorySlug: fm.categorySlug,
+      subcategory: fm.subcategory,
+      tags: fm.tags || [],
+    };
+  });
 }

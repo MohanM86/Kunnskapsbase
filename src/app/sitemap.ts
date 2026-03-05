@@ -1,34 +1,28 @@
 import type { MetadataRoute } from 'next';
-import { getAllArticlesMeta, getCategoryTree } from '@/lib/articles';
+import { getAllArticlesMeta } from '@/lib/articles';
+import { TAXONOMY } from '@/lib/taxonomy';
 
-const BASE_URL = 'https://kunnskapsbase.no';
+const BASE = 'https://kunnskapsbase.no';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticlesMeta();
-  const categoryTree = getCategoryTree();
-
-  const articleUrls: MetadataRoute.Sitemap = articles.map((article) => ({
-    url: `${BASE_URL}/wiki/${article.slugPath.join('/')}`,
-    lastModified: new Date(article.updatedAt),
-    changeFrequency: 'monthly',
-    priority: article.featured ? 0.9 : 0.7,
-  }));
-
-  const categoryUrls: MetadataRoute.Sitemap = Object.keys(categoryTree).map((catSlug) => ({
-    url: `${BASE_URL}/wiki/${catSlug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
 
   return [
-    {
-      url: BASE_URL,
+    { url: BASE, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },
+    { url: `${BASE}/tema`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/artikler`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
+    { url: `${BASE}/ordbok`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    ...TAXONOMY.map(c => ({
+      url: `${BASE}/${c.slug}`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    ...categoryUrls,
-    ...articleUrls,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    })),
+    ...articles.map(a => ({
+      url: `${BASE}/${a.slugPath.join('/')}`,
+      lastModified: new Date(a.updatedAt),
+      changeFrequency: 'monthly' as const,
+      priority: a.featured ? 0.85 : 0.7,
+    })),
   ];
 }

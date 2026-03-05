@@ -1,67 +1,102 @@
+// ============================================================
+// Core data types for kunnskapsbase.no
+// Designed to scale to 100,000+ articles
+// ============================================================
+
 export interface ArticleFrontmatter {
   title: string;
-  description: string;
-  category: string;
-  subcategory?: string;
+  description: string;            // 150-160 chars for SEO
+  definition: string;             // One-sentence definition for AI search
+  category: string;               // e.g. "Teknologi"
+  categorySlug: string;           // e.g. "teknologi"
+  subcategory: string;            // e.g. "Internett"
+  subcategorySlug: string;        // e.g. "internett"
   tags: string[];
-  updatedAt: string;
   author?: string;
+  publishedAt: string;            // ISO date
+  updatedAt: string;              // ISO date
   featured?: boolean;
-  order?: number;
-}
-
-export interface Article {
-  slug: string;
-  slugPath: string[]; // e.g. ['domener', 'hva-er-et-domene']
-  frontmatter: ArticleFrontmatter;
-  content: string;
-  htmlContent: string;
-  readingTime: string;
-}
-
-export interface CategoryTree {
-  [category: string]: {
-    label: string;
-    slug: string;
-    subcategories: {
-      [subcategory: string]: {
-        label: string;
-        slug: string;
-        articles: ArticleMeta[];
-      };
-    };
-    articles: ArticleMeta[]; // articles without subcategory
-  };
-}
-
-export interface ArticleMeta {
-  title: string;
-  slug: string;
-  slugPath: string[];
-  description: string;
-  category: string;
-  subcategory?: string;
-  tags: string[];
-  updatedAt: string;
-  featured?: boolean;
-}
-
-export interface SearchResult {
-  slug: string;
-  slugPath: string[];
-  title: string;
-  description: string;
-  category: string;
-  excerpt: string;
-  score: number;
-}
-
-export interface BreadcrumbItem {
-  label: string;
-  href: string;
+  difficulty?: 'beginner' | 'intermediate' | 'advanced';
+  readingTime?: number;           // minutes, auto-calculated
+  relatedArticles?: string[];     // slugPaths for internal linking
+  faqs?: FAQItem[];
+  imageAlt?: string;
 }
 
 export interface FAQItem {
   question: string;
   answer: string;
+}
+
+export interface Article {
+  slugPath: string[];             // ['teknologi', 'internett', 'hva-er-dns']
+  frontmatter: ArticleFrontmatter;
+  content: string;                // raw markdown
+  htmlContent: string;
+  readingTime: string;
+}
+
+export interface ArticleMeta {
+  slugPath: string[];
+  title: string;
+  description: string;
+  definition: string;
+  category: string;
+  categorySlug: string;
+  subcategory: string;
+  subcategorySlug: string;
+  tags: string[];
+  publishedAt: string;
+  updatedAt: string;
+  featured?: boolean;
+  difficulty?: string;
+}
+
+// ── Taxonomy ──────────────────────────────────────────────
+
+export interface SubcategoryMeta {
+  slug: string;
+  label: string;
+  articleCount: number;
+  articles: ArticleMeta[];
+}
+
+export interface CategoryMeta {
+  slug: string;
+  label: string;
+  description: string;
+  icon: string;                   // icon component name
+  subcategories: SubcategoryMeta[];
+  articleCount: number;
+  featuredArticle?: ArticleMeta;
+}
+
+// ── Search ────────────────────────────────────────────────
+
+export interface SearchDoc {
+  slugPath: string[];
+  title: string;
+  description: string;
+  definition: string;
+  content: string;
+  category: string;
+  categorySlug: string;
+  subcategory: string;
+  tags: string[];
+}
+
+export interface SearchResult {
+  slugPath: string[];
+  title: string;
+  description: string;
+  category: string;
+  categorySlug: string;
+  excerpt: string;
+}
+
+// ── Navigation ────────────────────────────────────────────
+
+export interface BreadcrumbItem {
+  label: string;
+  href: string;
 }

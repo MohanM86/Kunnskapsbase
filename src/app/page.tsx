@@ -1,111 +1,131 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getAllArticlesMeta, getCategoryTree } from '@/lib/articles';
+import { getAllArticlesMeta, getRecentArticles, getFeaturedArticles } from '@/lib/articles';
+import { TAXONOMY } from '@/lib/taxonomy';
+import SearchBox from '@/components/ui/SearchBox';
 import ArticleCard from '@/components/wiki/ArticleCard';
-import SearchBox from '@/components/wiki/SearchBox';
+import { CategoryIcon } from '@/components/icons/CategoryIcons';
+import JsonLd from '@/components/seo/JsonLd';
+import { webSiteSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Kunnskapsbase – Domener, DNS, E-post og Nettsider',
-  description: 'Norsk kunnskapsbase for alt om domener, DNS, e-post og nettsider. Finn svar, veiledninger og tekniske guider.',
+  title: 'Kunnskapsbase.no – Norges kunnskapsplattform',
+  description: 'Forklarer verden på norsk. Dyptgående artikler om teknologi, AI, økonomi, helse, vitenskap og mer – optimalisert for Google og AI-søk.',
+  alternates: { canonical: 'https://kunnskapsbase.no' },
 };
 
-const categories = [
-  {
-    slug: 'domener',
-    name: 'Domener',
-    icon: '🌐',
-    desc: 'Alt om domeneregistrering, overføring, WHOIS og forvaltning av domenenavn.',
-  },
-  {
-    slug: 'dns',
-    name: 'DNS',
-    icon: '🔧',
-    desc: 'Forstå DNS-systemet, ulike posttyper, TTL, navnetjenere og feilsøking.',
-  },
-  {
-    slug: 'epost',
-    name: 'E-post',
-    icon: '✉️',
-    desc: 'Sett opp e-post, konfigurer SPF, DKIM og DMARC, og løs leveringsproblemer.',
-  },
-  {
-    slug: 'nettsider',
-    name: 'Nettsider',
-    icon: '💻',
-    desc: 'Webhotell, SSL/TLS, ytelse, CMS og alt du trenger for nettstedet ditt.',
-  },
-];
-
 export default function HomePage() {
-  const allArticles = getAllArticlesMeta();
-  const categoryTree = getCategoryTree();
-  const featured = allArticles.filter((a) => a.featured).slice(0, 6);
-  const recent = allArticles.slice(0, 6);
+  const all = getAllArticlesMeta();
+  const featured = getFeaturedArticles(3);
+  const recent = getRecentArticles(6);
+  const totalArticles = all.length;
+  const totalCategories = TAXONOMY.length;
 
-  const catCounts = Object.fromEntries(
-    Object.entries(categoryTree).map(([slug, cat]) => {
-      const total =
-        cat.articles.length +
-        Object.values(cat.subcategories).reduce((sum, s) => sum + s.articles.length, 0);
-      return [slug, total];
-    })
-  );
+  const catCounts: Record<string, number> = {};
+  for (const a of all) catCounts[a.categorySlug] = (catCounts[a.categorySlug] || 0) + 1;
 
   return (
     <>
+      <JsonLd schema={webSiteSchema} />
+
       {/* Hero */}
-      <section className="home-hero">
-        <h1>Norsk kunnskapsbase</h1>
-        <p>Finn svar på alt om domener, DNS, e-post og nettsider – skrevet på norsk.</p>
-        <div className="hero-search">
-          <SearchBox />
+      <section className="hero">
+        <div className="container">
+          <div className="fade-up">
+            <div className="hero-eyebrow">
+              <span className="hero-eyebrow-dot" />
+              Norges største kunnskapsbase
+            </div>
+          </div>
+          <h1 className="display-xl fade-up stagger-1">
+            Forstå verden<br />
+            <span className="text-gradient">på norsk</span>
+          </h1>
+          <p className="hero-subtitle fade-up stagger-2">
+            Dyptgående artikler om teknologi, AI, økonomi, helse og vitenskap.
+            Forklart klart og presist – for nysgjerrige mennesker.
+          </p>
+          <div className="hero-search-wrap fade-up stagger-3">
+            <SearchBox />
+          </div>
+
+          {/* Stats */}
+          <div className="stats-bar fade-up stagger-4" style={{ justifyContent: 'center', gap: '4rem', marginTop: '2.5rem' }}>
+            <div className="stat-item">
+              <span className="stat-value">{totalArticles}+</span>
+              <span className="stat-label">Artikler</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-value">{totalCategories}</span>
+              <span className="stat-label">Kategorier</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-value">100%</span>
+              <span className="stat-label">Norsk</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="home-content">
-        {/* Categories */}
-        <section className="home-section">
-          <div className="home-section-header">
-            <h2 className="home-section-title">Kategorier</h2>
+      {/* Categories */}
+      <section className="page-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Utforsk etter tema</h2>
+            <Link href="/tema" className="section-link">Se alle →</Link>
           </div>
           <div className="categories-grid">
-            {categories.map((cat) => (
-              <Link key={cat.slug} href={`/wiki/${cat.slug}`} className="category-card">
-                <div className="category-icon">{cat.icon}</div>
-                <div className="category-name">{cat.name}</div>
-                <div className="category-desc">{cat.desc}</div>
-                <div className="category-count">{catCounts[cat.slug] || 0} artikler</div>
+            {TAXONOMY.map((cat) => (
+              <Link key={cat.slug} href={`/${cat.slug}`} className={`category-card cat-color-${cat.color}`}>
+                <div className="cat-icon-wrap">
+                  <CategoryIcon name={cat.icon} size={22} />
+                </div>
+                <div className="cat-name">{cat.label}</div>
+                <div className="cat-count">{catCounts[cat.slug] || 0} artikler</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured */}
+      {featured.length > 0 && (
+        <section className="page-section">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">Fremhevede artikler</h2>
+            </div>
+            {featured.slice(0, 1).map(a => (
+              <Link key={a.slugPath.join('/')} href={`/${a.slugPath.join('/')}`} className="featured-article">
+                <div>
+                  <div className="featured-label">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+                    Fremhevet artikkel · {a.category}
+                  </div>
+                  <div className="featured-title">{a.title}</div>
+                  <div className="featured-desc">{a.description}</div>
+                </div>
+                <div className="featured-arrow">→</div>
               </Link>
             ))}
           </div>
         </section>
+      )}
 
-        {/* Featured articles */}
-        {featured.length > 0 && (
-          <section className="home-section">
-            <div className="home-section-header">
-              <h2 className="home-section-title">Populære artikler</h2>
-            </div>
-            <div className="articles-grid">
-              {featured.map((article) => (
-                <ArticleCard key={article.slug} article={article} />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Recent articles */}
-        <section className="home-section">
-          <div className="home-section-header">
-            <h2 className="home-section-title">Nyeste artikler</h2>
+      {/* Recent */}
+      <section className="page-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Nyeste artikler</h2>
+            <Link href="/artikler" className="section-link">Se alle →</Link>
           </div>
           <div className="articles-grid">
-            {recent.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
+            {recent.map((a, i) => (
+              <ArticleCard key={a.slugPath.join('/')} article={a} />
             ))}
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

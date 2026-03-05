@@ -1,30 +1,21 @@
 import Link from 'next/link';
 import type { ArticleMeta } from '@/lib/types';
 
-interface ArticleCardProps {
-  article: ArticleMeta;
-}
-
-export default function ArticleCard({ article }: ArticleCardProps) {
-  const href = `/wiki/${article.slugPath.join('/')}`;
-  const date = new Date(article.updatedAt).toLocaleDateString('nb-NO', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+export default function ArticleCard({ article }: { article: ArticleMeta }) {
+  const href = `/${article.slugPath.join('/')}`;
+  const date = new Date(article.publishedAt).toLocaleDateString('nb-NO', { year:'numeric', month:'long', day:'numeric' });
 
   return (
-    <Link href={href} className="article-card">
-      <div className="article-card-cat">{article.category}</div>
-      <h3 className="article-card-title">{article.title}</h3>
-      <p className="article-card-desc">{article.description}</p>
-      <div className="article-card-meta">
-        <time dateTime={article.updatedAt}>{date}</time>
-        <div className="article-card-tags">
-          {(article.tags || []).slice(0, 3).map((tag) => (
-            <span key={tag} className="tag">{tag}</span>
-          ))}
-        </div>
+    <Link href={href} className="article-card fade-up">
+      <div className="article-card-eyebrow">
+        <span className="article-cat-badge">{article.category}</span>
+        {article.difficulty && <span className="article-diff-badge">{article.difficulty}</span>}
+      </div>
+      <div className="article-card-title">{article.title}</div>
+      <div className="article-card-desc">{article.description}</div>
+      <div className="article-card-footer">
+        <time dateTime={article.publishedAt}>{date}</time>
+        <span className="article-card-arrow">→</span>
       </div>
     </Link>
   );

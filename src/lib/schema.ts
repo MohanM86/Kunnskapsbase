@@ -1,88 +1,69 @@
-import type { ArticleFrontmatter, FAQItem } from './types';
+import type { ArticleFrontmatter, FAQItem, BreadcrumbItem } from './types';
 
-const SITE_NAME = 'Kunnskapsbase';
-const SITE_URL = 'https://kunnskapsbase.no';
+const SITE = { name: 'Kunnskapsbase.no', url: 'https://kunnskapsbase.no' };
 
-export function buildArticleSchema(
-  frontmatter: ArticleFrontmatter,
-  slug: string,
-  htmlContent: string
-) {
-  const url = `${SITE_URL}/wiki/${slug}`;
+export const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  url: SITE.url,
+  logo: { '@type': 'ImageObject', url: `${SITE.url}/og-logo.png` },
+  sameAs: ['https://twitter.com/kunnskapsbase'],
+};
+
+export const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: SITE.url,
+  description: 'Norges største kunnskapsplattform – forklarer verden på norsk.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: `${SITE.url}/artikler?q={search_term_string}` },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+export function articleSchema(fm: ArticleFrontmatter, slugPath: string[]) {
+  const url = `${SITE.url}/${slugPath.join('/')}`;
   return {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: frontmatter.title,
-    description: frontmatter.description,
-    datePublished: frontmatter.updatedAt,
-    dateModified: frontmatter.updatedAt,
-    author: {
-      '@type': 'Person',
-      name: frontmatter.author || 'Redaksjonen',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}/images/logo.png`,
-      },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': url,
-    },
-    about: {
-      '@type': 'Thing',
-      name: frontmatter.category,
-    },
-    keywords: (frontmatter.tags || []).join(', '),
+    '@type': 'Article',
+    headline: fm.title,
+    description: fm.description,
+    datePublished: fm.publishedAt,
+    dateModified: fm.updatedAt,
+    author: { '@type': 'Person', name: fm.author || 'Redaksjonen' },
+    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    about: { '@type': 'Thing', name: fm.category },
+    keywords: (fm.tags || []).join(', '),
     url,
+    abstract: fm.definition,
   };
 }
 
-export function buildFAQSchema(faqs: FAQItem[]) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
-}
-
-export function buildBreadcrumbSchema(items: Array<{ label: string; href: string }>) {
+export function breadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
+    itemListElement: items.map((item, i) => ({
       '@type': 'ListItem',
-      position: index + 1,
+      position: i + 1,
       name: item.label,
-      item: `${SITE_URL}${item.href}`,
+      item: `${SITE.url}${item.href}`,
     })),
   };
 }
 
-export function buildWebSiteSchema() {
+export function faqSchema(faqs: FAQItem[]) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE_NAME,
-    url: SITE_URL,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
   };
 }
