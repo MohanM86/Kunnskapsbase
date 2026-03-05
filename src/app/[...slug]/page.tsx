@@ -28,11 +28,11 @@ interface PageProps {
 
 export async function generateStaticParams() {
   const paths = getAllArticleSlugs().map((s) => ({ slug: s }));
-  const allCatSlugs = [...new Set([
+  const allCatSlugs = Array.from(new Set([
     ...Object.keys(getCategoryTree()),
     ...CATEGORIES.map((c) => c.slug),
     ...LEGACY_IT_SLUGS,
-  ])];
+  ]));
   for (const catSlug of allCatSlugs) {
     paths.push({ slug: [catSlug] });
   }
