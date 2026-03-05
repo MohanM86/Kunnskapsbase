@@ -12,23 +12,19 @@ tags: [WHOIS, personvern, GDPR, domene, registrant, Norid]
 updatedAt: "2024-09-22"
 ---
 
-WHOIS er et offentlig register som viser informasjon om hvem som eier et domene. For domeneeiere er det viktig å forstå hva som er synlig – og hva som er beskyttet.
+WHOIS er et offentlig register som viser informasjon om hvem som eier et domene.
 
 ## Hva er WHOIS?
 
 WHOIS gir informasjon om registrant (eier), registrar, navnetjenere, og registreringsdatoer.
 
-```bash
-whois kunnskapsbase.no
-```
-
 ## WHOIS for .no-domener
 
-Norid anonymiserer kontaktinformasjon for privatpersoner som standard etter GDPR. Organisasjonsnavn er alltid synlig for bedrifter.
+Norid anonymiserer kontaktinformasjon for privatpersoner som standard etter GDPR.
 
 ## WHOIS-personvern for internasjonale domener
 
-De fleste registrarer tilbyr **WHOIS Privacy** – erstatter dine detaljer med registrarens info. Tjenesten er gratis hos Cloudflare Registrar og Porkbun.
+De fleste registrarer tilbyr **WHOIS Privacy** – erstatter dine detaljer med registrarens info.
 
 | Domenetype | Standard synlighet | Personvern |
 |------------|-------------------|------------|

@@ -32,12 +32,3 @@ updatedAt: "2024-10-08"
 ## 60-dagersregelen
 
 ICANN forbyr overføring av domener registrert eller overført de siste 60 dagene.
-
-## Sjekkliste
-
-- [ ] Hent EPP-kode fra nåværende registrar
-- [ ] Fjern transfer lock
-- [ ] Kontroller at registrantens e-postadresse er oppdatert
-- [ ] Start overføring hos ny registrar
-- [ ] Godkjenn via e-post
-- [ ] Aktiver automatisk fornyelse hos ny registrar

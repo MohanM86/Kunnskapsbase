@@ -1,10 +1,4 @@
-interface DefinitionBoxProps {
-  title: string;
-  description: string;
-  entityType?: string;
-  aliases?: string[];
-}
-
+interface DefinitionBoxProps { title: string; description: string; entityType?: string; aliases?: string[]; }
 export default function DefinitionBox({ title, description, entityType, aliases }: DefinitionBoxProps) {
   return (
     <div className="definition-box" role="note" aria-label="Kort forklart">
@@ -15,10 +9,8 @@ export default function DefinitionBox({ title, description, entityType, aliases 
       <p className="definition-box-text">{description}</p>
       {aliases && aliases.length > 0 && (
         <div className="definition-aliases">
-          <span className="definition-aliases-label">Også kjent som:</span>
-          {aliases.map((alias) => (
-            <span key={alias} className="definition-alias">{alias}</span>
-          ))}
+          <span className="definition-aliases-label">Ogs\u00e5 kjent som:</span>
+          {aliases.map((alias) => (<span key={alias} className="definition-alias">{alias}</span>))}
         </div>
       )}
     </div>

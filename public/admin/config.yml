@@ -1,20 +1,12 @@
-# Decap CMS Configuration for kunnskapsbase.no
-# Docs: https://decapcms.org/docs/
-
 backend:
   name: github
-  repo: DITT_GITHUB_BRUKERNAVN/kunnskapsbase  # <- Endre dette!
+  repo: DITT_GITHUB_BRUKERNAVN/kunnskapsbase
   branch: main
-  base_url: https://kunnskapsbase.no           # <- Endre til din Vercel-URL om nødvendig
-
-# Tillat redigering uten push (local_backend for utvikling)
-# local_backend: true
+  base_url: https://kunnskapsbase.no
 
 media_folder: public/images/uploads
 public_folder: /images/uploads
-
-# Publisering: commit direkte til main -> Vercel deployer automatisk
-publish_mode: editorial_workflow  # Fjern denne linjen for å publisere direkte
+publish_mode: editorial_workflow
 
 collections:
   - name: domener
@@ -30,15 +22,10 @@ collections:
       - { label: Beskrivelse, name: description, widget: text }
       - { label: Kategori, name: category, widget: hidden, default: Domener }
       - { label: Underkategori, name: subcategory, widget: string, required: false }
-      - label: Tags
-        name: tags
-        widget: list
-        allow_add: true
-        field: { label: Tag, name: tag, widget: string }
+      - { label: Tags, name: tags, widget: list, allow_add: true, field: { label: Tag, name: tag, widget: string } }
       - { label: Oppdatert, name: updatedAt, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: Fremhevet, name: featured, widget: boolean, default: false, required: false }
       - { label: Innhold, name: body, widget: markdown }
-
   - name: dns
     label: DNS
     label_singular: DNS-artikkel
@@ -52,15 +39,10 @@ collections:
       - { label: Beskrivelse, name: description, widget: text }
       - { label: Kategori, name: category, widget: hidden, default: DNS }
       - { label: Underkategori, name: subcategory, widget: string, required: false }
-      - label: Tags
-        name: tags
-        widget: list
-        allow_add: true
-        field: { label: Tag, name: tag, widget: string }
+      - { label: Tags, name: tags, widget: list, allow_add: true, field: { label: Tag, name: tag, widget: string } }
       - { label: Oppdatert, name: updatedAt, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: Fremhevet, name: featured, widget: boolean, default: false, required: false }
       - { label: Innhold, name: body, widget: markdown }
-
   - name: epost
     label: E-post
     label_singular: E-post-artikkel
@@ -74,15 +56,10 @@ collections:
       - { label: Beskrivelse, name: description, widget: text }
       - { label: Kategori, name: category, widget: hidden, default: E-post }
       - { label: Underkategori, name: subcategory, widget: string, required: false }
-      - label: Tags
-        name: tags
-        widget: list
-        allow_add: true
-        field: { label: Tag, name: tag, widget: string }
+      - { label: Tags, name: tags, widget: list, allow_add: true, field: { label: Tag, name: tag, widget: string } }
       - { label: Oppdatert, name: updatedAt, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: Fremhevet, name: featured, widget: boolean, default: false, required: false }
       - { label: Innhold, name: body, widget: markdown }
-
   - name: nettsider
     label: Nettsider
     label_singular: Nettside-artikkel
@@ -96,11 +73,7 @@ collections:
       - { label: Beskrivelse, name: description, widget: text }
       - { label: Kategori, name: category, widget: hidden, default: Nettsider }
       - { label: Underkategori, name: subcategory, widget: string, required: false }
-      - label: Tags
-        name: tags
-        widget: list
-        allow_add: true
-        field: { label: Tag, name: tag, widget: string }
+      - { label: Tags, name: tags, widget: list, allow_add: true, field: { label: Tag, name: tag, widget: string } }
       - { label: Oppdatert, name: updatedAt, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: Fremhevet, name: featured, widget: boolean, default: false, required: false }
       - { label: Innhold, name: body, widget: markdown }

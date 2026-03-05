@@ -1,12 +1,4 @@
-export type EntityType =
-  | 'Concept'
-  | 'Protocol'
-  | 'Technology'
-  | 'Process'
-  | 'Tool'
-  | 'Standard'
-  | 'Service'
-  | 'Guide';
+export type EntityType = 'Concept' | 'Protocol' | 'Technology' | 'Process' | 'Tool' | 'Standard' | 'Service' | 'Guide';
 
 export interface ArticleFrontmatter {
   title: string;
@@ -39,11 +31,7 @@ export interface CategoryTree {
     label: string;
     slug: string;
     subcategories: {
-      [subcategory: string]: {
-        label: string;
-        slug: string;
-        articles: ArticleMeta[];
-      };
+      [subcategory: string]: { label: string; slug: string; articles: ArticleMeta[] };
     };
     articles: ArticleMeta[];
   };
@@ -91,12 +79,5 @@ export interface SearchResult {
   score: number;
 }
 
-export interface BreadcrumbItem {
-  label: string;
-  href: string;
-}
-
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
+export interface BreadcrumbItem { label: string; href: string; }
+export interface FAQItem { question: string; answer: string; }

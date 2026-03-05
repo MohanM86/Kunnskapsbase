@@ -13,13 +13,12 @@ updatedAt: "2024-11-20"
 featured: true
 ---
 
-Å registrere et domene er enklere enn mange tror. Her er en komplett guide som tar deg gjennom hele prosessen.
+Å registrere et domene er enklere enn mange tror.
 
 ## Krav for .no-domener
 
 For å registrere et `.no`-domene må du:
-
-1. Ha et norsk organisasjonsnummer (AS, ENK, lag/forening) **eller**
+1. Ha et norsk organisasjonsnummer **eller**
 2. Være registrert i Folkeregisteret med norsk adresse
 3. Gå gjennom en akkreditert Norid-registrar
 
@@ -33,15 +32,6 @@ Privatpersoner kan registrere inntil **5 .no-domener** mot legitimasjon.
 | One.com | 99 kr | Bra |
 | Loopia | 139 kr | Godt |
 | Namecheap | (internasjonalt) | Utmerket |
-
-## Steg-for-steg registrering
-
-1. **Søk etter domenet** hos valgt registrar
-2. **Legg til i handlekurv** – hopp over tilleggstjenester du ikke trenger
-3. **Fyll inn registrantinformasjon** – navn, adresse, e-post, telefon
-4. **Velg registreringsperiode** – 1–10 år, 2–3 år anbefales
-5. **Aktiver automatisk fornyelse** – kritisk viktig!
-6. **Verifiser e-postadressen** din via lenke i bekreftelsesmail
 
 ## Etter registrering
 

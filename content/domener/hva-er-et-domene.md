@@ -44,11 +44,7 @@ www.kunnskapsbase.no
 - **Generiske TLD-er**: `.com`, `.org`, `.net` – globalt tilgjengelig
 - **Nye TLD-er**: `.app`, `.blog`, `.tech` – introdusert etter 2014
 
-## Registrering av domener
-
-For å ta i bruk et domenenavn må du **registrere det** gjennom en akkreditert registrar. I Norge er Norid ansvarlig for `.no`-domener, mens internasjonale domener administreres via ICANN.
-
-### Hva koster et domene?
+## Hva koster et domene?
 
 | Domene | Pris per år |
 |--------|-------------|
@@ -56,16 +52,6 @@ For å ta i bruk et domenenavn må du **registrere det** gjennom en akkreditert 
 | `.com` | 80–200 kr |
 | `.org` | 100–200 kr |
 | `.io` | 400–800 kr |
-
-## Eierskap og WHOIS
-
-Alle registrerte domener har eierinformasjon tilgjengelig via **WHOIS**-tjenesten. Du kan søke på `who.is` eller bruke kommandolinjen:
-
-```bash
-whois kunnskapsbase.no
-```
-
-> **Merk:** Med GDPR-regelverket er mye av eierinformasjonen nå anonymisert for privatpersoner.
 
 ## Vanlige feil å unngå
 

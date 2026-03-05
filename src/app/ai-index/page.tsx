@@ -9,14 +9,8 @@ const PAGE_URL = `${BASE_URL}/ai-index`;
 
 export const metadata: Metadata = {
   title: 'AI-indeks – Strukturert oversikt for AI-systemer',
-  description: 'Maskinlesbar indeks over alle artikler på Kunnskapsbase.no, strukturert etter kategori, underkategori og tema. Optimalisert for AI-crawlere og kunnskapsgrafer.',
+  description: 'Maskinlesbar indeks over alle artikler på Kunnskapsbase.no.',
   alternates: { canonical: PAGE_URL },
-  openGraph: {
-    title: 'AI-indeks | Kunnskapsbase.no',
-    description: 'Strukturert kunnskapsindeks optimalisert for AI-crawlere.',
-    url: PAGE_URL,
-    images: [{ url: `${BASE_URL}/images/og-default.png`, width: 1200, height: 630 }],
-  },
   robots: { index: true, follow: true },
 };
 
@@ -24,31 +18,21 @@ export default function AiIndexPage() {
   const allArticles = getAllArticlesMeta();
   const categoryTree = getCategoryTree();
 
-  const structure: Record<string, {
-    label: string;
-    topics: Record<string, { topic: string; subcategory: string; articles: typeof allArticles }>;
-  }> = {};
-
+  const structure: Record<string, { label: string; topics: Record<string, { topic: string; subcategory: string; articles: typeof allArticles }> }> = {};
   for (const article of allArticles) {
     const catSlug = article.category.toLowerCase().replace(/\s+/g, '-');
     if (!structure[catSlug]) structure[catSlug] = { label: article.category, topics: {} };
     const topicKey = article.topic || article.subcategory || 'Generelt';
-    if (!structure[catSlug].topics[topicKey]) {
-      structure[catSlug].topics[topicKey] = { topic: topicKey, subcategory: article.subcategory || '', articles: [] };
-    }
+    if (!structure[catSlug].topics[topicKey]) structure[catSlug].topics[topicKey] = { topic: topicKey, subcategory: article.subcategory || '', articles: [] };
     structure[catSlug].topics[topicKey].articles.push(article);
   }
 
   const categoryOrder = ['domener', 'dns', 'epost', 'nettsider'];
   const breadcrumbs = [{ label: 'Hjem', href: '/' }, { label: 'AI-indeks', href: '/ai-index' }];
-  const schemas = [
-    buildCollectionPageSchema(PAGE_URL, 'AI-indeks – Kunnskapsbase.no', 'Strukturert kunnskapsindeks for AI-systemer', allArticles.length),
-    buildBreadcrumbSchema(breadcrumbs),
-  ];
+  const schemas = [buildCollectionPageSchema(PAGE_URL, 'AI-indeks', 'Strukturert kunnskapsindeks for AI-systemer', allArticles.length), buildBreadcrumbSchema(breadcrumbs)];
 
   return (
-    <>
-      <JsonLd schema={schemas} />
+    <><JsonLd schema={schemas} />
       <div className="ai-index-page">
         <div className="ai-index-header">
           <div className="ai-index-badge">AI-indeks</div>
@@ -57,79 +41,36 @@ export default function AiIndexPage() {
           <div className="ai-index-meta">
             <span>{allArticles.length} artikler</span>
             <span>{Object.keys(categoryTree).length} kategorier</span>
-            <a href="/entity-index.json" className="ai-index-json-link">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <rect x="1" y="1" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="1.2"/>
-                <path d="M4 5h6M4 7h4M4 9h5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-              </svg>
-              entity-index.json
-            </a>
+            <a href="/entity-index.json" className="ai-index-json-link">entity-index.json</a>
           </div>
         </div>
-
         <div className="ai-index-about">
           <h2>Om kunnskapsbasen</h2>
-          <p>
-            Kunnskapsbase.no er en åpen, norsk kunnskapsbase om teknologi, internett og digitale tjenester.
-            Hvert innhold representerer ett begrep (entity) med definisjon, forklaring og relasjoner til andre begreper.
-          </p>
+          <p>Kunnskapsbase.no er en åpen, norsk kunnskapsbase om teknologi, internett og digitale tjenester.</p>
           <dl className="ai-index-facts">
             <dt>Nettadresse</dt><dd>https://kunnskapsbase.no</dd>
             <dt>Språk</dt><dd>Norsk bokmål (nb-NO)</dd>
             <dt>Lisens</dt><dd>CC BY 4.0</dd>
-            <dt>Entity-indeks</dt><dd><a href="/entity-index.json">https://kunnskapsbase.no/entity-index.json</a></dd>
-            <dt>RSS</dt><dd><a href="/rss.xml">https://kunnskapsbase.no/rss.xml</a></dd>
-            <dt>LLM-informasjon</dt><dd><a href="/llms.txt">https://kunnskapsbase.no/llms.txt</a></dd>
           </dl>
         </div>
-
-        <div className="ai-index-toc">
-          <h2>Innholdsfortegnelse</h2>
-          <div className="ai-index-toc-grid">
-            {categoryOrder.filter((k) => structure[k]).map((catSlug) => {
-              const cat = structure[catSlug];
-              const count = Object.values(cat.topics).reduce((s, t) => s + t.articles.length, 0);
-              return (
-                <a key={catSlug} href={`#${catSlug}`} className="ai-index-toc-item">
-                  <span className="ai-index-toc-label">{cat.label}</span>
-                  <span className="ai-index-toc-count">{count} artikler</span>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-
         {categoryOrder.filter((k) => structure[k]).map((catSlug) => {
           const cat = structure[catSlug];
           return (
             <section key={catSlug} id={catSlug} className="ai-index-category">
-              <div className="ai-index-cat-header">
-                <h2>{cat.label}</h2>
-                <Link href={`/${catSlug}`} className="ai-index-cat-link">Se alle artikler</Link>
-              </div>
+              <div className="ai-index-cat-header"><h2>{cat.label}</h2><Link href={`/${catSlug}`} className="ai-index-cat-link">Se alle artikler</Link></div>
               {Object.entries(cat.topics).map(([topicKey, topicData]) => (
                 <div key={topicKey} className="ai-index-topic">
                   <h3 className="ai-index-topic-title">{topicData.topic}</h3>
-                  <div className="ai-index-articles">
-                    {topicData.articles.map((article) => (
-                      <div key={article.slug} className="ai-index-article">
-                        <div className="ai-index-article-meta">
-                          <Link href={`/${article.slugPath.join('/')}`} className="ai-index-article-title">
-                            {article.title}
-                          </Link>
-                          {article.entityType && (
-                            <span className="ai-index-entity-type">{article.entityType}</span>
-                          )}
-                        </div>
-                        <p className="ai-index-article-desc">{article.description}</p>
-                        {article.aliases && article.aliases.length > 0 && (
-                          <div className="ai-index-aliases">
-                            <span>Aliases:</span> {article.aliases.join(', ')}
-                          </div>
-                        )}
+                  <div className="ai-index-articles">{topicData.articles.map((article) => (
+                    <div key={article.slug} className="ai-index-article">
+                      <div className="ai-index-article-meta">
+                        <Link href={`/${article.slugPath.join('/')}`} className="ai-index-article-title">{article.title}</Link>
+                        {article.entityType && <span className="ai-index-entity-type">{article.entityType}</span>}
                       </div>
-                    ))}
-                  </div>
+                      <p className="ai-index-article-desc">{article.description}</p>
+                      {article.aliases && article.aliases.length > 0 && (<div className="ai-index-aliases"><span>Aliases:</span> {article.aliases.join(', ')}</div>)}
+                    </div>
+                  ))}</div>
                 </div>
               ))}
             </section>

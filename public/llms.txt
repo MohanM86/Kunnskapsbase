@@ -11,25 +11,12 @@ email configuration, and web hosting. Each article explains one concept
 (entity) with a definition, detailed explanation, examples, and FAQ.
 Content is structured for both humans and AI systems.
 
-Structure:
-- Each article represents one concept (entity)
-- Entity types: Concept, Protocol, Technology, Process, Tool, Standard, Service, Guide
-- Articles include: aliases, related entities, see-also links
-- Categories: Domener (Domains), DNS, E-post (Email), Nettsider (Websites)
-
 Endpoints:
 AI Index (human-readable):       https://kunnskapsbase.no/ai-index
 Entity Index (machine-readable): https://kunnskapsbase.no/entity-index.json
 RSS Feed:                        https://kunnskapsbase.no/rss.xml
 Sitemap:                         https://kunnskapsbase.no/sitemap.xml
-Glossary:                        https://kunnskapsbase.no/ordbok
-All articles:                    https://kunnskapsbase.no/artikler
 
 Permissions:
 Content may be used for AI training, indexing, and knowledge retrieval
 under CC BY 4.0. Attribution: kunnskapsbase.no
-
-Crawling:
-Allowed user-agents: GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot,
-anthropic-ai, Google-Extended, Applebot-Extended, Amazonbot, cohere-ai
-Disallowed paths: /admin/, /api/search

@@ -14,6 +14,12 @@ import { CATEGORY_LABEL, SUBCATEGORY_LABEL } from './categories';
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 const SITE_URL = 'https://kunnskapsbase.no';
 
+function safeTimestamp(dateStr?: string): number {
+  if (!dateStr) return 0;
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? 0 : d.getTime();
+}
+
 export function getAllArticleSlugs(): string[][] {
   const slugPaths: string[][] = [];
   function walk(dir: string, parts: string[]) {
@@ -50,24 +56,11 @@ export async function getArticleBySlug(slugPath: string[]): Promise<Article | nu
   const frontmatter = data as ArticleFrontmatter;
   const htmlContent = await markdownToHtml(content);
   const rt = readingTime(content);
-  return {
-    slug: slugPath[slugPath.length - 1],
-    slugPath,
-    frontmatter,
-    content,
-    htmlContent,
-    readingTime: `${Math.ceil(rt.minutes)} min lesetid`,
-  };
+  return { slug: slugPath[slugPath.length - 1], slugPath, frontmatter, content, htmlContent, readingTime: `${Math.ceil(rt.minutes)} min lesetid` };
 }
 
 async function markdownToHtml(markdown: string): Promise<string> {
-  const result = await unified()
-    .use(remarkParse as any)
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeHighlight)
-    .use(rehypeStringify)
-    .process(markdown);
+  const result = await unified().use(remarkParse as any).use(remarkGfm).use(remarkRehype).use(rehypeHighlight).use(rehypeStringify).process(markdown);
   return result.toString();
 }
 
@@ -80,40 +73,26 @@ export function getAllArticlesMeta(): ArticleMeta[] {
     const { data } = matter(fileContent);
     const fm = data as ArticleFrontmatter;
     articles.push({
-      title: fm.title,
-      slug: slugPath[slugPath.length - 1],
-      slugPath,
-      description: fm.description,
-      category: fm.category,
-      subcategory: fm.subcategory,
-      topic: fm.topic,
-      tags: fm.tags || [],
-      updatedAt: fm.updatedAt,
-      featured: fm.featured,
-      entityType: fm.entityType,
-      aliases: fm.aliases || [],
-      related: fm.related || [],
-      seeAlso: fm.seeAlso || [],
+      title: fm.title, slug: slugPath[slugPath.length - 1], slugPath, description: fm.description,
+      category: fm.category, subcategory: fm.subcategory, topic: fm.topic, tags: fm.tags || [],
+      updatedAt: fm.updatedAt || '', featured: fm.featured, entityType: fm.entityType,
+      aliases: fm.aliases || [], related: fm.related || [], seeAlso: fm.seeAlso || [],
     });
   }
-  return articles.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
+  return articles.sort((a, b) => safeTimestamp(b.updatedAt) - safeTimestamp(a.updatedAt));
 }
 
 export function getCategoryTree(): CategoryTree {
   const articles = getAllArticlesMeta();
   const tree: CategoryTree = {};
   for (const article of articles) {
-    const catSlug = article.slugPath[0]; // folder name is canonical
+    const catSlug = article.slugPath[0];
     const catLabel = CATEGORY_LABEL[catSlug] || article.category;
-    if (!tree[catSlug]) {
-      tree[catSlug] = { label: catLabel, slug: catSlug, subcategories: {}, articles: [] };
-    }
+    if (!tree[catSlug]) tree[catSlug] = { label: catLabel, slug: catSlug, subcategories: {}, articles: [] };
     if (article.subcategory) {
       const subSlug = article.subcategory.toLowerCase().replace(/\s+/g, '-');
       const subLabel = SUBCATEGORY_LABEL[subSlug] || article.subcategory;
-      if (!tree[catSlug].subcategories[subSlug]) {
-        tree[catSlug].subcategories[subSlug] = { label: subLabel, slug: subSlug, articles: [] };
-      }
+      if (!tree[catSlug].subcategories[subSlug]) tree[catSlug].subcategories[subSlug] = { label: subLabel, slug: subSlug, articles: [] };
       tree[catSlug].subcategories[subSlug].articles.push(article);
     } else {
       tree[catSlug].articles.push(article);
@@ -123,32 +102,20 @@ export function getCategoryTree(): CategoryTree {
 }
 
 export function getRelatedArticles(current: ArticleMeta, all: ArticleMeta[], limit = 4): ArticleMeta[] {
-  const scored = all
-    .filter((a) => a.slug !== current.slug)
-    .map((a) => {
-      let score = 0;
-      if (a.category === current.category) score += 3;
-      if (a.subcategory && a.subcategory === current.subcategory) score += 2;
-      if (a.topic && a.topic === current.topic) score += 2;
-      const sharedTags = (a.tags || []).filter((t) => (current.tags || []).includes(t));
-      score += sharedTags.length;
-      // Boost explicitly linked entities
-      if ((current.related || []).includes(a.slug)) score += 5;
-      if ((current.seeAlso || []).includes(a.slug)) score += 3;
-      return { article: a, score };
-    })
-    .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map((x) => x.article);
-  return scored;
+  return all.filter((a) => a.slug !== current.slug).map((a) => {
+    let score = 0;
+    if (a.category === current.category) score += 3;
+    if (a.subcategory && a.subcategory === current.subcategory) score += 2;
+    if (a.topic && a.topic === current.topic) score += 2;
+    score += (a.tags || []).filter((t) => (current.tags || []).includes(t)).length;
+    if ((current.related || []).includes(a.slug)) score += 5;
+    if ((current.seeAlso || []).includes(a.slug)) score += 3;
+    return { article: a, score };
+  }).filter((x) => x.score > 0).sort((a, b) => b.score - a.score).slice(0, limit).map((x) => x.article);
 }
 
-// Resolve article metas by slug list (for related/seeAlso fields)
 export function resolveArticlesBySlug(slugs: string[], all: ArticleMeta[]): ArticleMeta[] {
-  return slugs
-    .map((s) => all.find((a) => a.slug === s || a.slugPath.join('/') === s))
-    .filter((a): a is ArticleMeta => a !== undefined);
+  return slugs.map((s) => all.find((a) => a.slug === s || a.slugPath.join('/') === s)).filter((a): a is ArticleMeta => a !== undefined);
 }
 
 export function getAllArticlesForSearch() {
@@ -159,33 +126,15 @@ export function getAllArticlesForSearch() {
     if (!fileContent) continue;
     const { data, content } = matter(fileContent);
     const fm = data as ArticleFrontmatter;
-    results.push({
-      slug: slugPath[slugPath.length - 1],
-      slugPath,
-      title: fm.title,
-      description: fm.description,
-      content: content.replace(/#{1,6}\s/g, '').replace(/\*\*/g, '').replace(/\*/g, '').slice(0, 500),
-      category: fm.category,
-      tags: fm.tags || [],
-    });
+    results.push({ slug: slugPath[slugPath.length - 1], slugPath, title: fm.title, description: fm.description, content: content.replace(/#{1,6}\s/g, '').replace(/\*\*/g, '').replace(/\*/g, '').slice(0, 500), category: fm.category, tags: fm.tags || [] });
   }
   return results;
 }
 
 export function getEntityIndex(): EntityIndexEntry[] {
-  const all = getAllArticlesMeta();
-  return all.map((a) => ({
-    title: a.title,
-    slug: a.slug,
-    url: `${SITE_URL}/${a.slugPath.join('/')}`,
-    description: a.description,
-    category: a.category,
-    subcategory: a.subcategory,
-    topic: a.topic,
-    entityType: a.entityType,
-    aliases: a.aliases,
-    related: a.related,
-    seeAlso: a.seeAlso,
-    date: a.updatedAt,
+  return getAllArticlesMeta().map((a) => ({
+    title: a.title, slug: a.slug, url: `${SITE_URL}/${a.slugPath.join('/')}`, description: a.description,
+    category: a.category, subcategory: a.subcategory, topic: a.topic, entityType: a.entityType,
+    aliases: a.aliases, related: a.related, seeAlso: a.seeAlso, date: a.updatedAt,
   }));
 }
