@@ -14,6 +14,12 @@ import { CATEGORY_LABEL, SUBCATEGORY_LABEL } from './categories';
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 const SITE_URL = 'https://kunnskapsbase.no';
 
+function safeTimestamp(dateStr?: string): number {
+  if (!dateStr) return 0;
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? 0 : d.getTime();
+}
+
 export function getAllArticleSlugs(): string[][] {
   const slugPaths: string[][] = [];
   function walk(dir: string, parts: string[]) {
@@ -88,7 +94,7 @@ export function getAllArticlesMeta(): ArticleMeta[] {
       subcategory: fm.subcategory,
       topic: fm.topic,
       tags: fm.tags || [],
-      updatedAt: fm.updatedAt,
+      updatedAt: fm.updatedAt || '',
       featured: fm.featured,
       entityType: fm.entityType,
       aliases: fm.aliases || [],
@@ -96,7 +102,7 @@ export function getAllArticlesMeta(): ArticleMeta[] {
       seeAlso: fm.seeAlso || [],
     });
   }
-  return articles.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
+  return articles.sort((a, b) => safeTimestamp(b.updatedAt) - safeTimestamp(a.updatedAt));
 }
 
 export function getCategoryTree(): CategoryTree {

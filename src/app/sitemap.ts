@@ -5,6 +5,12 @@ import { CATEGORIES, LEGACY_IT_SLUGS } from '@/lib/categories';
 const BASE_URL = 'https://kunnskapsbase.no';
 const NOW = new Date();
 
+function safeDate(dateStr?: string): Date {
+  if (!dateStr) return NOW;
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? NOW : d;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticlesMeta();
   const categoryTree = getCategoryTree();
@@ -38,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // All article pages
   const articlePages: MetadataRoute.Sitemap = articles.map((a) => ({
     url: `${BASE_URL}/${a.slugPath.join('/')}`,
-    lastModified: new Date(a.updatedAt),
+    lastModified: safeDate(a.updatedAt),
     changeFrequency: 'monthly',
     priority: a.featured ? 0.9 : 0.7,
   }));

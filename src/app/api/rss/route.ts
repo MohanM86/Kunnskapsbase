@@ -13,6 +13,12 @@ function esc(s: string): string {
     .replace(/'/g, '&apos;');
 }
 
+function safeDate(dateStr?: string): Date {
+  if (!dateStr) return new Date();
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? new Date() : d;
+}
+
 export const dynamic = 'force-static';
 export const revalidate = 3600;
 
@@ -21,7 +27,7 @@ export function GET() {
 
   const items = articles.map((a) => {
     const url = `${BASE_URL}/${a.slugPath.join('/')}`;
-    const pubDate = new Date(a.updatedAt).toUTCString();
+    const pubDate = safeDate(a.updatedAt).toUTCString();
     const cats = [a.category, a.subcategory, a.topic]
       .filter(Boolean)
       .map((c) => `    <category>${esc(c!)}</category>`)
