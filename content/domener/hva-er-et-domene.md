@@ -1,61 +1,90 @@
 ---
-title: Hva er et domenenavn?
-description: Et domenenavn er den lesbare adressen til et nettsted, som oversetter til en IP-adresse via DNS. Eksempel – kunnskapsbase.no eller google.com.
-entityType: Concept
-category: Domener
-subcategory: Grunnleggende
-topic: Domenenavn
-aliases: ["domene", "domenenavn", "nettadresse", "URL-domene"]
-related: ["registrere-domene", "hva-er-dns", "whois-og-personvern"]
-seeAlso: ["hva-er-dns", "ssl-sertifikat"]
-tags: [domene, domenenavn, DNS, internett, introduksjon]
-updatedAt: "2024-11-15"
+title: "Hva er et domenenavn"
+slug: "hva-er-et-domene"
+category: "Domener"
+subcategory: "Grunnleggende"
+description: "Et domenenavn er den lesbare adressen til et nettsted som oversettes til en IP-adresse via DNS."
+keywords: ["domene", "domenenavn", "DNS", "TLD", "registrar"]
+date: "2024-11-15"
+lastReviewed: "2025-03-05"
+author: "Kunnskapsbase"
+readingTime: 5
+draft: false
+entityType: "Concept"
+topic: "Domenenavn"
+aliases: ["domene", "domenenavn", "nettadresse"]
+related: ["registrere-domene", "hva-er-dns", "whois-og-personvern", "overfoere-domene"]
+seeAlso: ["registrere-domene", "hva-er-dns"]
+tags: ["domene", "domenenavn", "DNS", "internett"]
+updatedAt: "2025-03-05"
 featured: true
+contentType: "knowledge-article"
+difficulty: "beginner"
 ---
 
-Et **domenenavn** er den lesbare adressen som brukere skriver inn i nettleseren for å nå nettstedet ditt – for eksempel `kunnskapsbase.no` eller `google.com`. Det er i praksis et alias for en IP-adresse, siden datamaskiner kommuniserer med tall, ikke ord.
+# Hva er et domenenavn
 
-## Hvordan fungerer et domenenavn?
+Et domenenavn er den lesbare adressen brukere skriver i nettleseren for å nå et nettsted – for eksempel `kunnskapsbase.no` eller `google.com`.
 
-Når du skriver et domenenavn i nettleseren, skjer dette i bakgrunnen:
+> **Kort forklart**
+> Et domene er et alias for en IP-adresse. DNS oversetter navnet til tall slik at datamaskiner finner riktig server.
 
-1. Nettleseren spør en **DNS-løser** (ofte levert av din internettleverandør) om IP-adressen til domenet
-2. DNS-løseren slår opp i DNS-systemet og finner riktig IP-adresse
-3. Nettleseren kobler seg til webserveren på den IP-adressen
-4. Nettstedet lastes inn
+## Hva betyr begrepet
 
-Hele prosessen tar typisk under 50 millisekunder.
+Domenenavn er delt i nivåer: toppnivådomene (.no, .com), andrenivådomene (kunnskapsbase) og eventuelt subdomene (www). I Norge administreres .no-domener av Norid.
 
-## Oppbygning av et domenenavn
-
-Et domenenavn er delt opp i **nivåer**, adskilt av punktum:
+## Hvordan fungerer det
 
 ```
-www.kunnskapsbase.no
-│   │             │
-│   │             └─ Toppnivådomene (TLD): .no
-│   └─────────────── Andrenivådomene: kunnskapsbase
-└─────────────────── Subdomene: www
+Bruker skriver domene → DNS-oppslag → IP-adresse → Nettside lastes (< 50 ms)
 ```
 
-### Toppnivådomener (TLD)
+- **Landsspesifikke TLD-er**: `.no`, `.se`, `.dk`
+- **Generiske TLD-er**: `.com`, `.org`, `.net`
+- **Nye TLD-er**: `.app`, `.blog`, `.tech`
 
-- **Landsspesifikke TLD-er**: `.no`, `.se`, `.dk`, `.de` – tildeles av nasjonale registre
-- **Generiske TLD-er**: `.com`, `.org`, `.net` – globalt tilgjengelig
-- **Nye TLD-er**: `.app`, `.blog`, `.tech` – introdusert etter 2014
+## Hvorfor er det viktig
 
-## Hva koster et domene?
+Et domenenavn er identiteten din på nett. Det påvirker troverdighet, merkevare og SEO. Kort og memorerbart er best.
+
+## Eksempler
 
 | Domene | Pris per år |
 |--------|-------------|
 | `.no` | 99–199 kr |
 | `.com` | 80–200 kr |
-| `.org` | 100–200 kr |
 | `.io` | 400–800 kr |
 
-## Vanlige feil å unngå
+## Vanlige spørsmål
 
-- **Stave domenet feil** – sjekk at du registrerer riktig navn
-- **Glemme å fornye** – sett opp automatisk fornyelse
-- **Velge for lang eller komplisert navn** – kort og memorerbart er best
-- **Ikke registrere varianter** – vurder å sikre deg `.no` og `.com`
+### Hva koster et domene?
+Fra ca. 99 kr/år for .no til 400+ kr/år for .io.
+
+### Kan jeg flytte domenet til en annen registrar?
+Ja. Se artikkelen om domeneoverføring.
+
+### Hva er et subdomene?
+En underadresse som `blogg.dinside.no`. Opprettes gratis via DNS.
+
+### Kan noen stjele domenet mitt?
+Ikke med automatisk fornyelse aktivert og oppdatert kontaktinfo.
+
+### Hva er forskjellen på .no og .com?
+.no krever norsk tilknytning. .com er globalt tilgjengelig.
+
+## Relaterte begreper
+
+- [Registrere domene](/domener/registrere-domene) – slik kjøper du et domene
+- [DNS](/dns/hva-er-dns) – systemet som oversetter domenenavn
+- [WHOIS](/domener/whois-og-personvern) – eierinformasjon for domener
+- [Overføre domene](/domener/overfoere-domene) – bytte registrar
+- [SSL-sertifikat](/nettsider/ssl-sertifikat) – HTTPS for domenet
+
+## Se også
+
+- [Registrere domene](/domener/registrere-domene)
+- [Hva er DNS](/dns/hva-er-dns)
+
+## Oppsummering
+
+Et domenenavn er den lesbare adressen til et nettsted. Det oversettes til en IP-adresse via DNS og er identiteten din på internett.

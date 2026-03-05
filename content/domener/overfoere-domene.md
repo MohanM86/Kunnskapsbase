@@ -1,34 +1,91 @@
 ---
-title: Overføre domene til ny registrar
-description: Slik overfører du et domene mellom registrarer uten nedetid – med EPP-kode for internasjonale domener og Norid-prosessen for .no-domener.
-entityType: Process
-category: Domener
-subcategory: Registrering
-topic: Domeneoverføring
+title: "Overføre domene til ny registrar"
+slug: "overfoere-domene"
+category: "Domener"
+subcategory: "Registrering"
+description: "Slik overfører du et domene mellom registrarer uten nedetid med EPP-kode eller Norid-prosessen."
+keywords: ["overføre domene", "EPP-kode", "domain transfer", "bytte registrar"]
+date: "2024-10-08"
+lastReviewed: "2025-03-05"
+author: "Kunnskapsbase"
+readingTime: 4
+draft: false
+entityType: "Process"
+topic: "Domeneoverføring"
 aliases: ["flytte domene", "bytte registrar", "domain transfer", "EPP-kode"]
-related: ["registrere-domene", "hva-er-et-domene", "bytte-navnetjener"]
-seeAlso: ["whois-og-personvern"]
-tags: [overføring, registrar, EPP-kode, transfer, .no]
-updatedAt: "2024-10-08"
+related: ["registrere-domene", "hva-er-et-domene", "bytte-navnetjener", "whois-og-personvern"]
+seeAlso: ["registrere-domene", "whois-og-personvern"]
+tags: ["overføring", "registrar", "EPP-kode", "transfer", ".no"]
+updatedAt: "2025-03-05"
+contentType: "knowledge-article"
+difficulty: "beginner"
 ---
 
-Å overføre et domene betyr å flytte administrasjonen fra én registrar til en annen. DNS og nettstedet fortsetter å fungere under hele prosessen.
+# Overføre domene til ny registrar
 
-## Overføre .no-domener
+Å overføre et domene betyr å flytte administrasjonen fra én registrar til en annen, uten nedetid for nettsted eller e-post.
 
-1. Sjekk at domenet ikke er sperret (transfer lock)
-2. Be om overføring hos ny registrar
-3. Godkjenn e-posten fra Norid innen 5 dager
-4. Overføringen fullføres innen 1–3 virkedager
+> **Kort forklart**
+> Du henter en EPP-kode fra gammel registrar, starter overføring hos ny, og godkjenner via e-post. Ferdig på 1–7 dager.
 
-## Overføre internasjonale domener (.com, .org, .net)
+## Hva betyr begrepet
 
-1. **Hent EPP-koden** fra nåværende registrar (også kalt auth-code)
-2. **Lås opp domenet** – fjern transfer lock
-3. **Start overføring** hos ny registrar med domene + EPP-kode
-4. **Godkjenn via e-post** innen fristen (5 dager)
-5. Vent opptil **7 dager** – vanligvis 1–3 dager
+En domeneoverføring (transfer) flytter domenet til en ny registrar. DNS og nettstedet fungerer uavbrutt under prosessen.
 
-## 60-dagersregelen
+## Hvordan fungerer det
 
-ICANN forbyr overføring av domener registrert eller overført de siste 60 dagene.
+### Overføringsprosess
+
+```
+Hent EPP-kode → Lås opp domene → Start overføring → Godkjenn → Fullført
+```
+
+**For .no:** Be ny registrar om overføring → Godkjenn Norid-epost innen 5 dager.
+
+**For .com/.org:** Hent EPP-kode → Fjern transfer lock → Start hos ny registrar → Godkjenn.
+
+ICANN forbyr overføring av domener registrert de siste 60 dagene.
+
+## Hvorfor er det viktig
+
+Bytte registrar for bedre pris, styrepanel eller kundeservice. Prosessen er enkel og risikofri.
+
+## Eksempler
+
+- **Fra GoDaddy til Namecheap** – lavere priser
+- **Fra One.com til Domeneshop** – bedre DNS
+- **Fra Loopia til Cloudflare** – gratis DNS og SSL
+
+## Vanlige spørsmål
+
+### Får jeg nedetid?
+Nei. DNS fortsetter å fungere.
+
+### Hva er en EPP-kode?
+En engangskode som beviser eierskap. Også kalt auth-code.
+
+### Hvor lang tid tar det?
+1–7 dager avhengig av registrar.
+
+### Koster det å overføre?
+Noen registrarer tar betalt, men inkluderer ofte ett års fornyelse.
+
+### Kan jeg overføre et nylig registrert domene?
+Nei. ICANN krever 60 dager mellom registrering/overføring.
+
+## Relaterte begreper
+
+- [Registrere domene](/domener/registrere-domene) – opprette nytt domene
+- [Domenenavn](/domener/hva-er-et-domene) – hva et domene er
+- [WHOIS](/domener/whois-og-personvern) – eierinformasjon
+- [Bytte navnetjener](/dns/bytte-navnetjener) – flytte DNS separat
+- [DNS](/dns/hva-er-dns) – fungerer uavbrutt under overføring
+
+## Se også
+
+- [Registrere domene](/domener/registrere-domene)
+- [WHOIS og personvern](/domener/whois-og-personvern)
+
+## Oppsummering
+
+Domeneoverføring flytter domenet til ny registrar med en EPP-kode. Ingen nedetid, og prosessen tar 1–7 dager.

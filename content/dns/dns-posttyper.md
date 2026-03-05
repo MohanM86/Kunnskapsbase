@@ -1,70 +1,57 @@
 ---
-title: DNS-posttyper forklart
-description: Komplett oversikt over DNS-posttyper – A, AAAA, CNAME, MX, TXT, NS, SOA, SRV og CAA. Med eksempler og bruksområder for alle typer.
-entityType: Standard
-category: DNS
-subcategory: Konfigurasjon
-topic: DNS Records
-aliases: ["DNS records", "DNS-poster", "A-post", "MX-post", "CNAME", "TXT-post", "nameserver records"]
-related: ["hva-er-dns", "bytte-navnetjener", "spf-dkim-dmarc"]
-seeAlso: ["sette-opp-epost", "ssl-sertifikat"]
-tags: [DNS, A-post, CNAME, MX, TXT, NS, posttyper, records]
-updatedAt: "2024-10-25"
+title: "DNS-posttyper forklart"
+slug: "dns-posttyper"
+category: "DNS"
+subcategory: "Konfigurasjon"
+description: "Oversikt over DNS-posttyper som A, AAAA, CNAME, MX, TXT, NS og CAA med eksempler og bruksområder."
+keywords: ["DNS-poster", "A-post", "CNAME", "MX-post", "TXT-post", "NS"]
+date: "2024-10-25"
+lastReviewed: "2025-03-05"
+author: "Kunnskapsbase"
+readingTime: 5
+draft: false
+entityType: "Standard"
+topic: "DNS Records"
+aliases: ["DNS records", "DNS-poster", "A-post", "MX-post", "CNAME"]
+related: ["hva-er-dns", "bytte-navnetjener", "spf-dkim-dmarc", "sette-opp-epost"]
+seeAlso: ["hva-er-dns", "spf-dkim-dmarc"]
+tags: ["DNS", "A-post", "CNAME", "MX", "TXT", "NS"]
+updatedAt: "2025-03-05"
 featured: true
+contentType: "knowledge-article"
+difficulty: "beginner"
 ---
 
-DNS bruker ulike **posttyper** (records) for å peke til ulike tjenester.
+# DNS-posttyper forklart
 
-## A-post – IPv4-adresse
+DNS-posttyper er ulike oppføringer i DNS-systemet som peker domenenavn til servere, e-post, verifisering og andre tjenester.
 
-Peker domenenavn til en IPv4-adresse.
+> **Kort forklart**
+> Hver posttype har et spesifikt formål – A peker til webservere, MX til e-postservere, og TXT brukes for sikkerhet og verifisering.
 
-```
-kunnskapsbase.no.  3600  IN  A  185.107.56.200
-```
+## Hva betyr begrepet
 
-## AAAA-post – IPv6-adresse
+DNS bruker ulike posttyper (records) for å koble domenenavn til tjenester. Riktig konfigurasjon er avgjørende for at nettsider og e-post fungerer.
 
-```
-kunnskapsbase.no.  3600  IN  AAAA  2001:db8::1
-```
-
-## CNAME-post – Alias
-
-Peker til et annet domenenavn. Kan ikke brukes på rotdomenet.
+## Hvordan fungerer det
 
 ```
-www.kunnskapsbase.no.  3600  IN  CNAME  kunnskapsbase.no.
+Domene → DNS-oppslag → Posttype (A/MX/CNAME/TXT) → Riktig server
 ```
 
-## MX-post – E-postserver
+- **A-post** – Peker til IPv4-adresse: `kunnskapsbase.no → 185.107.56.200`
+- **AAAA-post** – Peker til IPv6-adresse
+- **CNAME** – Alias til et annet domene: `www → kunnskapsbase.no`
+- **MX-post** – Styrer e-postlevering. Lavest tall = høyest prioritet
+- **TXT-post** – Brukes for SPF, DKIM, DMARC og verifisering
+- **NS-post** – Angir autoritative navnetjenere
+- **CAA-post** – Bestemmer hvem som kan utstede SSL-sertifikater
 
-```
-kunnskapsbase.no.  3600  IN  MX  10  mail.kunnskapsbase.no.
-```
+## Hvorfor er det viktig
 
-Lavest prioritetstall velges først. Ha alltid to MX-poster.
+Feil i DNS-poster er en av de vanligste årsakene til at nettsider ikke lastes eller e-post ikke leveres.
 
-## TXT-post – Tekst og verifisering
-
-```
-kunnskapsbase.no.  IN  TXT  "v=spf1 include:_spf.google.com ~all"
-_dmarc.kunnskapsbase.no.  IN  TXT  "v=DMARC1; p=quarantine"
-```
-
-## NS-post – Navnetjenere
-
-```
-kunnskapsbase.no.  86400  IN  NS  ns1.domenehotell.no.
-```
-
-## CAA-post – SSL-autorisasjon
-
-```
-kunnskapsbase.no.  3600  IN  CAA  0 issue "letsencrypt.org"
-```
-
-## Oversikt
+## Eksempler
 
 | Type | Bruk |
 |------|------|
@@ -75,5 +62,37 @@ kunnskapsbase.no.  3600  IN  CAA  0 issue "letsencrypt.org"
 | TXT | Verifisering/SPF/DKIM |
 | NS | Navnetjener |
 | CAA | SSL-autorisasjon |
-| SRV | Tjenestelokasjon |
-| PTR | Omvendt oppslag |
+
+## Vanlige spørsmål
+
+### Kan jeg ha flere A-poster?
+Ja. Det brukes for lastbalansering mellom flere servere.
+
+### Hva er forskjellen på A og CNAME?
+A peker til en IP-adresse. CNAME peker til et annet domenenavn.
+
+### Kan jeg bruke CNAME på rotdomenet?
+Nei, teknisk sett ikke. Noen leverandører tilbyr CNAME-flattening.
+
+### Hvor mange MX-poster trenger jeg?
+Minst én, men to anbefales for redundans.
+
+### Hva betyr TTL i DNS-poster?
+Time To Live – hvor lenge oppføringen caches før ny sjekk.
+
+## Relaterte begreper
+
+- [DNS](/dns/hva-er-dns) – systemet som bruker postene
+- [Bytte navnetjener](/dns/bytte-navnetjener) – flytte DNS-administrasjon
+- [SPF, DKIM og DMARC](/epost/spf-dkim-dmarc) – e-postsikkerhet via TXT
+- [E-postoppsett](/epost/sette-opp-epost) – MX-poster for e-post
+- [SSL-sertifikat](/nettsider/ssl-sertifikat) – CAA-poster for HTTPS
+
+## Se også
+
+- [Hva er DNS](/dns/hva-er-dns)
+- [SPF, DKIM og DMARC](/epost/spf-dkim-dmarc)
+
+## Oppsummering
+
+DNS-posttyper styrer hvordan domenet kobles til webservere, e-post og sikkerhet. De viktigste er A, CNAME, MX og TXT.
