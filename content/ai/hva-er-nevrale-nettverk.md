@@ -5,6 +5,7 @@ category: ai
 description: Nevrale nettverk er AI-systemer inspirert av hjernens struktur som lærer å gjenkjenne mønstre ved å behandle data gjennom lag av kunstige nevroner.
 keywords: nevrale nettverk, kunstige nevroner, dyp læring, maskinlæring, AI, bildegjenkjenning, deep learning
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er nevrale nettverk

@@ -5,6 +5,7 @@ category: ai
 description: Store språkmodeller er AI-systemer trent på enorme tekstmengder som kan forstå og generere menneskelig språk på en svært naturlig måte.
 keywords: store språkmodeller, LLM, GPT, ChatGPT, Claude, språk-AI, generativ AI, transformer
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er store språkmodeller

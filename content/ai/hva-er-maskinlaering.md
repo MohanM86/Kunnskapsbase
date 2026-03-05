@@ -5,6 +5,7 @@ category: ai
 description: Maskinlæring er en gren av kunstig intelligens der datamaskiner lærer fra data uten å bli eksplisitt programmert for hver oppgave.
 keywords: maskinlæring, kunstig intelligens, AI, nevrale nettverk, algoritme, datanalyse, modelltrening
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er maskinlæring

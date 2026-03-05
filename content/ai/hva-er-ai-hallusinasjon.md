@@ -5,6 +5,7 @@ category: ai
 description: AI-hallusinasjon er når et AI-system produserer feil, oppdiktet eller misvisende informasjon med høy selvtillit som om det var sant.
 keywords: AI-hallusinasjon, feilinformasjon, ChatGPT feil, språkmodell, AI-pålitelighet, faktafeil AI, LLM-feil
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er AI-hallusinasjon

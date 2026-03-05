@@ -5,6 +5,7 @@ category: ai
 description: Forsterkningslæring er en AI-metode der et system lærer gjennom prøving og feiling ved å motta belønning for riktige handlinger og straff for feil.
 keywords: forsterkningslæring, reinforcement learning, belønning, AI-trening, spillende AI, AlphaGo, robotikk
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er forsterkningslæring

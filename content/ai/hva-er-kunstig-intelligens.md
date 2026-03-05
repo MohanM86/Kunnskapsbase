@@ -5,6 +5,7 @@ category: ai
 description: Kunstig intelligens er teknologi som gjør det mulig for datamaskiner å utføre oppgaver som normalt krever menneskelig intelligens.
 keywords: kunstig intelligens, AI, maskinlæring, automatisering, robotikk, språkmodell, ChatGPT
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er kunstig intelligens

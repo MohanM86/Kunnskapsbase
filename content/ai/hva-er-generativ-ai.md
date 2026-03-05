@@ -5,6 +5,7 @@ category: ai
 description: Generativ AI er kunstig intelligens som kan skape nytt innhold som tekst, bilder, musikk og kode basert på instruksjoner fra brukeren.
 keywords: generativ AI, generative modeller, DALL-E, ChatGPT, bildegenerering, tekstgenerering, kreativ AI
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er generativ AI

@@ -5,6 +5,7 @@ category: ai
 description: Naturlig språkbehandling er en gren av AI som gjør datamaskiner i stand til å forstå, tolke og generere menneskelig språk.
 keywords: naturlig språkbehandling, NLP, tekstanalyse, AI, språkmodell, sentimentanalyse, chatbot
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er naturlig språkbehandling

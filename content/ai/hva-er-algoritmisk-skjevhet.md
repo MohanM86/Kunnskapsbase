@@ -5,6 +5,7 @@ category: ai
 description: Algoritmisk skjevhet er systematiske feil i AI-systemer som fører til urettferdige resultater, ofte som følge av skjeve treningsdata eller designvalg.
 keywords: algoritmisk skjevhet, AI-bias, diskriminering, rettferdig AI, maskinlæring, treningsdata, AI-etikk
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er algoritmisk skjevhet

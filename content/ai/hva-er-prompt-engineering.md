@@ -5,6 +5,7 @@ category: ai
 description: Prompt engineering er kunsten å formulere instruksjoner til AI-systemer på en måte som gir de beste og mest nøyaktige svarene.
 keywords: prompt engineering, AI-instruksjoner, ChatGPT, språkmodell, AI-prompts, instruksjonsdesign, generativ AI
 readingTime: 5 min
+updatedAt: "2025-01-15"
 ---
 
 # Hva er prompt engineering
