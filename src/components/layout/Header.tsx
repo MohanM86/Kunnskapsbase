@@ -30,6 +30,7 @@ const PRIMARY_NAV = [
 ];
 
 const MEGA_MENU_CATS = [
+  { href: '/seo', label: 'SEO', desc: 'Søkemotoroptimalisering og synlighet' },
   { href: '/handel', label: 'Handel', desc: 'Toll, import og forbruker' },
   { href: '/bolig', label: 'Bolig', desc: 'Boligkjøp, lån og oppussing' },
   { href: '/jobb', label: 'Jobb', desc: 'CV, intervju og karriere' },

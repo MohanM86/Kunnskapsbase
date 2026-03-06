@@ -9,6 +9,12 @@ export const CATEGORIES: CategoryConfig[] = [
     subcategories: [{ slug: 'internett', label: 'Internett' }, { slug: 'programmering', label: 'Programmering' }, { slug: 'sikkerhet', label: 'Sikkerhet' }, { slug: 'maskinvare', label: 'Maskinvare' }],
   },
   {
+    slug: 'seo', label: 'SEO',
+    description: 'Søkemotoroptimalisering, søkeord, lenkebygging, teknisk SEO og Google-verktøy.',
+    introText: 'SEO (søkemotoroptimalisering) handler om å øke nettsiders synlighet i søkemotorer som Google. Her finner du artikler om søkeord, on-page og off-page SEO, teknisk optimalisering, lenkebygging og verktøy som Google Search Console.',
+    subcategories: [{ slug: 'grunnleggende', label: 'Grunnleggende' }, { slug: 'teknisk', label: 'Teknisk' }, { slug: 'innhold', label: 'Innhold' }, { slug: 'off-page', label: 'Off-page' }, { slug: 'verktoy', label: 'Verktøy' }],
+  },
+  {
     slug: 'ai', label: 'AI',
     description: 'Kunstig intelligens, maskinlæring, store språkmodeller og automatisering.',
     introText: 'Kunstig intelligens forandrer måten vi jobber, kommuniserer og løser problemer. Her finner du artikler om maskinlæring, store språkmodeller, AI-agenter, prompt engineering og etikk – fra grunnleggende konsepter til avanserte teknikker.',
