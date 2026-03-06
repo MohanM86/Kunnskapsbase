@@ -92,16 +92,40 @@ export const CATEGORIES: CategoryConfig[] = [
     introText: 'Underholdning er en viktig del av hverdagen. Her finner du artikler om film, TV-serier, musikk, strømmetjenester, spill og kulturopplevelser – fra anmeldelser og anbefalinger til forståelse av mediene som former vår tid.',
     subcategories: [{ slug: 'film-og-tv', label: 'Film og TV' }, { slug: 'musikk', label: 'Musikk' }, { slug: 'spill', label: 'Spill' }, { slug: 'streaming', label: 'Streaming' }],
   },
+  {
+    slug: 'bil', label: 'Bil',
+    description: 'Elbil, bilforsikring, EU-kontroll, vedlikehold og selvkjørende teknologi.',
+    introText: 'Alt om bil – fra elbil og hybridbil til bilforsikring, EU-kontroll og selvkjørende teknologi. Praktisk kunnskap for norske bilister.',
+    subcategories: [{ slug: 'elbil', label: 'Elbil' }, { slug: 'vedlikehold', label: 'Vedlikehold' }, { slug: 'forsikring-bil', label: 'Forsikring' }],
+  },
+  {
+    slug: 'dyr', label: 'Dyr',
+    description: 'Kjæledyr, hundetrening, dyrevelferd, dyreforsikring og allergi.',
+    introText: 'Kjæledyr beriker livene våre. Her finner du artikler om hundetrening, kattens adferd, dyrevelferd, dyreforsikring, allergi og mikrochiping.',
+    subcategories: [{ slug: 'hund', label: 'Hund' }, { slug: 'katt', label: 'Katt' }, { slug: 'dyrevelferd', label: 'Dyrevelferd' }],
+  },
+  {
+    slug: 'jus', label: 'Jus',
+    description: 'Forbrukerkjøpsloven, arbeidsmiljøloven, GDPR, arverett og strafferett.',
+    introText: 'Jus handler om lover og rettigheter som påvirker hverdagen din. Her finner du artikler om forbrukerkjøpsloven, arbeidsmiljøloven, GDPR, husleieloven, arverett og strafferett.',
+    subcategories: [{ slug: 'forbrukerrett', label: 'Forbrukerrett' }, { slug: 'arbeidsrett', label: 'Arbeidsrett' }, { slug: 'personvern', label: 'Personvern' }],
+  },
+  {
+    slug: 'klima', label: 'Klima',
+    description: 'Klimaendringer, fornybar energi, Parisavtalen og karbonfotavtrykk.',
+    introText: 'Klimaendringer er vår tids største utfordring. Her finner du artikler om drivhuseffekten, fornybar energi, Parisavtalen, karbonfotavtrykk og havforsuring.',
+    subcategories: [{ slug: 'fornybar-energi', label: 'Fornybar energi' }, { slug: 'klimapolitikk', label: 'Klimapolitikk' }],
+  },
+  {
+    slug: 'hobby', label: 'Hobby',
+    description: 'Sjakk, fotografi, friluftsliv, hagearbeid og kreative aktiviteter.',
+    introText: 'Hobbyer gir glede, mestring og kreativitet. Her finner du artikler om sjakk, fotografi, friluftsliv, hagearbeid, strikking og 3D-printing.',
+    subcategories: [{ slug: 'friluftsliv', label: 'Friluftsliv' }, { slug: 'kreativt', label: 'Kreativt' }, { slug: 'spill-hobby', label: 'Spill og brettspill' }],
+  },
 ];
 
 /* ── Dynamic categories without config get auto-descriptions ── */
-export const DYNAMIC_CAT_INTROS: Record<string, string> = {
-  bil: 'Alt om bil – fra elbil og hybridbil til bilforsikring, EU-kontroll og selvkjørende teknologi. Praktisk kunnskap for norske bilister.',
-  dyr: 'Kjæledyr beriker livene våre. Her finner du artikler om hundetrening, kattens adferd, dyrevelferd, dyreforsikring, allergi og mikrochiping.',
-  jus: 'Jus handler om lover og rettigheter som påvirker hverdagen din. Her finner du artikler om forbrukerkjøpsloven, arbeidsmiljøloven, GDPR, husleieloven, arverett og strafferett.',
-  klima: 'Klimaendringer er vår tids største utfordring. Her finner du artikler om drivhuseffekten, fornybar energi, Parisavtalen, karbonfotavtrykk og havforsuring.',
-  hobby: 'Hobbyer gir glede, mestring og kreativitet. Her finner du artikler om sjakk, fotografi, friluftsliv, hagearbeid, strikking og 3D-printing.',
-};
+export const DYNAMIC_CAT_INTROS: Record<string, string> = {};
 
 export const LEGACY_IT_SLUGS = ['domener', 'dns', 'epost', 'nettsider'];
 export const LEGACY_LABELS: Record<string, string> = { domener: 'Domener', dns: 'DNS', epost: 'E-post', nettsider: 'Nettsider' };
