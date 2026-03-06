@@ -54,7 +54,7 @@ export const CATEGORIES: CategoryConfig[] = [
     slug: 'helse', label: 'Helse',
     description: 'Medisin, ernæring, mental helse, trening og velvære.',
     introText: 'God helse er grunnlaget for livskvalitet. Her finner du artikler om kroppen, ernæring, styrketrening, søvn, mental helse og medisinsk kunnskap – basert på forskning og skrevet for å være forståelig og nyttig i hverdagen.',
-    subcategories: [{ slug: 'medisin', label: 'Medisin' }, { slug: 'diabetes', label: 'Diabetes' }, { slug: 'hjerte', label: 'Hjerte og kar' }, { slug: 'ernaering', label: 'Ernæring' }, { slug: 'mental-helse', label: 'Mental helse' }, { slug: 'kroppen', label: 'Kroppen' }, { slug: 'trening', label: 'Trening' }],
+    subcategories: [{ slug: 'medisin', label: 'Medisin' }, { slug: 'diabetes', label: 'Diabetes' }, { slug: 'hjerte', label: 'Hjerte og kar' }, { slug: 'kreft', label: 'Kreft' }, { slug: 'ernaering', label: 'Ernæring' }, { slug: 'mental-helse', label: 'Mental helse' }, { slug: 'kroppen', label: 'Kroppen' }, { slug: 'trening', label: 'Trening' }],
   },
   {
     slug: 'sport', label: 'Sport',
