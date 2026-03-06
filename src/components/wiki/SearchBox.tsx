@@ -52,7 +52,7 @@ export default function SearchBox({ compact, autoFocus, initialQuery = '', onRes
           {loading && <span className="search-spinner" aria-hidden="true">⟳</span>}
         </div>
       </form>
-      {isOpen && results.length > 0 && compact && (
+      {isOpen && results.length > 0 && (
         <div className="search-dropdown" role="listbox" id="search-listbox" aria-label="Søkeresultater">
           {results.slice(0, 5).map((r) => (<Link key={r.slug} href={`/${r.slugPath.join('/')}`} className="search-result-item" onClick={() => setIsOpen(false)} role="option"><span className="result-title">{r.title}</span><span className="result-cat">{r.category}</span></Link>))}
           {results.length > 5 && (<button className="search-see-all" onClick={() => { setIsOpen(false); router.push(`/?q=${encodeURIComponent(query)}`); }}>Se alle {results.length} resultater →</button>)}
