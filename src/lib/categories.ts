@@ -27,6 +27,12 @@ export const CATEGORIES: CategoryConfig[] = [
     subcategories: [{ slug: 'personlig-oekonomi', label: 'Personlig økonomi' }, { slug: 'investering', label: 'Investering' }, { slug: 'naeringsliv', label: 'Næringsliv' }],
   },
   {
+    slug: 'krypto', label: 'Krypto',
+    description: 'Blockchain, Bitcoin, Ethereum, DeFi, NFT, Web3 og kryptovaluta.',
+    introText: 'Krypto omfatter blockchain-teknologi, kryptovalutaer og det desentraliserte internett. I denne kategorien finner du artikler om Bitcoin, Ethereum, DeFi, NFT-er, smarte kontrakter og Web3 – forklart på en måte som gjør kompleks teknologi tilgjengelig for alle.',
+    subcategories: [{ slug: 'grunnleggende', label: 'Grunnleggende' }, { slug: 'kryptovalutaer', label: 'Kryptovalutaer' }, { slug: 'defi', label: 'DeFi' }],
+  },
+  {
     slug: 'handel', label: 'Handel',
     description: 'Toll, import, eksport, netthandel og forbrukerrettigheter.',
     introText: 'Handel berører alle som kjøper og selger varer. Her finner du artikler om toll og avgifter, import og eksport, netthandel, forbrukerrettigheter, frakt og internasjonal handel – praktisk kunnskap for både forbrukere og næringsdrivende.',
