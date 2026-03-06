@@ -1,28 +1,55 @@
 import { NextRequest, NextResponse } from 'next/server';
-import Fuse from 'fuse.js';
-import { getAllArticlesForSearch } from '@/lib/articles';
-
-let cachedIndex: Fuse<ReturnType<typeof getAllArticlesForSearch>[number]> | null = null;
-let cachedData: ReturnType<typeof getAllArticlesForSearch> | null = null;
-
-function getSearchIndex() {
-  if (!cachedIndex || !cachedData) {
-    cachedData = getAllArticlesForSearch();
-    cachedIndex = new Fuse(cachedData, {
-      keys: [{ name: 'title', weight: 0.5 }, { name: 'description', weight: 0.3 }, { name: 'content', weight: 0.15 }, { name: 'tags', weight: 0.05 }],
-      threshold: 0.4, includeScore: true, minMatchCharLength: 2,
-    });
-  }
-  return { index: cachedIndex, data: cachedData };
-}
+import { getAllArticlesMeta } from '@/lib/articles';
 
 export async function GET(req: NextRequest) {
-  const q = req.nextUrl.searchParams.get('q') || '';
-  if (q.trim().length < 2) return NextResponse.json({ results: [] });
-  const { index } = getSearchIndex();
-  const results = index.search(q).slice(0, 20).map((r) => ({
-    slug: r.item.slug, slugPath: r.item.slugPath, title: r.item.title, description: r.item.description,
-    category: r.item.category, excerpt: r.item.content.slice(0, 150) + '...', score: r.score ?? 1,
-  }));
+  const q = req.nextUrl.searchParams.get('q')?.trim().toLowerCase() || '';
+  if (q.length < 2) return NextResponse.json({ results: [] });
+
+  const allArticles = getAllArticlesMeta();
+
+  const results = allArticles
+    .map((article) => {
+      let score = 0;
+      const title = article.title.toLowerCase();
+      const desc = article.description?.toLowerCase() || '';
+      const tags = (article.tags || []).map((t: string) => t.toLowerCase());
+      const aliases = (article.aliases || []).map((a: string) => a.toLowerCase());
+
+      // Exact title match
+      if (title === q) score += 100;
+      // Title starts with query
+      else if (title.startsWith(q)) score += 80;
+      // Title contains query
+      else if (title.includes(q)) score += 60;
+
+      // Alias match
+      for (const alias of aliases) {
+        if (alias === q) score += 90;
+        else if (alias.startsWith(q)) score += 70;
+        else if (alias.includes(q)) score += 50;
+      }
+
+      // Tag match
+      for (const tag of tags) {
+        if (tag === q) score += 40;
+        else if (tag.includes(q)) score += 20;
+      }
+
+      // Description match
+      if (desc.includes(q)) score += 10;
+
+      return { ...article, score };
+    })
+    .filter((a) => a.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 20)
+    .map((a) => ({
+      slug: a.slug,
+      slugPath: a.slugPath,
+      title: a.title,
+      description: a.description,
+      category: a.category,
+    }));
+
   return NextResponse.json({ results });
 }
