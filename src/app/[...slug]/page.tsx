@@ -10,6 +10,7 @@ import RelatedArticles from '@/components/wiki/RelatedArticles';
 import ArticleCard from '@/components/wiki/ArticleCard';
 import DefinitionBox from '@/components/wiki/DefinitionBox';
 import KnowledgeGraph from '@/components/wiki/KnowledgeGraph';
+import TableOfContents from '@/components/wiki/TableOfContents';
 import JsonLd from '@/components/seo/JsonLd';
 
 const BASE_URL = 'https://kunnskapsbase.no';
@@ -68,22 +69,27 @@ export default async function ContentPage({ params }: PageProps) {
           <Sidebar categoryTree={categoryTree} activeCategory={slug[0]} />
           <div className="wiki-main">
             <Breadcrumbs items={breadcrumbs} />
-            <article>
-              <header className="article-header">
-                <div className="article-meta">
-                  <span className="article-cat">{article.frontmatter.category}</span>
-                  {article.frontmatter.subcategory && <span className="article-cat article-cat-sub">{article.frontmatter.subcategory}</span>}
-                  {article.frontmatter.topic && <span className="article-cat article-cat-topic">{article.frontmatter.topic}</span>}
-                  {dateStr && <time className="article-date" dateTime={article.frontmatter.updatedAt}>{dateStr}</time>}
-                  <span className="article-reading-time">· {article.readingTime}</span>
-                </div>
-                <h1 className="article-title">{article.frontmatter.title}</h1>
-                <DefinitionBox title={article.frontmatter.title} description={article.frontmatter.description} entityType={article.frontmatter.entityType} aliases={article.frontmatter.aliases} />
-                {article.frontmatter.tags?.length > 0 && (<div className="article-tags">{article.frontmatter.tags.map((tag) => (<span key={tag} className="tag">{tag}</span>))}</div>)}
-              </header>
-              <hr className="article-divider" />
-              <div className="article-content" dangerouslySetInnerHTML={{ __html: article.htmlContent }} />
-            </article>
+            <div className="article-with-toc">
+              <article>
+                <header className="article-header">
+                  <div className="article-meta">
+                    <span className="article-cat">{article.frontmatter.category}</span>
+                    {article.frontmatter.subcategory && <span className="article-cat article-cat-sub">{article.frontmatter.subcategory}</span>}
+                    {article.frontmatter.topic && <span className="article-cat article-cat-topic">{article.frontmatter.topic}</span>}
+                    {dateStr && <time className="article-date" dateTime={article.frontmatter.updatedAt}>{dateStr}</time>}
+                    <span className="article-reading-time">· {article.readingTime}</span>
+                  </div>
+                  <h1 className="article-title">{article.frontmatter.title}</h1>
+                  <DefinitionBox title={article.frontmatter.title} description={article.frontmatter.description} entityType={article.frontmatter.entityType} aliases={article.frontmatter.aliases} />
+                  {article.frontmatter.tags?.length > 0 && (<div className="article-tags">{article.frontmatter.tags.map((tag) => (<span key={tag} className="tag">{tag}</span>))}</div>)}
+                </header>
+                <hr className="article-divider" />
+                <div className="article-content" dangerouslySetInnerHTML={{ __html: article.htmlContent }} />
+              </article>
+              <aside className="toc-sidebar">
+                <TableOfContents />
+              </aside>
+            </div>
             <KnowledgeGraph related={explicitRelated} seeAlso={explicitSeeAlso} sameTopic={sameTopic} />
             <RelatedArticles articles={related} />
           </div>
