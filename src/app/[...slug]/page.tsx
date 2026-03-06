@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getAllArticleSlugs, getArticleBySlug, getAllArticlesMeta, getCategoryTree, getRelatedArticles, resolveArticlesBySlug } from '@/lib/articles';
-import { CATEGORIES, LEGACY_IT_SLUGS, CATEGORY_LABEL } from '@/lib/categories';
+import { CATEGORIES, LEGACY_IT_SLUGS, CATEGORY_LABEL, DYNAMIC_CAT_INTROS } from '@/lib/categories';
 import { buildBreadcrumbs } from '@/lib/breadcrumbs';
 import { buildArticleSchema, buildBreadcrumbSchema, buildCollectionPageSchema } from '@/lib/schema';
 import Sidebar from '@/components/wiki/Sidebar';
@@ -32,8 +32,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: fm.title, description: fm.description, alternates: { canonical: url }, openGraph: { title: fm.title, description: fm.description, url, type: 'article', images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: fm.title }] } };
   }
   const catSlug = slug[0];
-  const catLabel = getCategoryTree()[catSlug]?.label ?? CATEGORIES.find((c) => c.slug === catSlug)?.label;
-  if (catLabel) return { title: catLabel, description: `Artikler og guider om ${catLabel.toLowerCase()}` };
+  const catConfig = CATEGORIES.find((c) => c.slug === catSlug);
+  const catLabel = getCategoryTree()[catSlug]?.label ?? catConfig?.label;
+  if (catLabel) {
+    const desc = catConfig?.introText || DYNAMIC_CAT_INTROS[catSlug] || `Artikler og guider om ${catLabel.toLowerCase()}`;
+    return { title: catLabel, description: desc };
+  }
   return { title: 'Ikke funnet' };
 }
 
@@ -88,14 +92,28 @@ export default async function ContentPage({ params }: PageProps) {
     );
   }
 
-  // Category page
+  // ── Category page ──
   const catSlug = slug[0];
-  const cat = categoryTree[catSlug] || (() => { const regCat = CATEGORIES.find((c) => c.slug === catSlug); if (!regCat) return null; return { label: regCat.label, slug: catSlug, subcategories: {}, articles: [] as any[] }; })();
+  const cat = categoryTree[catSlug] || (() => {
+    const regCat = CATEGORIES.find((c) => c.slug === catSlug);
+    if (!regCat) return null;
+    return { label: regCat.label, slug: catSlug, subcategories: {}, articles: [] as any[] };
+  })();
   if (!cat) return notFound();
 
   const breadcrumbs = [{ label: 'Hjem', href: '/' }, { label: cat.label, href: `/${catSlug}` }];
   const allCatArticles = [...cat.articles, ...Object.values(cat.subcategories).flatMap((s) => s.articles)];
-  const catSchema = buildCollectionPageSchema(`${BASE_URL}/${catSlug}`, `${cat.label} – Kunnskapsbase.no`, `Artikler og guider om ${cat.label.toLowerCase()}`, allCatArticles.length);
+
+  // Get intro text
+  const catConfig = CATEGORIES.find((c) => c.slug === catSlug);
+  const introText = catConfig?.introText || DYNAMIC_CAT_INTROS[catSlug] || '';
+
+  const catSchema = buildCollectionPageSchema(
+    `${BASE_URL}/${catSlug}`,
+    `${cat.label} – Kunnskapsbase.no`,
+    introText || `Artikler og guider om ${cat.label.toLowerCase()}`,
+    allCatArticles.length
+  );
 
   return (
     <><JsonLd schema={[catSchema, buildBreadcrumbSchema(breadcrumbs)]} />
@@ -105,11 +123,42 @@ export default async function ContentPage({ params }: PageProps) {
           <Breadcrumbs items={breadcrumbs} />
           <div className="category-page-header">
             <h1 className="category-page-title">{cat.label}</h1>
-            <p className="category-page-desc">{allCatArticles.length > 0 ? `${allCatArticles.length} artikler i denne kategorien` : CATEGORIES.find((c) => c.slug === catSlug)?.description || 'Innhold kommer snart.'}</p>
+            {introText ? (
+              <p className="category-page-intro">{introText}</p>
+            ) : (
+              <p className="category-page-desc">
+                {allCatArticles.length > 0
+                  ? `${allCatArticles.length} artikler i denne kategorien`
+                  : 'Innhold kommer snart.'}
+              </p>
+            )}
+            {introText && allCatArticles.length > 0 && (
+              <p className="category-page-count">{allCatArticles.length} artikler</p>
+            )}
           </div>
-          {allCatArticles.length === 0 && (<div className="category-empty"><p>Ingen artikler ennå i denne kategorien. Sjekk tilbake snart.</p><a href="/tema" className="category-empty-link">Se alle kategorier →</a></div>)}
-          {cat.articles.length > 0 && (<section className="home-section"><div className="articles-grid">{cat.articles.map((a) => <ArticleCard key={a.slug} article={a} />)}</div></section>)}
-          {Object.entries(cat.subcategories).map(([subSlug, sub]) => (<section key={subSlug} className="home-section"><div className="home-section-header"><h2 className="home-section-title">{sub.label}</h2></div><div className="articles-grid">{sub.articles.map((a) => <ArticleCard key={a.slug} article={a} />)}</div></section>))}
+          {allCatArticles.length === 0 && (
+            <div className="category-empty">
+              <p>Ingen artikler ennå i denne kategorien. Sjekk tilbake snart.</p>
+              <a href="/tema" className="category-empty-link">Se alle kategorier →</a>
+            </div>
+          )}
+          {cat.articles.length > 0 && (
+            <section className="home-section">
+              <div className="articles-grid">
+                {cat.articles.map((a) => <ArticleCard key={a.slug} article={a} />)}
+              </div>
+            </section>
+          )}
+          {Object.entries(cat.subcategories).map(([subSlug, sub]) => (
+            <section key={subSlug} className="home-section">
+              <div className="home-section-header">
+                <h2 className="home-section-title">{sub.label}</h2>
+              </div>
+              <div className="articles-grid">
+                {sub.articles.map((a) => <ArticleCard key={a.slug} article={a} />)}
+              </div>
+            </section>
+          ))}
         </div>
       </div>
     </>

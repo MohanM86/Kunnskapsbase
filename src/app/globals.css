@@ -47,7 +47,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Sidebar */
 .sidebar { width: var(--sidebar-width); flex-shrink: 0; position: sticky; top: calc(var(--header-height) + 1.5rem); max-height: calc(100vh - var(--header-height) - 3rem); overflow-y: auto; padding: 1.5rem 0; }
-.sidebar-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-light); padding: 0 1rem 0.75rem; }
+.sidebar-title { display: none; }
 .sidebar-section { margin-bottom: 0.25rem; }
 .sidebar-category { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 1rem; font-size: 0.85rem; font-weight: 600; color: var(--color-text); border-radius: var(--radius-sm); transition: background var(--transition); }
 .sidebar-category:hover { background: var(--color-border-light); }
@@ -238,6 +238,32 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .header-dropdown-menu { position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: white; border: 1px solid var(--color-border); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 0.4rem 0; min-width: 150px; z-index: 200; display: flex; flex-direction: column; }
 .header-dropdown-menu a { padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500; color: var(--color-text); text-decoration: none; }
 .header-dropdown-menu a:hover { background: var(--color-accent-light); color: var(--color-accent); text-decoration: none; }
+
+/* Mega menu */
+.header-nav-left { display: flex; align-items: center; gap: 0.25rem; }
+.header-nav-right { display: flex; align-items: center; gap: 0.25rem; }
+.header-mega-wrap { position: relative; display: inline-flex; align-items: center; }
+.header-mega-btn { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.875rem; font-weight: 500; color: var(--color-text-muted); cursor: pointer; font-family: inherit; white-space: nowrap; transition: all var(--transition); }
+.header-mega-btn:hover { color: var(--color-text); background: var(--color-border-light); }
+.header-mega-menu { position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: white; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: 1rem; min-width: 480px; z-index: 200; }
+.mega-menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.35rem; }
+.mega-menu-item { display: flex; flex-direction: column; gap: 0.1rem; padding: 0.6rem 0.8rem; border-radius: var(--radius); text-decoration: none; transition: all var(--transition); }
+.mega-menu-item:hover { background: var(--color-accent-light); text-decoration: none; }
+.mega-menu-label { font-size: 0.875rem; font-weight: 600; color: var(--color-text); }
+.mega-menu-item:hover .mega-menu-label { color: var(--color-accent); }
+.mega-menu-desc { font-size: 0.75rem; color: var(--color-text-muted); line-height: 1.4; }
+.mega-menu-footer { border-top: 1px solid var(--color-border-light); margin-top: 0.5rem; padding-top: 0.6rem; text-align: center; }
+.mega-menu-footer a { font-size: 0.82rem; font-weight: 500; color: var(--color-accent); text-decoration: none; }
+.mega-menu-footer a:hover { text-decoration: underline; }
+
+/* Sidebar groups */
+.sidebar-group { margin-bottom: 1.25rem; }
+.sidebar-group-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); padding: 0.75rem 1rem 0.35rem; border-top: 1px solid var(--color-border-light); }
+.sidebar-group:first-child .sidebar-group-label { border-top: none; padding-top: 0; }
+
+/* Category page intro */
+.category-page-intro { font-size: 1rem; color: var(--color-text-muted); line-height: 1.65; max-width: 640px; margin-bottom: 0.5rem; }
+.category-page-count { font-size: 0.85rem; color: var(--color-accent); font-weight: 600; }
 
 /* =====================================================
    FOOTER - New professional design
@@ -526,6 +552,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .header-nav { display: none; }
   .header-search { display: none; }
   .mobile-menu-btn { display: flex; }
+  .header-mega-menu { display: none; }
   .wiki-layout { gap: 0; }
   .sidebar { display: none; }
   .wiki-main { padding: 1.5rem 0; }
