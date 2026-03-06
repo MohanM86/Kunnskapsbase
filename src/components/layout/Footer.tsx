@@ -1,23 +1,130 @@
 import Link from 'next/link';
 
-function LogoIcon() { return (<svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="1" y="1" width="18" height="18" rx="3" stroke="white" strokeWidth="1.5"/><path d="M5 7h6M5 10h10M5 13h8" stroke="white" strokeWidth="1.5" strokeLinecap="round"/></svg>); }
+function LogoIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="20" height="20" rx="4" stroke="#4ade80" strokeWidth="1.5" />
+      <path d="M6 8h6M6 11h10M6 14h8" stroke="#4ade80" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+const CATEGORY_LINKS = [
+  { href: '/teknologi', label: 'Teknologi' },
+  { href: '/ai', label: 'AI' },
+  { href: '/oekonomi', label: 'Økonomi' },
+  { href: '/helse', label: 'Helse' },
+  { href: '/vitenskap', label: 'Vitenskap' },
+];
+
+const MORE_LINKS = [
+  { href: '/historie', label: 'Historie' },
+  { href: '/samfunn', label: 'Samfunn' },
+  { href: '/utdanning', label: 'Utdanning' },
+  { href: '/reise', label: 'Reise' },
+  { href: '/mat', label: 'Mat' },
+];
+
+const EXPLORE_LINKS = [
+  { href: '/tema', label: 'Tema' },
+  { href: '/artikler', label: 'Alle artikler' },
+  { href: '/ordbok', label: 'Ordbok' },
+  { href: '/ai-index', label: 'AI-indeks' },
+];
+
+const MACHINE_LINKS = [
+  { href: '/entity-index.json', label: 'entity-index.json', external: true },
+  { href: '/rss.xml', label: 'RSS-feed', external: true },
+  { href: '/llms.txt', label: 'llms.txt', external: true },
+  { href: '/sitemap.xml', label: 'Sitemap', external: true },
+];
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="site-footer">
+      {/* Accent bar */}
+      <div className="footer-accent-bar" aria-hidden="true" />
+
       <div className="footer-inner">
+        {/* Brand section */}
         <div className="footer-brand">
-          <Link href="/" className="site-logo"><LogoIcon /><span className="logo-text">kunnskapsbase<span className="logo-tld">.no</span></span></Link>
-          <p>Norsk kunnskapsbase for alt – teknologi, AI, økonomi, helse og mer.</p>
+          <Link href="/" className="footer-logo">
+            <LogoIcon />
+            <span className="footer-logo-text">
+              kunnskapsbase<span className="footer-logo-tld">.no</span>
+            </span>
+          </Link>
+          <p className="footer-tagline">
+            Norsk kunnskapsbase for teknologi, AI, økonomi, helse, vitenskap og mer. 
+            Åpen, strukturert og optimalisert for både mennesker og AI.
+          </p>
+          <div className="footer-badges">
+            <span className="footer-badge">CC BY 4.0</span>
+            <span className="footer-badge">Norsk bokmål</span>
+            <span className="footer-badge footer-badge-ai">AI-optimalisert</span>
+          </div>
         </div>
+
+        {/* Links sections */}
         <div className="footer-links">
-          <div><h4>Kategorier</h4><Link href="/teknologi">Teknologi</Link><Link href="/ai">AI</Link><Link href="/oekonomi">Økonomi</Link><Link href="/helse">Helse</Link><Link href="/vitenskap">Vitenskap</Link></div>
-          <div><h4>Mer</h4><Link href="/historie">Historie</Link><Link href="/samfunn">Samfunn</Link><Link href="/utdanning">Utdanning</Link><Link href="/reise">Reise</Link><Link href="/mat">Mat</Link></div>
-          <div><h4>Utforsk</h4><Link href="/tema">Tema</Link><Link href="/artikler">Alle artikler</Link><Link href="/ordbok">Ordbok</Link><Link href="/ai-index">AI-indeks</Link></div>
-          <div><h4>For maskiner</h4><a href="/entity-index.json">entity-index.json</a><a href="/rss.xml">RSS-feed</a><a href="/llms.txt">llms.txt</a><a href="/sitemap.xml">Sitemap</a></div>
+          <div className="footer-col">
+            <h4 className="footer-col-title">Kategorier</h4>
+            <ul className="footer-col-list">
+              {CATEGORY_LINKS.map(({ href, label }) => (
+                <li key={href}><Link href={href}>{label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4 className="footer-col-title">Mer</h4>
+            <ul className="footer-col-list">
+              {MORE_LINKS.map(({ href, label }) => (
+                <li key={href}><Link href={href}>{label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4 className="footer-col-title">Utforsk</h4>
+            <ul className="footer-col-list">
+              {EXPLORE_LINKS.map(({ href, label }) => (
+                <li key={href}><Link href={href}>{label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4 className="footer-col-title">For maskiner</h4>
+            <ul className="footer-col-list">
+              {MACHINE_LINKS.map(({ href, label }) => (
+                <li key={href}>
+                  <a href={href} className="footer-machine-link">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                      <path d="M4 1h7v7M11 1L5 7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-      <div className="footer-bottom"><p>&copy; {new Date().getFullYear()} kunnskapsbase.no – Innhold under CC BY 4.0</p></div>
+
+      {/* Bottom bar */}
+      <div className="footer-bottom">
+        <div className="footer-bottom-inner">
+          <p className="footer-copyright">
+            &copy; {year} kunnskapsbase.no
+          </p>
+          <p className="footer-license">
+            Innhold lisensiert under <a href="https://creativecommons.org/licenses/by/4.0/deed.no" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }
