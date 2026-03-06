@@ -5,7 +5,7 @@
   --font-serif: 'Lora', Georgia, serif;
   --color-bg: #fafaf8; --color-surface: #ffffff; --color-border: #e5e5e0;
   --color-border-light: #f0f0ec; --color-text: #1a1a18; --color-text-muted: #6b6b65;
-  --color-text-light: #9b9b95; --color-accent: #1d6a3a; --color-accent-light: #edf7f1;
+  --color-text-light: #70706c; --color-accent: #1d6a3a; --color-accent-light: #edf7f1;
   --color-accent-hover: #155330; --color-tag-bg: #f0f4f0; --color-tag-text: #2d6a3a;
   --color-code-bg: #f4f4f0; --color-highlight: #fff8e6; --color-danger: #c0392b;
   --sidebar-width: 260px; --header-height: 60px; --content-max: 760px; --page-max: 1280px;
@@ -152,10 +152,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .search-box { position: relative; }
 .search-input-wrap { display: flex; align-items: center; gap: 0.5rem; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg); padding: 0 0.75rem; transition: border-color var(--transition); }
 .search-input-wrap:focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 2px rgba(29,106,58,.12); }
-.search-icon { font-size: 0.9rem; }
+.search-icon { display: flex; align-items: center; color: var(--color-text-light); }
 .search-input { border: none; background: transparent; font-family: inherit; font-size: 0.875rem; color: var(--color-text); padding: 0.5rem 0; width: 100%; outline: none; }
 .search-input::placeholder { color: var(--color-text-light); }
-.search-spinner { font-size: 0.9rem; animation: spin 0.8s linear infinite; }
+.search-spinner { font-size: 0.9rem; animation: spin 0.8s linear infinite; color: var(--color-text-light); }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 .search-dropdown { position: absolute; top: calc(100% + 4px); left: 0; right: 0; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); box-shadow: var(--shadow-lg); z-index: 200; overflow: hidden; }
 .search-result-item { display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 1rem; font-size: 0.8rem; color: var(--color-text); border-bottom: 1px solid var(--color-border-light); transition: background var(--transition); text-decoration: none; }
@@ -338,7 +338,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #666666;
+  color: #808080;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #1a1a1a;
@@ -402,12 +402,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .footer-copyright {
   font-size: 0.8rem;
-  color: #555555;
+  color: #787878;
 }
 
 .footer-license {
   font-size: 0.8rem;
-  color: #555555;
+  color: #787878;
 }
 
 .footer-license a {
