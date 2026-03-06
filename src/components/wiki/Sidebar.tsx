@@ -51,16 +51,16 @@ export default function Sidebar({ categoryTree, activeCategory }: SidebarProps) 
   const groups = SIDEBAR_GROUPS.map((group) => ({
     ...group,
     categories: group.categories
-      .filter((slug) => categoryTree[slug])
-      .map((slug) => ({ slug, ...categoryTree[slug] })),
+      .filter((catSlug) => categoryTree[catSlug])
+      .map((catSlug) => ({ slug: catSlug, ...categoryTree[catSlug] })),
   })).filter((g) => g.categories.length > 0);
 
   // Add extras to "Annet" if any
   if (extraSlugs.length > 0) {
     const annetGroup = groups.find((g) => g.label === 'Annet');
     const extras = extraSlugs
-      .filter((slug) => categoryTree[slug])
-      .map((slug) => ({ slug, ...categoryTree[slug] }));
+      .filter((catSlug) => categoryTree[catSlug])
+      .map((catSlug) => ({ slug: catSlug, ...categoryTree[catSlug] }));
     if (annetGroup) {
       annetGroup.categories.push(...extras);
     } else {
