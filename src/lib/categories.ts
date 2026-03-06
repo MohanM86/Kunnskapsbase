@@ -48,19 +48,19 @@ export const CATEGORIES: CategoryConfig[] = [
     slug: 'jobb', label: 'Jobb',
     description: 'CV, jobbintervju, lønn, arbeidsmarked og karriere.',
     introText: 'Arbeidslivet er i stadig endring. Her finner du artikler om CV-skriving, jobbintervju, lønnsforhandlinger, arbeidsrettigheter, frilans og karriereutvikling – fra første jobb til seniorkarriere.',
-    subcategories: [{ slug: 'jobbsoek', label: 'Jobbsøk' }, { slug: 'arbeidsliv', label: 'Arbeidsliv' }, { slug: 'frilans', label: 'Frilans' }],
+    subcategories: [{ slug: 'jobbsoek', label: 'Jobbsøk' }, { slug: 'arbeidsliv', label: 'Arbeidsliv' }, { slug: 'karriere', label: 'Karriere' }, { slug: 'frilans', label: 'Frilans' }],
   },
   {
     slug: 'helse', label: 'Helse',
     description: 'Medisin, ernæring, mental helse, trening og velvære.',
     introText: 'God helse er grunnlaget for livskvalitet. Her finner du artikler om kroppen, ernæring, styrketrening, søvn, mental helse og medisinsk kunnskap – basert på forskning og skrevet for å være forståelig og nyttig i hverdagen.',
-    subcategories: [{ slug: 'medisin', label: 'Medisin' }, { slug: 'ernaering', label: 'Ernæring' }, { slug: 'mental-helse', label: 'Mental helse' }, { slug: 'trening', label: 'Trening' }],
+    subcategories: [{ slug: 'medisin', label: 'Medisin' }, { slug: 'diabetes', label: 'Diabetes' }, { slug: 'ernaering', label: 'Ernæring' }, { slug: 'mental-helse', label: 'Mental helse' }, { slug: 'kroppen', label: 'Kroppen' }, { slug: 'trening', label: 'Trening' }],
   },
   {
     slug: 'sport', label: 'Sport',
     description: 'Fotball, håndball, ski, trening, OL og idrettsverden.',
     introText: 'Sport engasjerer millioner av nordmenn. Her finner du artikler om fotball, håndball, ski, løping, sykkel, OL og idrettsverden – regler, historie, treningsråd og de store øyeblikkene i norsk og internasjonal idrett.',
-    subcategories: [{ slug: 'fotball', label: 'Fotball' }, { slug: 'vintersport', label: 'Vintersport' }, { slug: 'trening-sport', label: 'Trening' }, { slug: 'idrettshistorie', label: 'Idrettshistorie' }],
+    subcategories: [{ slug: 'fotball', label: 'Fotball' }, { slug: 'ski', label: 'Ski' }, { slug: 'haandball', label: 'Håndball' }, { slug: 'trening', label: 'Trening' }, { slug: 'idrettsverden', label: 'Idrettsverden' }],
   },
   {
     slug: 'vitenskap', label: 'Vitenskap',
