@@ -104,6 +104,23 @@ export default async function ContentPage({ params }: PageProps) {
   const breadcrumbs = [{ label: 'Hjem', href: '/' }, { label: cat.label, href: `/${catSlug}` }];
   const allCatArticles = [...cat.articles, ...Object.values(cat.subcategories).flatMap((s) => s.articles)];
 
+  // For umbrella categories like "teknologi", also include articles from child categories (domener, dns, epost, nettsider)
+  const UMBRELLA_CHILDREN: Record<string, string[]> = {
+    teknologi: LEGACY_IT_SLUGS,
+  };
+  const childSlugs = UMBRELLA_CHILDREN[catSlug] || [];
+  const childSections: { label: string; slug: string; articles: any[] }[] = [];
+  for (const childSlug of childSlugs) {
+    const childCat = categoryTree[childSlug];
+    if (childCat) {
+      const childArticles = [...childCat.articles, ...Object.values(childCat.subcategories).flatMap((s) => s.articles)];
+      if (childArticles.length > 0) {
+        childSections.push({ label: childCat.label, slug: childSlug, articles: childArticles });
+        allCatArticles.push(...childArticles);
+      }
+    }
+  }
+
   // Get intro text
   const catConfig = CATEGORIES.find((c) => c.slug === catSlug);
   const introText = catConfig?.introText || DYNAMIC_CAT_INTROS[catSlug] || '';
@@ -156,6 +173,18 @@ export default async function ContentPage({ params }: PageProps) {
               </div>
               <div className="articles-grid">
                 {sub.articles.map((a) => <ArticleCard key={a.slug} article={a} />)}
+              </div>
+            </section>
+          ))}
+          {childSections.map((child) => (
+            <section key={child.slug} className="home-section">
+              <div className="home-section-header">
+                <h2 className="home-section-title">
+                  <a href={`/${child.slug}`}>{child.label}</a>
+                </h2>
+              </div>
+              <div className="articles-grid">
+                {child.articles.map((a) => <ArticleCard key={a.slug} article={a} />)}
               </div>
             </section>
           ))}
