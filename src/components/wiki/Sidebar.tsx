@@ -52,7 +52,7 @@ export default function Sidebar({ categoryTree, activeCategory }: SidebarProps) 
     ...group,
     categories: group.categories
       .filter((catSlug) => categoryTree[catSlug])
-      .map((catSlug) => ({ slug: catSlug, ...categoryTree[catSlug] })),
+      .map((catSlug) => ({ ...categoryTree[catSlug], slug: catSlug })),
   })).filter((g) => g.categories.length > 0);
 
   // Add extras to "Annet" if any
@@ -60,7 +60,7 @@ export default function Sidebar({ categoryTree, activeCategory }: SidebarProps) 
     const annetGroup = groups.find((g) => g.label === 'Annet');
     const extras = extraSlugs
       .filter((catSlug) => categoryTree[catSlug])
-      .map((catSlug) => ({ slug: catSlug, ...categoryTree[catSlug] }));
+      .map((catSlug) => ({ ...categoryTree[catSlug], slug: catSlug }));
     if (annetGroup) {
       annetGroup.categories.push(...extras);
     } else {
