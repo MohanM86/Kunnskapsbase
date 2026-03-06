@@ -21,10 +21,34 @@ export const CATEGORIES: CategoryConfig[] = [
     subcategories: [{ slug: 'personlig-oekonomi', label: 'Personlig økonomi' }, { slug: 'investering', label: 'Investering' }, { slug: 'naeringsliv', label: 'Næringsliv' }],
   },
   {
+    slug: 'handel', label: 'Handel',
+    description: 'Toll, import, eksport, netthandel og forbrukerrettigheter.',
+    introText: 'Handel berører alle som kjøper og selger varer. Her finner du artikler om toll og avgifter, import og eksport, netthandel, forbrukerrettigheter, frakt og internasjonal handel – praktisk kunnskap for både forbrukere og næringsdrivende.',
+    subcategories: [{ slug: 'toll-og-avgifter', label: 'Toll og avgifter' }, { slug: 'netthandel', label: 'Netthandel' }, { slug: 'forbruker', label: 'Forbruker' }],
+  },
+  {
+    slug: 'bolig', label: 'Bolig',
+    description: 'Boligkjøp, lån, oppussing, strøm og borettslag.',
+    introText: 'Bolig er den største investeringen de fleste gjør. Her finner du artikler om boligkjøp, boliglån, oppussing, strøm, borettslag, husleie og vedlikehold – kunnskap som hjelper deg ta gode boligbeslutninger.',
+    subcategories: [{ slug: 'boligkjoep', label: 'Boligkjøp' }, { slug: 'oppussing', label: 'Oppussing' }, { slug: 'utleie', label: 'Utleie' }],
+  },
+  {
+    slug: 'jobb', label: 'Jobb',
+    description: 'CV, jobbintervju, lønn, arbeidsmarked og karriere.',
+    introText: 'Arbeidslivet er i stadig endring. Her finner du artikler om CV-skriving, jobbintervju, lønnsforhandlinger, arbeidsrettigheter, frilans og karriereutvikling – fra første jobb til seniorkarriere.',
+    subcategories: [{ slug: 'jobbsoek', label: 'Jobbsøk' }, { slug: 'arbeidsliv', label: 'Arbeidsliv' }, { slug: 'frilans', label: 'Frilans' }],
+  },
+  {
     slug: 'helse', label: 'Helse',
     description: 'Medisin, ernæring, mental helse, trening og velvære.',
     introText: 'God helse er grunnlaget for livskvalitet. Her finner du artikler om kroppen, ernæring, styrketrening, søvn, mental helse og medisinsk kunnskap – basert på forskning og skrevet for å være forståelig og nyttig i hverdagen.',
     subcategories: [{ slug: 'medisin', label: 'Medisin' }, { slug: 'ernaering', label: 'Ernæring' }, { slug: 'mental-helse', label: 'Mental helse' }, { slug: 'trening', label: 'Trening' }],
+  },
+  {
+    slug: 'sport', label: 'Sport',
+    description: 'Fotball, håndball, ski, trening, OL og idrettsverden.',
+    introText: 'Sport engasjerer millioner av nordmenn. Her finner du artikler om fotball, håndball, ski, løping, sykkel, OL og idrettsverden – regler, historie, treningsråd og de store øyeblikkene i norsk og internasjonal idrett.',
+    subcategories: [{ slug: 'fotball', label: 'Fotball' }, { slug: 'vintersport', label: 'Vintersport' }, { slug: 'trening-sport', label: 'Trening' }, { slug: 'idrettshistorie', label: 'Idrettshistorie' }],
   },
   {
     slug: 'vitenskap', label: 'Vitenskap',
@@ -61,6 +85,12 @@ export const CATEGORIES: CategoryConfig[] = [
     description: 'Oppskrifter, råvarer, kosthold, matkultur og drikke.',
     introText: 'Mat er kultur, vitenskap og hverdagsglede. I denne kategorien finner du artikler om norsk matkultur, fermentering, næringsstoffer, glutenfritt kosthold, matsvinn og kokketeknikker som sous vide.',
     subcategories: [{ slug: 'oppskrifter', label: 'Oppskrifter' }, { slug: 'kosthold', label: 'Kosthold' }, { slug: 'matkultur', label: 'Matkultur' }],
+  },
+  {
+    slug: 'underholdning', label: 'Underholdning',
+    description: 'Film, TV, musikk, streaming, spill og kultur.',
+    introText: 'Underholdning er en viktig del av hverdagen. Her finner du artikler om film, TV-serier, musikk, strømmetjenester, spill og kulturopplevelser – fra anmeldelser og anbefalinger til forståelse av mediene som former vår tid.',
+    subcategories: [{ slug: 'film-og-tv', label: 'Film og TV' }, { slug: 'musikk', label: 'Musikk' }, { slug: 'spill', label: 'Spill' }, { slug: 'streaming', label: 'Streaming' }],
   },
 ];
 

@@ -26,13 +26,18 @@ const PRIMARY_NAV = [
   { href: '/ai', label: 'AI' },
   { href: '/oekonomi', label: 'Økonomi' },
   { href: '/helse', label: 'Helse' },
-  { href: '/vitenskap', label: 'Vitenskap' },
+  { href: '/sport', label: 'Sport' },
 ];
 
 const MEGA_MENU_CATS = [
+  { href: '/handel', label: 'Handel', desc: 'Toll, import og forbruker' },
+  { href: '/bolig', label: 'Bolig', desc: 'Boligkjøp, lån og oppussing' },
+  { href: '/jobb', label: 'Jobb', desc: 'CV, intervju og karriere' },
+  { href: '/underholdning', label: 'Underholdning', desc: 'Film, musikk og spill' },
+  { href: '/vitenskap', label: 'Vitenskap', desc: 'Fysikk, biologi og forskning' },
   { href: '/historie', label: 'Historie', desc: 'Verdenshistorie og norsk historie' },
-  { href: '/samfunn', label: 'Samfunn', desc: 'Politikk, jus og rettigheter' },
-  { href: '/utdanning', label: 'Utdanning', desc: 'Skole, studier og karriere' },
+  { href: '/samfunn', label: 'Samfunn', desc: 'Politikk og rettigheter' },
+  { href: '/utdanning', label: 'Utdanning', desc: 'Skole, studier og læring' },
   { href: '/reise', label: 'Reise', desc: 'Destinasjoner og reisetips' },
   { href: '/mat', label: 'Mat', desc: 'Kosthold og matkultur' },
   { href: '/bil', label: 'Bil', desc: 'Elbil, forsikring og vedlikehold' },

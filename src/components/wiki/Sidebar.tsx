@@ -12,10 +12,13 @@ interface SidebarProps {
 
 /* ── Grouped sidebar structure ── */
 const SIDEBAR_GROUPS: { label: string; categories: string[] }[] = [
-  { label: 'Teknologi', categories: ['ai', 'teknologi', 'domener', 'dns', 'epost', 'nettsider'] },
-  { label: 'Samfunn', categories: ['oekonomi', 'historie', 'jus', 'samfunn'] },
-  { label: 'Livsstil', categories: ['helse', 'mat', 'reise', 'hobby'] },
-  { label: 'Annet', categories: ['bil', 'dyr', 'klima', 'utdanning', 'vitenskap'] },
+  { label: 'Teknologi & AI', categories: ['ai', 'teknologi', 'domener', 'dns', 'epost', 'nettsider'] },
+  { label: 'Økonomi & Handel', categories: ['oekonomi', 'handel', 'bolig', 'jobb'] },
+  { label: 'Samfunn & Rettigheter', categories: ['samfunn', 'jus', 'historie', 'utdanning'] },
+  { label: 'Vitenskap & Natur', categories: ['vitenskap', 'klima'] },
+  { label: 'Helse & Livsstil', categories: ['helse', 'mat', 'sport', 'hobby'] },
+  { label: 'Reise & Transport', categories: ['reise', 'bil', 'dyr'] },
+  { label: 'Underholdning', categories: ['underholdning'] },
 ];
 
 const catIcons: Record<string, React.ReactNode> = {
@@ -37,6 +40,11 @@ const catIcons: Record<string, React.ReactNode> = {
   klima: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7.5" r="2.5" stroke="currentColor" strokeWidth="1.2"/><path d="M7 2V3.5M7 11.5V13M2 7.5H3.5M10.5 7.5H12M3.5 3.5L4.5 4.5M9.5 10.5L10.5 11.5M10.5 3.5L9.5 4.5M3.5 11.5L4.5 10.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>,
   utdanning: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5.5L7 3L12 5.5L7 8L2 5.5Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/><path d="M4 6.5V10C4 10 5.2 11.5 7 11.5C8.8 11.5 10 10 10 10V6.5" stroke="currentColor" strokeWidth="1.2"/></svg>,
   vitenskap: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2V8L2.5 12H11.5L9 8V2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><line x1="4.5" y1="2" x2="9.5" y2="2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><circle cx="6.5" cy="10" r="0.7" fill="currentColor"/><circle cx="8.5" cy="9.5" r="0.5" fill="currentColor"/></svg>,
+  handel: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 3H3.5L5 10H11" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="6" cy="12" r="1" stroke="currentColor" strokeWidth="1"/><circle cx="10" cy="12" r="1" stroke="currentColor" strokeWidth="1"/><path d="M5 5H12L11 8.5H5.5" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/></svg>,
+  bolig: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L7 2.5L12 7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M3.5 8V12H6V9.5H8V12H10.5V8" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/></svg>,
+  jobb: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1.5" y="5" width="11" height="7" rx="1" stroke="currentColor" strokeWidth="1.2"/><path d="M5 5V3.5C5 2.7 5.7 2 6.5 2H7.5C8.3 2 9 2.7 9 3.5V5" stroke="currentColor" strokeWidth="1.2"/><line x1="1.5" y1="8.5" x2="12.5" y2="8.5" stroke="currentColor" strokeWidth="1"/></svg>,
+  sport: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2"/><path d="M7 1.5V12.5M1.5 7H12.5" stroke="currentColor" strokeWidth="0.8"/><path d="M3.5 2.5C5 4.5 5 9.5 3.5 11.5M10.5 2.5C9 4.5 9 9.5 10.5 11.5" stroke="currentColor" strokeWidth="0.8"/></svg>,
+  underholdning: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 3.5L5.5 7L2 10.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6 3.5L9.5 7L6 10.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><line x1="10.5" y1="3.5" x2="10.5" y2="10.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>,
 };
 
 export default function Sidebar({ categoryTree, activeCategory }: SidebarProps) {
