@@ -70,7 +70,7 @@ export default function Footer() {
         {/* Links sections */}
         <div className="footer-links">
           <div className="footer-col">
-            <h4 className="footer-col-title">Kategorier</h4>
+            <span className="footer-col-title">Kategorier</span>
             <ul className="footer-col-list">
               {CATEGORY_LINKS.map(({ href, label }) => (
                 <li key={href}><Link href={href}>{label}</Link></li>
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">Mer</h4>
+            <span className="footer-col-title">Mer</span>
             <ul className="footer-col-list">
               {MORE_LINKS.map(({ href, label }) => (
                 <li key={href}><Link href={href}>{label}</Link></li>
@@ -88,7 +88,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">Utforsk</h4>
+            <span className="footer-col-title">Utforsk</span>
             <ul className="footer-col-list">
               {EXPLORE_LINKS.map(({ href, label }) => (
                 <li key={href}><Link href={href}>{label}</Link></li>
@@ -97,7 +97,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">For maskiner</h4>
+            <span className="footer-col-title">For maskiner</span>
             <ul className="footer-col-list">
               {MACHINE_LINKS.map(({ href, label }) => (
                 <li key={href}>

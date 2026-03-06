@@ -48,12 +48,12 @@ export default function SearchBox({ compact, autoFocus, initialQuery = '', onRes
       <form onSubmit={handleSubmit} role="search" aria-label="Søk i kunnskapsbasen">
         <div className="search-input-wrap">
           <span className="search-icon" aria-hidden="true"><SearchIcon /></span>
-          <input ref={inputRef} type="search" value={query} onChange={(e) => { setQuery(e.target.value); setIsOpen(true); }} onFocus={() => setIsOpen(true)} placeholder={compact ? 'Søk...' : 'Søk i kunnskapsbasen...'} className="search-input" aria-label="Søk" aria-autocomplete="list" aria-expanded={isOpen && results.length > 0} />
+          <input ref={inputRef} type="search" value={query} onChange={(e) => { setQuery(e.target.value); setIsOpen(true); }} onFocus={() => setIsOpen(true)} placeholder={compact ? 'Søk...' : 'Søk i kunnskapsbasen...'} className="search-input" role="combobox" aria-label="Søk" aria-autocomplete="list" aria-expanded={isOpen && results.length > 0} aria-controls="search-listbox" />
           {loading && <span className="search-spinner" aria-hidden="true">⟳</span>}
         </div>
       </form>
       {isOpen && results.length > 0 && compact && (
-        <div className="search-dropdown" role="listbox" aria-label="Søkeresultater">
+        <div className="search-dropdown" role="listbox" id="search-listbox" aria-label="Søkeresultater">
           {results.slice(0, 5).map((r) => (<Link key={r.slug} href={`/${r.slugPath.join('/')}`} className="search-result-item" onClick={() => setIsOpen(false)} role="option"><span className="result-title">{r.title}</span><span className="result-cat">{r.category}</span></Link>))}
           {results.length > 5 && (<button className="search-see-all" onClick={() => { setIsOpen(false); router.push(`/?q=${encodeURIComponent(query)}`); }}>Se alle {results.length} resultater →</button>)}
         </div>
