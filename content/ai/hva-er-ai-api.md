@@ -2,7 +2,7 @@
 title: "Hva er AI-API?"
 slug: "hva-er-ai-api"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "AI-API-er lar deg integrere kunstig intelligens i dine egne applikasjoner. Lær om OpenAI API, Claude API, kostnader og hvordan du kommer i gang."
 keywords: ["AI-API", "OpenAI API", "Claude API", "Gemini API", "API-integrasjon", "LLM API"]
 date: "2026-03-06"

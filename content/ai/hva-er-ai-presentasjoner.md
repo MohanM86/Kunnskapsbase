@@ -2,7 +2,7 @@
 title: "Hva er AI-presentasjoner?"
 slug: "hva-er-ai-presentasjoner"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-presentasjoner lar deg lage profesjonelle slidedekk fra tekst eller idéer. Lær om Gamma, Beautiful.ai, Canva AI og hvordan AI endrer presentasjonsdesign."
 keywords: ["AI-presentasjoner", "AI slides", "Gamma", "Beautiful.ai", "presentasjon AI", "slidedesign"]
 date: "2026-03-06"

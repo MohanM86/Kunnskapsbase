@@ -2,7 +2,7 @@
 title: "Hva er finjustering av AI?"
 slug: "hva-er-finjustering-av-ai"
 category: "AI"
-subcategory: "Teknikker"
+subcategory: "teknikker"
 description: "Finjustering av AI er prosessen med å trene en eksisterende modell videre på spesifikke data for å tilpasse den til bestemte oppgaver eller domener."
 keywords: ["finjustering", "fine-tuning", "AI-tilpasning", "språkmodell", "maskinlæring"]
 date: "2026-03-05"

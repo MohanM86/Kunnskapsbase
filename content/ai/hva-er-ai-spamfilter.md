@@ -2,7 +2,7 @@
 title: "Hva er AI-spamfilter?"
 slug: "hva-er-ai-spamfilter"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-spamfiltre bruker maskinlæring for å blokkere uønsket e-post, meldinger og innhold. Lær om hvordan filtrene fungerer, utviklingen fra regler til AI, og moderne trusler."
 keywords: ["AI-spamfilter", "spam AI", "e-postsikkerhet", "phishing-deteksjon", "Gmail spamfilter"]
 date: "2026-03-06"

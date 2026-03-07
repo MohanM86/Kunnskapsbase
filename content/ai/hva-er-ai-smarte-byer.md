@@ -2,7 +2,7 @@
 title: "Hva er AI-smarte byer?"
 slug: "hva-er-ai-smarte-byer"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI-smarte byer bruker kunstig intelligens for å optimalisere transport, energi, sikkerhet og offentlige tjenester. Lær om smart mobilitet, byplanlegging og norske initiativer."
 keywords: ["smart city", "smarte byer", "AI byplanlegging", "smart transport", "IoT by"]
 date: "2026-03-06"

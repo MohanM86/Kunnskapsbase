@@ -2,7 +2,7 @@
 title: "Hva er AI-diagnostikk?"
 slug: "hva-er-ai-diagnostikk"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-diagnostikk bruker kunstig intelligens for å oppdage sykdommer gjennom bildeanalyse, symptomvurdering og biomarkører. Lær om røntgen-AI, tidlig deteksjon og norsk helsebruk."
 keywords: ["AI-diagnostikk", "medisinsk AI", "AI røntgen", "bildediagnostikk", "sykdomsdeteksjon"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er store språkmodeller (LLM)?"
 slug: "hva-er-store-spraakmodeller"
 category: "AI"
-subcategory: "Grunnleggende"
+subcategory: "grunnleggende"
 description: "Store språkmodeller (LLM) er AI-systemer trent på enorme tekstmengder som kan forstå og generere menneskelignende tekst. Lær hvordan de fungerer."
 keywords: ["store språkmodeller", "LLM", "large language model", "GPT", "AI-modeller"]
 date: "2026-03-05"

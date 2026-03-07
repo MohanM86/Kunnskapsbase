@@ -2,7 +2,7 @@
 title: "Hva er AI-leadgenerering?"
 slug: "hva-er-ai-leadgenerering"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-leadgenerering bruker kunstig intelligens for å identifisere, kvalifisere og konvertere potensielle kunder. Lær om automatisert prospektering, scoring og verktøy."
 keywords: ["AI-leadgenerering", "leadgenerering AI", "automatisert prospektering", "AI leads", "lead scoring AI"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI-agenter?"
 slug: "hva-er-ai-agenter-dybde"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-agenter er autonome AI-systemer som kan planlegge, utføre handlinger og lære av resultater. Lær om arkitekturer, verktøybruk og fremtiden for agentbasert AI."
 keywords: ["AI-agenter", "autonome agenter", "agentbasert AI", "verktøybruk", "ReAct", "planlegging"]
 date: "2026-03-06"

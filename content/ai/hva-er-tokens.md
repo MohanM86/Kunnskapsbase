@@ -2,7 +2,7 @@
 title: "Hva er tokens i AI?"
 slug: "hva-er-tokens"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "Tokens er grunnenheten AI-modeller bruker for å forstå og generere tekst. Lær hva tokens er, hvordan tokenisering fungerer, og hvorfor det påvirker pris og ytelse."
 keywords: ["tokens", "tokenisering", "kontekstvindu", "BPE", "token-grense", "AI-prising"]
 date: "2026-03-06"

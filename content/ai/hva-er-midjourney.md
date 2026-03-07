@@ -2,7 +2,7 @@
 title: "Hva er Midjourney?"
 slug: "hva-er-midjourney"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Midjourney er et AI-bildegenereringsverktøy kjent for eksepsjonell visuell kvalitet. Lær om prompting, versjonene, abonnementer og bruksområder."
 keywords: ["Midjourney", "AI-bilder", "bildegenerering", "Midjourney prompts", "AI-kunst"]
 date: "2026-03-06"

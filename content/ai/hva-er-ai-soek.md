@@ -2,7 +2,7 @@
 title: "Hva er AI-søk?"
 slug: "hva-er-ai-soek"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "AI-søk er neste generasjon søketeknologi der AI gir direkte svar i stedet for lenkelister. Lær om AI Overviews, Perplexity, SearchGPT og fremtidens søk."
 keywords: ["AI-søk", "AI search", "SearchGPT", "fremtidens søk", "generativt søk"]
 date: "2026-03-06"

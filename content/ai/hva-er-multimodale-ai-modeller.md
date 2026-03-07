@@ -2,7 +2,7 @@
 title: "Hva er multimodale AI-modeller?"
 slug: "hva-er-multimodale-ai-modeller"
 category: "AI"
-subcategory: "Grunnleggende"
+subcategory: "grunnleggende"
 description: "Multimodale AI-modeller kan forstå og generere flere typer data samtidig, som tekst, bilder, lyd og video. Lær hva de er og hvordan de fungerer."
 keywords: ["multimodal AI", "multimodale modeller", "GPT-4 vision", "tekst og bilde AI", "AI-modeller"]
 date: "2026-03-05"

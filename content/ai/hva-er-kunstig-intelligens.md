@@ -2,7 +2,7 @@
 title: "Hva er kunstig intelligens"
 slug: "hva-er-kunstig-intelligens"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Kunstig intelligens er teknologi som lar datamaskiner utføre oppgaver som normalt krever menneskelig intelligens."
 keywords: ["kunstig intelligens", "AI", "maskinlæring", "nevrale nettverk", "deep learning"]
 date: "2025-01-15"

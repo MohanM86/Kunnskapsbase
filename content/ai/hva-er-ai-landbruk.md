@@ -2,7 +2,7 @@
 title: "Hva er AI i landbruk?"
 slug: "hva-er-ai-landbruk"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI i landbruk bruker kunstig intelligens for presisjonsjordbruk, avlingsovervåking og automatisert drift. Lær om droner, sensorteknologi og norsk landbruk med AI."
 keywords: ["AI landbruk", "presisjonsjordbruk", "smart farming", "AI avling", "landbruksteknologi"]
 date: "2026-03-06"

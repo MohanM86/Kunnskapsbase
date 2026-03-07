@@ -2,7 +2,7 @@
 title: "Hva er AI-innholdsproduksjon?"
 slug: "hva-er-ai-innholdsproduksjon"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-innholdsproduksjon bruker kunstig intelligens for å skape tekst, bilder, video og lyd. Lær om verktøy, arbeidsflyter og beste praksis for kvalitetsinnhold med AI."
 keywords: ["AI-innholdsproduksjon", "AI content", "innholdsgenerering", "AI-skriving", "content creation AI"]
 date: "2026-03-06"

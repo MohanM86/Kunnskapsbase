@@ -2,7 +2,7 @@
 title: "Hva er AI i utdanning?"
 slug: "hva-er-ai-i-utdanning"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI transformerer utdanning med personalisert læring, intelligente tutorer og nye vurderingsmetoder. Lær om muligheter, utfordringer og AI i norsk skole."
 keywords: ["AI utdanning", "AI skole", "AI læring", "personalisert læring", "AI-tutor"]
 date: "2026-03-06"

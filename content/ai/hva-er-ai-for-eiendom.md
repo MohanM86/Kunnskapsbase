@@ -2,7 +2,7 @@
 title: "Hva er AI for eiendom?"
 slug: "hva-er-ai-for-eiendom"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI transformerer eiendomsbransjen med automatisert verdivurdering, virtuelle visninger og smart markedsføring. Lær om AI-verktøy og bruksområder for norsk eiendom."
 keywords: ["AI eiendom", "AI bolig", "automatisk verdivurdering", "virtuell visning", "AI eiendomsmegler"]
 date: "2026-03-06"

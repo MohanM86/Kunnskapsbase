@@ -2,7 +2,7 @@
 title: "Hva er OpenAI?"
 slug: "hva-er-openai"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "OpenAI er selskapet bak ChatGPT, GPT-4 og DALL-E. Lær om historien, produktene, kontroversene og OpenAIs rolle i AI-revolusjonen."
 keywords: ["OpenAI", "ChatGPT selskap", "Sam Altman", "GPT", "DALL-E", "AI-selskap"]
 date: "2026-03-06"

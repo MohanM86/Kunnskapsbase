@@ -2,7 +2,7 @@
 title: "Hva er AI og personvern?"
 slug: "hva-er-ai-og-personvern"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI og personvern handler om hvordan kunstig intelligens samler, bruker og beskytter persondata. Lær om GDPR, dataminimering og ansvarlig AI-bruk."
 keywords: ["AI personvern", "GDPR AI", "persondata", "dataminimering", "AI-etikk", "ansvarlig AI"]
 date: "2026-03-06"

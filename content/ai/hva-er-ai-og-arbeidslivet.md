@@ -2,7 +2,7 @@
 title: "Hva er AI og arbeidslivet?"
 slug: "hva-er-ai-og-arbeidslivet"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI endrer arbeidslivet fundamentalt. Lær om hvilke jobber som påvirkes, nye roller som oppstår, og hvordan du forbereder deg for en AI-drevet arbeidshverdag."
 keywords: ["AI arbeidsliv", "AI jobber", "automatisering arbeid", "fremtidens arbeid", "AI kompetanse"]
 date: "2026-03-06"

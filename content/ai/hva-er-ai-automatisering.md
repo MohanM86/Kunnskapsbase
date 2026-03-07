@@ -2,7 +2,7 @@
 title: "Hva er AI-automatisering?"
 slug: "hva-er-ai-automatisering"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-automatisering bruker kunstig intelligens for å utføre oppgaver som tradisjonelt krevde menneskelig arbeid. Lær om RPA, intelligente arbeidsflyter og bruksområder."
 keywords: ["AI-automatisering", "intelligent automatisering", "RPA", "arbeidsflyt", "prosessautomatisering"]
 date: "2026-03-06"

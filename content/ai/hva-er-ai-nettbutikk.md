@@ -2,7 +2,7 @@
 title: "Hva er AI-nettbutikk?"
 slug: "hva-er-ai-nettbutikk"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI transformerer netthandel med personalisering, automatisert kundeservice og smart lagerstyring. Lær hvordan du bruker AI for å øke salget i nettbutikken din."
 keywords: ["AI-nettbutikk", "AI e-handel", "personalisering nettbutikk", "AI kundeservice", "AI-anbefalinger"]
 date: "2026-03-06"

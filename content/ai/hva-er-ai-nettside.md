@@ -2,7 +2,7 @@
 title: "Hva er AI-nettside?"
 slug: "hva-er-ai-nettside"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-nettsider bruker kunstig intelligens for å bygge, optimalisere og drifte nettsider. Lær om AI-nettsidebyggere, personalisering og fremtidens nettutvikling."
 keywords: ["AI-nettside", "AI nettsidebygger", "AI webdesign", "v0", "Bolt", "AI-webutvikling"]
 date: "2026-03-06"

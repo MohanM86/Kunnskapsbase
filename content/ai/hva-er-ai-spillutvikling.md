@@ -2,7 +2,7 @@
 title: "Hva er AI i spillutvikling?"
 slug: "hva-er-ai-spillutvikling"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI transformerer spillutvikling med prosedyregenerering, intelligente NPC-er og AI-assistert design. Lær om teknologien bak moderne spillopplevelser."
 keywords: ["AI spill", "spillutvikling AI", "NPC AI", "prosedyregenerering", "AI game design"]
 date: "2026-03-06"

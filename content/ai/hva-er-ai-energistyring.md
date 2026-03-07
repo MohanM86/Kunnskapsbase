@@ -2,7 +2,7 @@
 title: "Hva er AI-energistyring?"
 slug: "hva-er-ai-energistyring"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-energistyring optimaliserer energiforbruk i bygninger, industri og strømnett med kunstig intelligens. Lær om smart strøm, fornybar energi og norske løsninger som Tibber."
 keywords: ["AI-energistyring", "smart energi", "Tibber", "strømoptimalisering", "AI strømnett", "energieffektivisering"]
 date: "2026-03-06"

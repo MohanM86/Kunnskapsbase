@@ -2,7 +2,7 @@
 title: "Hva er AI-trading?"
 slug: "hva-er-ai-trading"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-trading bruker kunstig intelligens for å analysere markeder og utføre handler automatisk. Lær om algoritmisk handel, robo-rådgivere, risiko og norske løsninger."
 keywords: ["AI-trading", "algoritmisk handel", "AI investering", "robo-rådgiver", "kvantitativ trading"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er Anthropic?"
 slug: "hva-er-anthropic"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "Anthropic er AI-sikkerhetsselskapet bak Claude. Lær om grunnleggelsen, Constitutional AI, modellene og Anthropics unike tilnærming til ansvarlig AI-utvikling."
 keywords: ["Anthropic", "Claude selskap", "AI-sikkerhet", "Constitutional AI", "Dario Amodei"]
 date: "2026-03-06"

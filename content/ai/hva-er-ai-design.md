@@ -2,7 +2,7 @@
 title: "Hva er AI-design?"
 slug: "hva-er-ai-design"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-design bruker kunstig intelligens for å lage logoer, grafisk design, UI/UX og merkevareidentitet. Lær om Canva AI, Figma AI, Looka og AI-drevne designverktøy."
 keywords: ["AI-design", "AI grafisk design", "Canva AI", "Figma AI", "logo AI", "UI design AI"]
 date: "2026-03-06"

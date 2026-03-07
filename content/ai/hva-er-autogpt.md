@@ -2,7 +2,7 @@
 title: "Hva er AutoGPT?"
 slug: "hva-er-autogpt"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AutoGPT var en av de første autonome AI-agentene som demonstrerte at språkmodeller kan planlegge og utføre oppgaver selvstendig. Lær om konseptet, begrensningene og arven."
 keywords: ["AutoGPT", "autonom agent", "AI-agent", "selvkjørende AI", "GPT-agent"]
 date: "2026-03-06"

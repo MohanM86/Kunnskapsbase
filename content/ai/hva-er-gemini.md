@@ -2,7 +2,7 @@
 title: "Hva er Gemini?"
 slug: "hva-er-gemini"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "Gemini er Googles AI-modell og assistent som er dypt integrert med Google-tjenester. Lær om modellene, multimodal kapasitet og hvordan Gemini skiller seg ut."
 keywords: ["Gemini", "Google Gemini", "Google AI", "Gemini Pro", "Gemini Ultra", "Google Bard"]
 date: "2026-03-06"

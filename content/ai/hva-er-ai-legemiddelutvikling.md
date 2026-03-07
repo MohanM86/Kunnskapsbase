@@ -2,7 +2,7 @@
 title: "Hva er AI-legemiddelutvikling?"
 slug: "hva-er-ai-legemiddelutvikling"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI akselererer legemiddelutvikling fra 10–15 år til potensielt 2–5 år. Lær om molekyldesign, AlphaFold, kliniske studier og norsk legemiddelforskning med AI."
 keywords: ["AI-legemiddelutvikling", "drug discovery AI", "AlphaFold", "molekyldesign", "kliniske studier AI"]
 date: "2026-03-06"

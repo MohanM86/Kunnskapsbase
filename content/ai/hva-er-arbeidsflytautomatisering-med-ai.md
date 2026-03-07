@@ -2,7 +2,7 @@
 title: "Hva er arbeidsflytautomatisering med AI?"
 slug: "hva-er-arbeidsflytautomatisering-med-ai"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "Arbeidsflytautomatisering med AI kombinerer verktøy som Zapier, Make og n8n med kunstig intelligens for å automatisere komplekse prosesser. Lær hvordan du kommer i gang."
 keywords: ["arbeidsflytautomatisering", "Zapier AI", "Make", "n8n", "no-code automatisering", "AI-arbeidsflyt"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI-kundesegmentering?"
 slug: "hva-er-ai-kundesegmentering"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-kundesegmentering bruker maskinlæring for å gruppere kunder basert på adferd, verdi og behov. Lær om RFM-analyse, prediktive segmenter og churn-prediksjon."
 keywords: ["AI-kundesegmentering", "kundesegmentering", "RFM-analyse", "churn-prediksjon", "kundeprofiler"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI-ansiktsgjenkjenning?"
 slug: "hva-er-ai-ansiktsgjenkjenning"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-ansiktsgjenkjenning identifiserer og verifiserer personer basert på ansiktstrekk. Lær om teknologien, bruksområder, personverndebatten og regulering."
 keywords: ["ansiktsgjenkjenning", "facial recognition", "biometrisk AI", "Face ID", "personvern ansikt"]
 date: "2026-03-06"

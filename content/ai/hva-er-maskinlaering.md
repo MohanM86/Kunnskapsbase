@@ -2,7 +2,7 @@
 title: "Hva er maskinlæring?"
 slug: "hva-er-maskinlaering"
 category: "AI"
-subcategory: "Grunnleggende"
+subcategory: "grunnleggende"
 description: "Maskinlæring er en gren av kunstig intelligens der datamaskiner lærer fra data uten å bli eksplisitt programmert. Les hvordan det fungerer."
 keywords: ["maskinlæring", "machine learning", "AI", "kunstig intelligens", "algoritmer"]
 date: "2026-03-05"

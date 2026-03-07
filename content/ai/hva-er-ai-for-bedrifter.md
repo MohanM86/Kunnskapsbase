@@ -2,7 +2,7 @@
 title: "Hva er AI for bedrifter?"
 slug: "hva-er-ai-for-bedrifter"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI for bedrifter handler om å implementere kunstig intelligens som gir forretningsverdi. Lær om bruksområder, implementering og ROI for norske bedrifter."
 keywords: ["AI bedrift", "enterprise AI", "AI implementering", "AI ROI", "AI-strategi bedrift"]
 date: "2026-03-06"

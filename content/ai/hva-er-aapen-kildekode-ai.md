@@ -2,7 +2,7 @@
 title: "Hva er åpen kildekode AI?"
 slug: "hva-er-aapen-kildekode-ai"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Åpen kildekode AI er AI-modeller og verktøy som er fritt tilgjengelige for alle. Lær om Llama, Mistral, Stable Diffusion og fordelene med åpne modeller."
 keywords: ["åpen kildekode AI", "open source AI", "Llama", "Mistral", "Hugging Face", "åpne modeller"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI-kundeservice?"
 slug: "hva-er-ai-kundeservice"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-kundeservice bruker kunstig intelligens for å håndtere kundehenvendelser raskere og mer effektivt. Lær om chatboter, sentimentanalyse, automatisering og norske løsninger."
 keywords: ["AI-kundeservice", "kundeservice AI", "automatisert kundeservice", "AI support", "chatbot kundeservice"]
 date: "2026-03-06"

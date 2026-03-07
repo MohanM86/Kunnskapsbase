@@ -2,7 +2,7 @@
 title: "Hva er AI-stemme og tale?"
 slug: "hva-er-ai-stemme"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-stemme dekker tale-til-tekst, tekst-til-tale og stemmekloning. Lær om Whisper, ElevenLabs og hvordan AI transformerer hvordan vi kommuniserer med maskiner."
 keywords: ["AI-stemme", "tekst-til-tale", "tale-til-tekst", "stemmekloning", "ElevenLabs", "Whisper"]
 date: "2026-03-06"

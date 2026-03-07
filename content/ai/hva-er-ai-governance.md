@@ -2,7 +2,7 @@
 title: "Hva er AI governance?"
 slug: "hva-er-ai-governance"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI governance er rammeverket for styring og kontroll av AI i organisasjoner. Lær om policyer, ansvarsfordeling, risikostyring og implementering."
 keywords: ["AI governance", "AI-styring", "AI-policy", "ansvarlig AI", "AI-risikostyring"]
 date: "2026-03-06"

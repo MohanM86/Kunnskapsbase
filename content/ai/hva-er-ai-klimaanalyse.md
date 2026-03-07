@@ -2,7 +2,7 @@
 title: "Hva er AI-klimaanalyse?"
 slug: "hva-er-ai-klimaanalyse"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI-klimaanalyse bruker kunstig intelligens for å forstå, forutsi og bekjempe klimaendringer. Lær om værprognoser, energioptimalisering og klimamodellering med AI."
 keywords: ["AI-klimaanalyse", "AI klima", "klimamodellering", "AI energi", "bærekraft AI"]
 date: "2026-03-06"

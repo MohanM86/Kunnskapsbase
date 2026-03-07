@@ -2,7 +2,7 @@
 title: "Hva er AI-dynamisk prising?"
 slug: "hva-er-ai-dynamisk-prising"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-dynamisk prising justerer priser automatisk basert på etterspørsel, konkurranse og kundeadferd. Lær om prisoptimalisering, etikk og bruksområder."
 keywords: ["dynamisk prising", "AI-prising", "prisoptimalisering", "revenue management", "dynamic pricing"]
 date: "2026-03-06"

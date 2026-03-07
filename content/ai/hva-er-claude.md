@@ -2,7 +2,7 @@
 title: "Hva er Claude?"
 slug: "hva-er-claude"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "Claude er Anthropics AI-assistent kjent for grundig resonnering, lange kontekstvinduer og fokus på sikkerhet. Lær om modellene, funksjonene og hva som skiller Claude fra andre."
 keywords: ["Claude", "Anthropic", "Claude AI", "Claude Sonnet", "Claude Opus", "AI-assistent"]
 date: "2026-03-06"

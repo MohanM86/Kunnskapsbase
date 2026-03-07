@@ -2,7 +2,7 @@
 title: "Hva er generativ AI?"
 slug: "hva-er-generativ-ai-dybde"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Generativ AI er kunstig intelligens som kan skape nytt innhold – tekst, bilder, musikk, video og kode. Lær hvordan det fungerer, de viktigste modellene og bruksområdene."
 keywords: ["generativ AI", "generative AI", "AI-generering", "innholdsgenerering", "diffusjon", "transformer"]
 date: "2026-03-06"

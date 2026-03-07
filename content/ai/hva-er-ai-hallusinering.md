@@ -2,7 +2,7 @@
 title: "Hva er AI-hallusinering?"
 slug: "hva-er-ai-hallusinering"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "AI-hallusinering er når en AI-modell genererer plausibel men feilaktig informasjon. Lær hvorfor det skjer, hvordan du oppdager det, og strategier for å redusere hallusinering."
 keywords: ["AI-hallusinering", "hallucination", "faktafeil AI", "grounding", "pålitelighet"]
 date: "2026-03-06"

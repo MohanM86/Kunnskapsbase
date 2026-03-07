@@ -2,7 +2,7 @@
 title: "Hva er AI-logistikk?"
 slug: "hva-er-ai-logistikk"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-logistikk bruker kunstig intelligens for å optimalisere forsyningskjeder, lagerstyring, ruteplanlegging og transport. Lær om prediktiv analyse, automatisering og norske løsninger."
 keywords: ["AI-logistikk", "supply chain AI", "ruteoptimalisering", "lagerstyring AI", "prediktiv logistikk"]
 date: "2026-03-06"

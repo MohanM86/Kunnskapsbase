@@ -2,7 +2,7 @@
 title: "Hva er AI-bildegenerering?"
 slug: "hva-er-ai-bildegenerering"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-bildegenerering lar deg lage bilder fra tekstbeskrivelser. Lær om Midjourney, DALL-E, Stable Diffusion og hvordan diffusjonsmodeller fungerer."
 keywords: ["AI-bilder", "bildegenerering", "Midjourney", "DALL-E", "Stable Diffusion", "diffusjonsmodell"]
 date: "2026-03-06"

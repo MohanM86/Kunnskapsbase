@@ -2,7 +2,7 @@
 title: "Hva er AI-skriveverktøy?"
 slug: "hva-er-ai-skriveverktoy"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-skriveverktøy hjelper deg med å skrive raskere og bedre. Lær om Jasper, Writer, Grammarly, Notion AI og hvordan du velger riktig verktøy for dine behov."
 keywords: ["AI-skriveverktøy", "AI writing", "Jasper", "Writer", "Grammarly", "Notion AI"]
 date: "2026-03-06"

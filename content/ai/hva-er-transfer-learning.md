@@ -2,7 +2,7 @@
 title: "Hva er transfer learning?"
 slug: "hva-er-transfer-learning"
 category: "AI"
-subcategory: "Teknikker"
+subcategory: "teknikker"
 description: "Transfer learning er en maskinlæringsteknikk der en modell trent på én oppgave gjenbrukes som utgangspunkt for en annen. Lær hvordan det fungerer."
 keywords: ["transfer learning", "overføringslæring", "fortrente modeller", "maskinlæring", "AI-teknikk"]
 date: "2026-03-05"

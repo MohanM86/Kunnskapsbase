@@ -2,7 +2,7 @@
 title: "Hva er AI-digital tvilling?"
 slug: "hva-er-ai-digital-tvilling"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "En digital tvilling er en virtuell kopi av et fysisk objekt eller system som oppdateres i sanntid med AI. Lær om bruksområder i industri, byplanlegging og helse."
 keywords: ["digital tvilling", "digital twin", "AI simulering", "virtuell kopi", "industri 4.0"]
 date: "2026-03-06"

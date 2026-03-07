@@ -2,7 +2,7 @@
 title: "Hva er RAG?"
 slug: "hva-er-rag"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "RAG (Retrieval-Augmented Generation) kombinerer søk med AI-generering for å gi presise svar basert på oppdatert data. Lær hvordan RAG fungerer og løser hallusinering."
 keywords: ["RAG", "Retrieval-Augmented Generation", "vektordatabase", "embeddings", "kunnskapsbase AI"]
 date: "2026-03-06"

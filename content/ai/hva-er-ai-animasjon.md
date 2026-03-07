@@ -2,7 +2,7 @@
 title: "Hva er AI-animasjon?"
 slug: "hva-er-ai-animasjon"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-animasjon bruker kunstig intelligens for å skape animert innhold raskere og rimeligere. Lær om motion capture, bildeanimasjon, lippsynk og AI-verktøy for animatører."
 keywords: ["AI-animasjon", "AI animation", "motion capture AI", "lippsynk AI", "animasjonsverktøy"]
 date: "2026-03-06"

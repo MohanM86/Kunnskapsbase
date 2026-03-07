@@ -2,7 +2,7 @@
 title: "Hva er AI-droner?"
 slug: "hva-er-ai-droner"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-droner bruker kunstig intelligens for autonom navigasjon, bildeanalyse og beslutningstaking. Lær om bruksområder, teknologi og regulering i Norge."
 keywords: ["AI-droner", "droner AI", "autonom drone", "droneteknologi", "drone inspeksjon"]
 date: "2026-03-06"

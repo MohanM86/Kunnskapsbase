@@ -2,7 +2,7 @@
 title: "Hva er AI-sosiale medier-analyse?"
 slug: "hva-er-ai-sosiale-medier-analyse"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-sosiale medier-analyse overvåker merkevareomdømme, analyserer sentiment og oppdager trender automatisk. Lær om social listening, krisehåndtering og verktøy."
 keywords: ["sosiale medier analyse", "sentimentanalyse", "social listening", "merkevareomdømme", "AI SoMe"]
 date: "2026-03-06"

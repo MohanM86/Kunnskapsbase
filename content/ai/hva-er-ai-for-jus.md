@@ -2,7 +2,7 @@
 title: "Hva er AI for jus?"
 slug: "hva-er-ai-for-jus"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI transformerer juridisk arbeid med kontraktsanalyse, dokumentgjennomgang og juridisk research. Lær om AI-verktøy for advokater og norsk rettspraksis."
 keywords: ["AI jus", "AI juridisk", "kontraktsanalyse AI", "juridisk AI", "legal tech"]
 date: "2026-03-06"

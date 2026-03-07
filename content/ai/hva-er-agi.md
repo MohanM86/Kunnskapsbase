@@ -2,7 +2,7 @@
 title: "Hva er AGI?"
 slug: "hva-er-agi"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AGI (Artificial General Intelligence) er hypotetisk AI som kan utføre enhver intellektuell oppgave et menneske kan. Lær om veien mot AGI, debattene og implikasjonene."
 keywords: ["AGI", "kunstig generell intelligens", "superintelligens", "sterk AI", "generell AI"]
 date: "2026-03-06"

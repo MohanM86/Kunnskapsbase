@@ -2,7 +2,7 @@
 title: "Hva er AI-markedsføring?"
 slug: "hva-er-ai-markedsforing"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-markedsføring bruker kunstig intelligens for å effektivisere og forbedre markedsføring. Lær om AI-innhold, personalisering, annonseoptimalisering og verktøy."
 keywords: ["AI-markedsføring", "AI marketing", "markedsføringsautomatisering", "AI-innhold", "AI-annonsering"]
 date: "2026-03-06"

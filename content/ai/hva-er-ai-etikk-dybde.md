@@ -2,7 +2,7 @@
 title: "Hva er AI-etikk?"
 slug: "hva-er-ai-etikk-dybde"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI-etikk handler om de moralske spørsmålene rundt utvikling og bruk av kunstig intelligens. Lær om bias, transparens, ansvar og etiske rammeverk for AI."
 keywords: ["AI-etikk", "etisk AI", "AI-bias", "rettferdig AI", "ansvarlig AI", "AI-prinsipper"]
 date: "2026-03-06"

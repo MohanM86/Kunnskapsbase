@@ -2,7 +2,7 @@
 title: "Hva er ChatGPT?"
 slug: "hva-er-chatgpt"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "ChatGPT er OpenAIs AI-chatbot basert på GPT-modellene. Lær hvordan den fungerer, hva den kan brukes til, og forskjellen mellom gratisversjonen og Plus."
 keywords: ["ChatGPT", "OpenAI", "GPT-4", "AI-chatbot", "GPT", "kunstig intelligens"]
 date: "2026-03-06"

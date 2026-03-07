@@ -2,7 +2,7 @@
 title: "Hva er AI i romfart?"
 slug: "hva-er-ai-romfart"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI revolusjonerer romfart med autonom navigasjon, satellittanalyse og planetutforskning. Lær om NASAs AI, SpaceX, jordobservasjon og norsk romvirksomhet."
 keywords: ["AI romfart", "AI space", "satellitt AI", "autonom romfart", "jordobservasjon AI"]
 date: "2026-03-06"

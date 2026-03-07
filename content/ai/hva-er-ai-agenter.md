@@ -2,7 +2,7 @@
 title: "Hva er AI-agenter"
 slug: "hva-er-ai-agenter"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-agenter er autonome systemer som planlegger, bruker verktøy og utfører oppgaver ved hjelp av språkmodeller."
 keywords: ["AI-agenter", "autonome systemer", "LLM-agenter", "verktøybruk", "planlegging"]
 date: "2025-03-05"

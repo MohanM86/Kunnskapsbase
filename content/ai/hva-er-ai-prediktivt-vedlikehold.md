@@ -2,7 +2,7 @@
 title: "Hva er AI-prediktivt vedlikehold?"
 slug: "hva-er-ai-prediktivt-vedlikehold"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-prediktivt vedlikehold forutsier når maskiner og utstyr trenger vedlikehold – før de bryter sammen. Lær om sensordata, maskinlæring og industriell implementering."
 keywords: ["prediktivt vedlikehold", "predictive maintenance", "AI vedlikehold", "tilstandsovervåking", "industri AI"]
 date: "2026-03-06"

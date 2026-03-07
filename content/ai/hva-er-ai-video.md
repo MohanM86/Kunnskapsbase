@@ -2,7 +2,7 @@
 title: "Hva er AI-videogenerering?"
 slug: "hva-er-ai-video"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-videogenerering lar deg lage videoer fra tekst eller bilder. Lær om Sora, Runway, Kling og hvordan teknologien endrer videoproduksjon."
 keywords: ["AI-video", "videogenerering", "Sora", "Runway", "Kling", "tekst-til-video"]
 date: "2026-03-06"

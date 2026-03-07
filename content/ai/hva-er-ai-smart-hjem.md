@@ -2,7 +2,7 @@
 title: "Hva er AI-smart hjem?"
 slug: "hva-er-ai-smart-hjem"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-smart hjem bruker kunstig intelligens for å automatisere og optimalisere boligen din. Lær om smarte assistenter, energistyring, sikkerhet og norske løsninger."
 keywords: ["AI smart hjem", "smart hjem", "hjemmeautomatisering", "Alexa", "Google Home", "energistyring"]
 date: "2026-03-06"

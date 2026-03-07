@@ -2,7 +2,7 @@
 title: "Hva er AI-musikk?"
 slug: "hva-er-ai-musikk"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-musikk er musikk skapt av kunstig intelligens. Lær om Suno, Udio, musikkgenerering fra tekst, og de kreative og juridiske implikasjonene."
 keywords: ["AI-musikk", "musikk AI", "Suno", "Udio", "musikkgenerering", "AI-komposisjon"]
 date: "2026-03-06"

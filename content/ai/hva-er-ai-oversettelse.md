@@ -2,7 +2,7 @@
 title: "Hva er AI-oversettelse?"
 slug: "hva-er-ai-oversettelse"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "AI-oversettelse bruker kunstig intelligens for å oversette tekst mellom språk med høy kvalitet. Lær om nevral maskinoversettelse, DeepL, lokalisering og norsk."
 keywords: ["AI-oversettelse", "maskinoversettelse", "DeepL", "Google Translate", "lokalisering", "NMT"]
 date: "2026-03-06"

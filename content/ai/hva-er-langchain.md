@@ -2,7 +2,7 @@
 title: "Hva er LangChain?"
 slug: "hva-er-langchain"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "LangChain er det mest brukte rammeverket for å bygge AI-applikasjoner. Lær om chains, agenter, RAG-integrasjon og hvordan du kommer i gang."
 keywords: ["LangChain", "LLM-rammeverk", "AI-utvikling", "chains", "LangGraph", "RAG LangChain"]
 date: "2026-03-06"

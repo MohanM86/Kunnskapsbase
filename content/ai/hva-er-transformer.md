@@ -2,7 +2,7 @@
 title: "Hva er transformer-arkitekturen?"
 slug: "hva-er-transformer"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Transformer er AI-arkitekturen bak ChatGPT, Claude og alle moderne språkmodeller. Lær om attention-mekanismen, self-attention og hvorfor transformer revolusjonerte AI."
 keywords: ["transformer", "attention", "self-attention", "AI-arkitektur", "GPT", "BERT"]
 date: "2026-03-06"

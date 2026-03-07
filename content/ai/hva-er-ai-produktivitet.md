@@ -2,7 +2,7 @@
 title: "Hva er AI-produktivitet?"
 slug: "hva-er-ai-produktivitet"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-produktivitet handler om å bruke kunstig intelligens for å jobbe smartere og raskere. Lær om Microsoft Copilot, Google Duet, AI-arbeidsflyter og konkrete produktivitetstips."
 keywords: ["AI-produktivitet", "Microsoft Copilot", "Google Duet AI", "AI-effektivitet", "produktivitetsverktøy"]
 date: "2026-03-06"

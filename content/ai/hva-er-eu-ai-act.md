@@ -2,7 +2,7 @@
 title: "Hva er EU AI Act?"
 slug: "hva-er-eu-ai-act"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "EU AI Act er verdens første omfattende AI-lov. Lær om risikonivåene, kravene til bedrifter, tidslinjene og hva loven betyr for norske virksomheter."
 keywords: ["EU AI Act", "AI-lov", "AI-regulering EU", "risikobasert AI", "AI-compliance"]
 date: "2026-03-06"

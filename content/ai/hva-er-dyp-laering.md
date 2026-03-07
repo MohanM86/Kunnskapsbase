@@ -2,7 +2,7 @@
 title: "Hva er dyp læring?"
 slug: "hva-er-dyp-laering"
 category: "AI"
-subcategory: "Grunnleggende"
+subcategory: "grunnleggende"
 description: "Dyp læring er en avansert form for maskinlæring som bruker nevrale nettverk med mange lag til å løse komplekse oppgaver. Lær hvordan det fungerer."
 keywords: ["dyp læring", "deep learning", "nevrale nettverk", "AI", "maskinlæring"]
 date: "2026-03-05"

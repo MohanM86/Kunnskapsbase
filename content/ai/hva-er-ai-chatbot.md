@@ -2,7 +2,7 @@
 title: "Hva er AI-chatbot?"
 slug: "hva-er-ai-chatbot"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "En AI-chatbot er et program som bruker kunstig intelligens for å føre samtaler med mennesker. Lær om teknologien, bruksområder, bygging og valg av chatbot-plattform."
 keywords: ["AI-chatbot", "chatbot", "konversasjons-AI", "kundeservice-bot", "chatbot-plattform"]
 date: "2026-03-06"

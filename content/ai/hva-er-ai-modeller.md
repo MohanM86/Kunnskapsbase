@@ -2,7 +2,7 @@
 title: "Hva er AI-modeller?"
 slug: "hva-er-ai-modeller"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-modeller er de matematiske systemene som driver kunstig intelligens. Lær om ulike modelltyper, hvordan de trenes, og de viktigste modellene i dag."
 keywords: ["AI-modeller", "maskinlæringsmodell", "treningsmodell", "foundation model", "modelltyper"]
 date: "2026-03-06"

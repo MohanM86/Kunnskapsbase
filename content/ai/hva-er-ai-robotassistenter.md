@@ -2,7 +2,7 @@
 title: "Hva er AI-robotassistenter?"
 slug: "hva-er-ai-robotassistenter"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-robotassistenter kombinerer kunstig intelligens med robotikk for å utføre fysiske oppgaver. Lær om humanoid robotikk, cobots, servicerobotter og norsk robotforskning."
 keywords: ["AI-robot", "robotassistent", "cobot", "humanoid robot", "servicerobott", "robotikk AI"]
 date: "2026-03-06"

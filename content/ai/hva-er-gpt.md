@@ -2,7 +2,7 @@
 title: "Hva er GPT?"
 slug: "hva-er-gpt"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "GPT (Generative Pre-trained Transformer) er modellfamilien bak ChatGPT. Lær om GPT-arkitekturen, utviklingen fra GPT-1 til GPT-4o, og hvordan GPT endret AI-landskapet."
 keywords: ["GPT", "Generative Pre-trained Transformer", "GPT-4", "GPT-4o", "OpenAI GPT"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI-koding?"
 slug: "hva-er-ai-koding"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-koding bruker kunstig intelligens for å skrive, debugge og forbedre kode. Lær om GitHub Copilot, Cursor, Claude Code og hvordan AI endrer programvareutvikling."
 keywords: ["AI-koding", "GitHub Copilot", "Cursor", "Claude Code", "kodegenerering", "AI-programmering"]
 date: "2026-03-06"

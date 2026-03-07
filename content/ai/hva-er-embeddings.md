@@ -2,7 +2,7 @@
 title: "Hva er embeddings?"
 slug: "hva-er-embeddings"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Embeddings er matematiske representasjoner av tekst, bilder eller andre data som fanger mening. Lær hvordan de fungerer og brukes i søk, anbefalinger og RAG."
 keywords: ["embeddings", "vektorer", "semantisk søk", "embedding-modeller", "vektorrom"]
 date: "2026-03-06"

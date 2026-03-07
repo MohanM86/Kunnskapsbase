@@ -2,7 +2,7 @@
 title: "Hva er prompt engineering?"
 slug: "hva-er-prompt-engineering-dybde"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "Prompt engineering er kunsten å formulere instruksjoner til AI-modeller for å få best mulige resultater. Lær teknikker, mønstre og beste praksis."
 keywords: ["prompt engineering", "prompting", "AI-instruksjoner", "systemprompt", "few-shot", "chain-of-thought"]
 date: "2026-03-06"

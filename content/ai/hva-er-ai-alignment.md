@@ -2,7 +2,7 @@
 title: "Hva er AI alignment?"
 slug: "hva-er-ai-alignment"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI alignment handler om å sikre at kunstig intelligens handler i tråd med menneskelige verdier og intensjoner. Lær om alignment-problemet, teknikker og hvorfor det er viktig."
 keywords: ["AI alignment", "samordning", "verdijustering", "RLHF", "Constitutional AI", "AI-verdier"]
 date: "2026-03-06"

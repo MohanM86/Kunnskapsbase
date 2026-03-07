@@ -2,7 +2,7 @@
 title: "Hva er Hugging Face?"
 slug: "hva-er-hugging-face"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Hugging Face er den sentrale plattformen for åpen kildekode AI med over 500 000 modeller. Lær om modellbiblioteket, Transformers-biblioteket og AI-fellesskapet."
 keywords: ["Hugging Face", "AI-plattform", "Transformers", "åpen kildekode AI", "modellbibliotek"]
 date: "2026-03-06"

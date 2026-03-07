@@ -2,7 +2,7 @@
 title: "Hva er AI i Norge?"
 slug: "hva-er-ai-i-norge"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "Norge er et av landene som satser mest på AI i Norden. Lær om norsk AI-strategi, forskningsmiljøer, næringsliv og utfordringer for AI-bruk i Norge."
 keywords: ["AI Norge", "norsk AI", "AI-strategi", "NorwAI", "kunstig intelligens Norge"]
 date: "2026-03-06"

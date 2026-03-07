@@ -2,7 +2,7 @@
 title: "Hva er agentrammeverk?"
 slug: "hva-er-agentrammeverk"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "Agentrammeverk er programvareplattformer for å bygge AI-agenter. Lær om LangChain, CrewAI, AutoGen og hvordan du velger riktig rammeverk for ditt prosjekt."
 keywords: ["agentrammeverk", "LangChain", "CrewAI", "AutoGen", "AI-agent utvikling", "LangGraph"]
 date: "2026-03-06"

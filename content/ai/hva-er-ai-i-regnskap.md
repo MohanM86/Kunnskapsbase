@@ -2,7 +2,7 @@
 title: "Hva er AI i regnskap og økonomi?"
 slug: "hva-er-ai-i-regnskap"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI transformerer regnskap og økonomistyring med automatisert bokføring, fakturahåndtering og finansiell analyse. Lær om verktøy, bruksområder og norske løsninger."
 keywords: ["AI regnskap", "AI økonomi", "automatisert bokføring", "AI faktura", "finansiell AI"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI-regulering?"
 slug: "hva-er-ai-regulering"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI-regulering er lover og regler som styrer utviklingen og bruken av kunstig intelligens. Lær om EU AI Act, norsk lovgivning og den globale debatten."
 keywords: ["AI-regulering", "AI Act", "EU AI-lov", "AI-lovgivning", "ansvarlig AI", "AI-etikk"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI-personlig assistent?"
 slug: "hva-er-ai-personlig-assistent"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-personlige assistenter som Siri, Alexa og Google Assistant bruker kunstig intelligens for å hjelpe deg i hverdagen. Lær om utviklingen mot LLM-drevne assistenter."
 keywords: ["AI-assistent", "personlig assistent", "Siri", "Alexa", "Google Assistant", "AI-hjelper"]
 date: "2026-03-06"

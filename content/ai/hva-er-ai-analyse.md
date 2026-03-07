@@ -2,7 +2,7 @@
 title: "Hva er AI-analyse?"
 slug: "hva-er-ai-analyse"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI-analyse bruker kunstig intelligens for å finne mønstre, predikere trender og ta bedre beslutninger basert på data. Lær om prediktiv analyse, anomalideteksjon og verktøy."
 keywords: ["AI-analyse", "prediktiv analyse", "dataanalyse AI", "business intelligence", "AI-innsikt"]
 date: "2026-03-06"

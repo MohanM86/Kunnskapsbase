@@ -2,7 +2,7 @@
 title: "Hva er AI for sosiale medier?"
 slug: "hva-er-ai-for-sosiale-medier"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "AI for sosiale medier automatiserer innholdsproduksjon, optimaliserer publisering og analyserer engasjement. Lær om verktøy, strategier og beste praksis."
 keywords: ["AI sosiale medier", "social media AI", "AI-innhold SoMe", "innholdsplanlegging AI", "SoMe-automatisering"]
 date: "2026-03-06"

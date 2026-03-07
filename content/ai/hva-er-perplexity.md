@@ -2,7 +2,7 @@
 title: "Hva er Perplexity?"
 slug: "hva-er-perplexity"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "Perplexity er en AI-drevet søkemotor som gir direkte svar med kildehenvisning. Lær hvordan den skiller seg fra Google og tradisjonelle chatboter."
 keywords: ["Perplexity", "AI-søkemotor", "Perplexity AI", "søk med AI", "svarsøkemotor"]
 date: "2026-03-06"

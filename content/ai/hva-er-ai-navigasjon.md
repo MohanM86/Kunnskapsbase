@@ -2,7 +2,7 @@
 title: "Hva er AI-navigasjon?"
 slug: "hva-er-ai-navigasjon"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "AI-navigasjon bruker kunstig intelligens for å finne optimale ruter i sanntid. Lær om Google Maps AI, trafikk-prediksjon, innendørs navigasjon og fremtidens navigering."
 keywords: ["AI-navigasjon", "GPS AI", "Google Maps AI", "ruteoptimalisering", "trafikkprediksjon"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI-sikkerhet?"
 slug: "hva-er-ai-sikkerhet"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI-sikkerhet handler om å utvikle kunstig intelligens som er trygg, kontrollerbar og i tråd med menneskelige verdier. Lær om alignment, jailbreaking og sikkerhetsutfordringer."
 keywords: ["AI-sikkerhet", "AI safety", "alignment", "jailbreaking", "ansvarlig AI", "AI-risiko"]
 date: "2026-03-06"

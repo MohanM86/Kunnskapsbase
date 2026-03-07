@@ -2,7 +2,7 @@
 title: "Hva er Stable Diffusion?"
 slug: "hva-er-stable-diffusion"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Stable Diffusion er den ledende åpen kildekode AI-bildemodellen. Lær om hvordan den fungerer, lokal kjøring, tilpasning med LoRA, og det enorme fellesskapet."
 keywords: ["Stable Diffusion", "åpen kildekode bilder", "SD", "SDXL", "LoRA", "ComfyUI"]
 date: "2026-03-06"

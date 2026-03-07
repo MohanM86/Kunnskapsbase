@@ -2,7 +2,7 @@
 title: "Hva er vektordatabase?"
 slug: "hva-er-vektordatabase"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "En vektordatabase er en spesialisert database for å lagre og søke i AI-embeddings. Lær om Pinecone, Weaviate, ChromaDB og hvorfor vektordatabaser er essensielle for RAG."
 keywords: ["vektordatabase", "vector database", "Pinecone", "Weaviate", "ChromaDB", "semantisk søk"]
 date: "2026-03-06"

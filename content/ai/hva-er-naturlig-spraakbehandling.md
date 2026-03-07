@@ -2,7 +2,7 @@
 title: "Hva er naturlig språkbehandling (NLP)?"
 slug: "hva-er-naturlig-spraakbehandling"
 category: "AI"
-subcategory: "Grunnleggende"
+subcategory: "grunnleggende"
 description: "Naturlig språkbehandling (NLP) er en gren av AI som gjør datamaskiner i stand til å forstå, tolke og generere menneskelig språk."
 keywords: ["naturlig språkbehandling", "NLP", "natural language processing", "tekstanalyse", "AI"]
 date: "2026-03-05"

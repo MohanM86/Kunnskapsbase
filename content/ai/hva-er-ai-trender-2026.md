@@ -2,7 +2,7 @@
 title: "Hva er AI-trender i 2026?"
 slug: "hva-er-ai-trender-2026"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI utvikler seg i rekordfart. Lær om de viktigste AI-trendene i 2026 – fra agentisk AI og multimodale modeller til AI-regulering og demokratisering."
 keywords: ["AI-trender 2026", "AI-utvikling", "fremtidens AI", "AI-trender", "agentisk AI"]
 date: "2026-03-06"

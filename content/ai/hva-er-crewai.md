@@ -2,7 +2,7 @@
 title: "Hva er CrewAI?"
 slug: "hva-er-crewai"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "CrewAI er et rammeverk for å bygge team av AI-agenter som samarbeider om oppgaver. Lær om roller, oppgaver, crew-struktur og praktiske bruksområder."
 keywords: ["CrewAI", "multi-agent", "AI-team", "agentsamarbeid", "crew AI"]
 date: "2026-03-06"

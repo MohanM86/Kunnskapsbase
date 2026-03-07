@@ -2,7 +2,7 @@
 title: "Hva er temperatur i AI?"
 slug: "hva-er-temperatur-i-ai"
 category: "AI"
-subcategory: "Språkmodeller"
+subcategory: "spraakmodeller"
 description: "Temperatur er en innstilling som kontrollerer hvor kreativ eller forutsigbar en AI-modell er. Lær hvordan temperatur fungerer og når du bør justere den."
 keywords: ["temperatur AI", "temperature", "kreativitet AI", "top-p", "sampling", "AI-innstillinger"]
 date: "2026-03-06"

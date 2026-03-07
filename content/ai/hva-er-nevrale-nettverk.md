@@ -2,7 +2,7 @@
 title: "Hva er nevrale nettverk?"
 slug: "hva-er-nevrale-nettverk"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Nevrale nettverk er AI-systemer inspirert av hjernen som lærer mønstre fra data. Lær om lag, nevroner, treningsprosessen og ulike nettverkstyper."
 keywords: ["nevrale nettverk", "neural networks", "dyp læring", "nevroner", "lag", "backpropagation"]
 date: "2026-03-06"

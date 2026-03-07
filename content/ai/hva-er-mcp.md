@@ -2,7 +2,7 @@
 title: "Hva er MCP?"
 slug: "hva-er-mcp"
 category: "AI"
-subcategory: "Automatisering"
+subcategory: "automatisering"
 description: "MCP (Model Context Protocol) er en åpen standard som lar AI-modeller koble seg til eksterne verktøy og datakilder. Lær hvordan MCP fungerer og hvorfor det er viktig."
 keywords: ["MCP", "Model Context Protocol", "AI-integrasjon", "verktøybruk", "Anthropic MCP"]
 date: "2026-03-06"

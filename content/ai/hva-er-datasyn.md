@@ -2,7 +2,7 @@
 title: "Hva er datasyn (computer vision)?"
 slug: "hva-er-datasyn"
 category: "AI"
-subcategory: "Grunnleggende"
+subcategory: "grunnleggende"
 description: "Datasyn er en gren av AI som gjør datamaskiner i stand til å tolke og forstå visuell informasjon fra bilder og video. Lær hvordan det fungerer."
 keywords: ["datasyn", "computer vision", "bildegjenkjenning", "AI", "maskinlæring"]
 date: "2026-03-05"

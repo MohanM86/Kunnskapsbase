@@ -2,7 +2,7 @@
 title: "Hva er autonome biler?"
 slug: "hva-er-autonome-biler"
 category: "AI"
-subcategory: "Maskinlæring"
+subcategory: "maskinlaering"
 description: "Autonome biler bruker AI for å kjøre uten menneskelig fører. Lær om selvkjøringsnivåer, sensorteknologi, Tesla Autopilot, Waymo og status i Norge."
 keywords: ["autonome biler", "selvkjørende bil", "AI kjøring", "Tesla Autopilot", "Waymo", "selvkjøring"]
 date: "2026-03-06"

@@ -2,7 +2,7 @@
 title: "Hva er AI i helse?"
 slug: "hva-er-ai-i-helse"
 category: "AI"
-subcategory: "Samfunn"
+subcategory: "samfunn"
 description: "AI transformerer helsevesenet med bedre diagnostikk, legemiddelutvikling og pasientbehandling. Lær om AI-bruk i norsk helse, muligheter og utfordringer."
 keywords: ["AI helse", "medisinsk AI", "AI diagnostikk", "legemiddelutvikling AI", "helse-AI Norge"]
 date: "2026-03-06"
