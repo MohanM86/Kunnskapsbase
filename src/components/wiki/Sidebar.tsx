@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { CategoryTree } from '@/lib/types';
 
 interface SidebarProps {
@@ -47,109 +47,194 @@ const catIcons: Record<string, React.ReactNode> = {
   jobb: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1.5" y="5" width="11" height="7" rx="1" stroke="currentColor" strokeWidth="1.2"/><path d="M5 5V3.5C5 2.7 5.7 2 6.5 2H7.5C8.3 2 9 2.7 9 3.5V5" stroke="currentColor" strokeWidth="1.2"/><line x1="1.5" y1="8.5" x2="12.5" y2="8.5" stroke="currentColor" strokeWidth="1"/></svg>,
   sport: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2"/><path d="M7 1.5V12.5M1.5 7H12.5" stroke="currentColor" strokeWidth="0.8"/><path d="M3.5 2.5C5 4.5 5 9.5 3.5 11.5M10.5 2.5C9 4.5 9 9.5 10.5 11.5" stroke="currentColor" strokeWidth="0.8"/></svg>,
   underholdning: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 3.5L5.5 7L2 10.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6 3.5L9.5 7L6 10.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><line x1="10.5" y1="3.5" x2="10.5" y2="10.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>,
+  teknologi: <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="7" rx="1" stroke="currentColor" strokeWidth="1.2"/><line x1="5" y1="12" x2="9" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><line x1="7" y1="9" x2="7" y2="12" stroke="currentColor" strokeWidth="1.2"/></svg>,
 };
+
+/* ── Subcategories with >= this many articles become collapsible ── */
+const COLLAPSE_THRESHOLD = 5;
+
+/* ── Detect which subcategory the current article belongs to ── */
+function detectActiveSub(
+  pathname: string,
+  catSlug: string,
+  subcategories: Record<string, { articles: { slugPath: string[] }[] }>
+): string | null {
+  for (const [subSlug, sub] of Object.entries(subcategories)) {
+    for (const article of sub.articles) {
+      if (pathname === `/${article.slugPath.join('/')}`) return subSlug;
+    }
+  }
+  return null;
+}
 
 export default function Sidebar({ categoryTree, activeCategory }: SidebarProps) {
   const pathname = usePathname();
+
+  /* ── Category-level open/close ── */
   const [openCategories, setOpenCategories] = useState<Set<string>>(
     new Set(activeCategory ? [activeCategory] : [])
   );
 
+  /* ── Subcategory-level open/close (keyed as "catSlug:subSlug") ── */
+  const [openSubs, setOpenSubs] = useState<Set<string>>(new Set());
+
+  /* ── Auto-open active subcategory on navigation ── */
+  useEffect(() => {
+    if (!activeCategory || !categoryTree[activeCategory]) return;
+    const cat = categoryTree[activeCategory];
+    const activeSub = detectActiveSub(pathname, activeCategory, cat.subcategories);
+    if (activeSub) {
+      setOpenSubs(new Set([`${activeCategory}:${activeSub}`]));
+      setOpenCategories((prev) => new Set(prev).add(activeCategory));
+    }
+  }, [pathname, activeCategory, categoryTree]);
+
   const toggleCategory = (slug: string) => {
-    const next = new Set(openCategories);
-    if (next.has(slug)) next.delete(slug);
-    else next.add(slug);
-    setOpenCategories(next);
+    setOpenCategories((prev) => {
+      const next = new Set(prev);
+      if (next.has(slug)) next.delete(slug);
+      else next.add(slug);
+      return next;
+    });
   };
 
-  const isActive = (href: string) => pathname === href;
+  const toggleSub = (key: string) => {
+    setOpenSubs((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  };
 
-  // Collect all slugs already placed in groups
-  const placedSlugs = new Set(SIDEBAR_GROUPS.flatMap((g) => g.categories));
+  const isActivePath = (href: string) => pathname === href;
 
-  // Find any categories from content not in any group
-  const extraSlugs = Object.keys(categoryTree).filter((s) => !placedSlugs.has(s));
+  /* ── Build groups from SIDEBAR_GROUPS + extras ── */
+  const groups = useMemo(() => {
+    const placedSlugs = new Set(SIDEBAR_GROUPS.flatMap((g) => g.categories));
+    const extraSlugs = Object.keys(categoryTree).filter((s) => !placedSlugs.has(s));
 
-  // Build final groups, only including categories that have content
-  const groups = SIDEBAR_GROUPS.map((group) => ({
-    ...group,
-    categories: group.categories
-      .filter((catSlug) => categoryTree[catSlug])
-      .map((catSlug) => ({ ...categoryTree[catSlug], slug: catSlug })),
-  })).filter((g) => g.categories.length > 0);
+    const built = SIDEBAR_GROUPS.map((group) => ({
+      ...group,
+      categories: group.categories
+        .filter((catSlug) => categoryTree[catSlug])
+        .map((catSlug) => ({ ...categoryTree[catSlug], slug: catSlug })),
+    })).filter((g) => g.categories.length > 0);
 
-  // Add extras to "Annet" if any
-  if (extraSlugs.length > 0) {
-    const annetGroup = groups.find((g) => g.label === 'Annet');
-    const extras = extraSlugs
-      .filter((catSlug) => categoryTree[catSlug])
-      .map((catSlug) => ({ ...categoryTree[catSlug], slug: catSlug }));
-    if (annetGroup) {
-      annetGroup.categories.push(...extras);
-    } else {
-      groups.push({ label: 'Annet', categories: extras });
+    if (extraSlugs.length > 0) {
+      const extras = extraSlugs
+        .filter((catSlug) => categoryTree[catSlug])
+        .map((catSlug) => ({ ...categoryTree[catSlug], slug: catSlug }));
+      if (extras.length > 0) {
+        built.push({ label: 'Annet', categories: extras });
+      }
     }
-  }
+    return built;
+  }, [categoryTree]);
 
   return (
     <nav className="sidebar" aria-label="Innholdsfortegnelse">
       {groups.map((group) => (
         <div key={group.label} className="sidebar-group">
           <div className="sidebar-group-label">{group.label}</div>
-          {group.categories.map((cat) => {
-            const isOpen = openCategories.has(cat.slug);
-            const hasArticles =
-              cat.articles.length > 0 ||
-              Object.values(cat.subcategories).some((s) => s.articles.length > 0);
 
-            if (!hasArticles) return null;
+          {group.categories.map((cat) => {
+            const isCatOpen = openCategories.has(cat.slug);
+            const totalArticles =
+              cat.articles.length +
+              Object.values(cat.subcategories).reduce((sum, s) => sum + s.articles.length, 0);
+
+            if (totalArticles === 0) return null;
 
             return (
               <div key={cat.slug} className="sidebar-section">
+                {/* ── Category toggle ── */}
                 <button
-                  className={`sidebar-category ${isOpen ? 'open' : ''} ${activeCategory === cat.slug ? 'active-cat' : ''}`}
+                  className={`sidebar-category${isCatOpen ? ' open' : ''}${activeCategory === cat.slug ? ' active-cat' : ''}`}
                   onClick={() => toggleCategory(cat.slug)}
-                  aria-expanded={isOpen}
+                  aria-expanded={isCatOpen}
                 >
                   <span className="sidebar-cat-inner">
                     <span className="sidebar-cat-icon">{catIcons[cat.slug] || null}</span>
                     {cat.label}
                   </span>
-                  <span className="sidebar-chevron" aria-hidden="true">
-                    {isOpen ? '▾' : '▸'}
+                  <span className="sidebar-cat-meta">
+                    <span className="sidebar-cat-count">{totalArticles}</span>
+                    <span className="sidebar-chevron" aria-hidden="true">
+                      {isCatOpen ? '▾' : '▸'}
+                    </span>
                   </span>
                 </button>
-                {isOpen && (
+
+                {/* ── Expanded category content ── */}
+                {isCatOpen && (
                   <div className="sidebar-items">
+                    {/* Root articles (not in a subcategory) */}
                     {cat.articles.map((article) => {
                       const href = `/${article.slugPath.join('/')}`;
                       return (
                         <Link
                           key={article.slug}
                           href={href}
-                          className={`sidebar-link ${isActive(href) ? 'active' : ''}`}
+                          className={`sidebar-link${isActivePath(href) ? ' active' : ''}`}
                         >
                           {article.title}
                         </Link>
                       );
                     })}
-                    {Object.entries(cat.subcategories).map(([subSlug, sub]) => (
-                      <div key={subSlug} className="sidebar-subcategory">
-                        <div className="sidebar-sublabel">{sub.label}</div>
-                        {sub.articles.map((article) => {
-                          const href = `/${article.slugPath.join('/')}`;
-                          return (
-                            <Link
-                              key={article.slug}
-                              href={href}
-                              className={`sidebar-link sidebar-link-sub ${isActive(href) ? 'active' : ''}`}
+
+                    {/* Subcategories */}
+                    {Object.entries(cat.subcategories).map(([subSlug, sub]) => {
+                      const count = sub.articles.length;
+                      if (count === 0) return null;
+
+                      const subKey = `${cat.slug}:${subSlug}`;
+                      const isCollapsible = count >= COLLAPSE_THRESHOLD;
+                      const isSubOpen = openSubs.has(subKey);
+
+                      return (
+                        <div key={subSlug} className="sidebar-subcategory">
+                          {/* Sub header: collapsible or static */}
+                          {isCollapsible ? (
+                            <button
+                              className={`sidebar-sublabel sidebar-sublabel-btn${isSubOpen ? ' open' : ''}`}
+                              onClick={() => toggleSub(subKey)}
+                              aria-expanded={isSubOpen}
                             >
-                              {article.title}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    ))}
+                              <span>{sub.label}</span>
+                              <span className="sidebar-sub-meta">
+                                <span className="sidebar-sub-count">{count}</span>
+                                <span className="sidebar-sub-chevron" aria-hidden="true">
+                                  {isSubOpen ? '▾' : '▸'}
+                                </span>
+                              </span>
+                            </button>
+                          ) : (
+                            <div className="sidebar-sublabel">
+                              {sub.label}
+                            </div>
+                          )}
+
+                          {/* Sub articles: always shown if small, toggled if large */}
+                          {(!isCollapsible || isSubOpen) && (
+                            <div className="sidebar-sub-articles">
+                              {sub.articles.map((article) => {
+                                const href = `/${article.slugPath.join('/')}`;
+                                return (
+                                  <Link
+                                    key={article.slug}
+                                    href={href}
+                                    className={`sidebar-link sidebar-link-sub${isActivePath(href) ? ' active' : ''}`}
+                                  >
+                                    {article.title}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 )}
               </div>
