@@ -51,7 +51,7 @@ const catIcons: Record<string, React.ReactNode> = {
 };
 
 /* ── Subcategories with >= this many articles become collapsible ── */
-const COLLAPSE_THRESHOLD = 5;
+const COLLAPSE_THRESHOLD = 0;
 
 /* ── Detect which subcategory the current article belongs to ── */
 function detectActiveSub(
