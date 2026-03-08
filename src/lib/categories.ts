@@ -24,7 +24,7 @@ export const CATEGORIES: CategoryConfig[] = [
     slug: 'okonomi', label: 'Økonomi',
     description: 'Personlig økonomi, investering, næringsliv og makroøkonomi.',
     introText: 'Økonomi er studiet av hvordan ressurser produseres, fordeles og brukes i samfunnet. I denne kategorien finner du artikler om personlig økonomi, budsjettering, investering i aksjer, renter, inflasjon og makroøkonomiske sammenhenger.',
-    subcategories: [{ slug: 'personlig-okonomi', label: 'Personlig økonomi' }, { slug: 'investering', label: 'Investering' }, { slug: 'naeringsliv', label: 'Næringsliv' }],
+    subcategories: [{ slug: 'makrookonomi', label: 'Makroøkonomi' }, { slug: 'skatt', label: 'Skatt' }, { slug: 'personlig okonomi', label: 'Personlig økonomi' }, { slug: 'investering', label: 'Investering' }, { slug: 'lan', label: 'Lån' }, { slug: 'forsikring', label: 'Forsikring' }, { slug: 'pensjon', label: 'Pensjon' }],
   },
   {
     slug: 'krypto', label: 'Krypto',
