@@ -31,11 +31,10 @@ export default function PersonvernPage() {
   return (
     <div className="wiki-layout">
       <div className="wiki-main">
-        <div className="article-content-wrapper">
+        <div className="article-with-toc">
           <article className="personvern-article">
             <style>{`
               .personvern-article {
-                max-width: 780px;
                 color: #111;
                 line-height: 1.85;
                 font-size: 1rem;
@@ -179,43 +178,6 @@ export default function PersonvernPage() {
               .personvern-article .pv-back:hover {
                 background: #e0e0e0;
                 color: #111;
-              }
-              .pv-toc-sidebar {
-                position: sticky;
-                top: 5rem;
-                align-self: start;
-              }
-              .pv-toc-sidebar nav {
-                padding: 1.25rem;
-                background: #fafafa;
-                border: 1px solid #eee;
-                border-radius: 8px;
-              }
-              .pv-toc-sidebar .pv-toc-title {
-                font-size: 0.75rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 0.08em;
-                color: #999;
-                margin-bottom: 0.75rem;
-              }
-              .pv-toc-sidebar ol {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-              }
-              .pv-toc-sidebar li {
-                margin-bottom: 0.35rem;
-              }
-              .pv-toc-sidebar a {
-                font-size: 0.82rem;
-                color: #555;
-                text-decoration: none;
-                line-height: 1.5;
-                transition: color 0.15s;
-              }
-              .pv-toc-sidebar a:hover {
-                color: #16a34a;
               }
             `}</style>
 
@@ -420,12 +382,12 @@ export default function PersonvernPage() {
             <Link href="/" className="pv-back">← Tilbake til forsiden</Link>
           </article>
 
-          <aside className="toc-sidebar pv-toc-sidebar">
-            <nav>
-              <div className="pv-toc-title">Innhold</div>
-              <ol>
+          <aside className="toc-sidebar">
+            <nav className="toc">
+              <div className="toc-title">Innhold</div>
+              <ol className="toc-list">
                 {TOC_ITEMS.map((item) => (
-                  <li key={item.id}><a href={`#${item.id}`}>{item.label}</a></li>
+                  <li key={item.id} className="toc-item"><a href={`#${item.id}`}>{item.label}</a></li>
                 ))}
               </ol>
             </nav>
