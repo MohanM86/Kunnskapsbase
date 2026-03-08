@@ -32,41 +32,7 @@ Oslo er Norges hovedstad, største by og landets mest folkerike kommune med omtr
 ## Grunnfakta
 
 Oslo er unik i Norge ved å være både kommune og fylke samtidig. Kommunenummeret er 0301, og administrasjonssenteret er Oslo sentrum. Byen ble grunnlagt rundt 1040 og har vært Norges hovedstad siden middelalderen.
-cat > content/kommune/oslo.md << 'ENDOFFILE'
----
-title: "Oslo kommune – Fakta, befolkning og nøkkeltall"
-slug: "oslo"
-category: "kommune"
-subcategory: "oslo-fylke"
-description: "Alt du trenger å vite om Oslo kommune – befolkning, areal, politikk, næringsliv, utdanning, helse og historie. Norges hovedstad og største by."
-keywords: ["Oslo kommune", "Oslo befolkning", "Oslo fakta", "Norges hovedstad", "Oslo nøkkeltall"]
-date: "2026-03-08"
-lastReviewed: "2026-03-08"
-author: "Kunnskapsbase"
-readingTime: 7
-draft: false
-entityType: "Municipality"
-topic: "Oslo"
-aliases: ["Christiania", "Kristiania", "Oslo by"]
-related: ["baerums", "lillestroem", "drammen", "asker", "fredrikstad"]
-seeAlso: ["bergen", "trondheim"]
-tags: ["kommune", "hovedstad", "østlandet"]
-updatedAt: "2026-03-08"
-featured: true
-contentType: "knowledge-article"
-difficulty: "beginner"
----
 
-# Oslo kommune
-
-Oslo er Norges hovedstad, største by og landets mest folkerike kommune med omtrent 729 000 innbyggere (2025).
-
-> **Kort forklart**
-> Oslo er både kommune og fylke, og fungerer som Norges politiske, økonomiske og kulturelle sentrum. Byen ligger innerst i Oslofjorden og har et totalareal på 454 km².
-
-## Grunnfakta
-
-Oslo er unik i Norge ved å være både kommune og fylke samtidig. Kommunenummeret er 0301, og administrasjonssenteret er Oslo sentrum. Byen ble grunnlagt rundt 1040 og har vært Norges hovedstad siden middelalderen.
 ```
 Kommunenummer:  0301
 Fylke:          Oslo (egen fylkeskommune)
