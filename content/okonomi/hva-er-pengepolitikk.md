@@ -2,7 +2,7 @@
 title: "Hva er pengepolitikk?"
 slug: "hva-er-pengepolitikk"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Pengepolitikk er Norges Banks strategi for å styre økonomien gjennom styringsrenten – holde inflasjonen nær 2 %, sikre full sysselsetting og stabil krone."
 keywords: ["pengepolitikk", "monetary policy", "Norges Bank strategi", "inflasjonsmål", "pengepolitisk rapport"]
 date: "2026-03-07"

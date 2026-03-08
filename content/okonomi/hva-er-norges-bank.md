@@ -2,7 +2,7 @@
 title: "Hva er Norges Bank?"
 slug: "hva-er-norges-bank"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Norges Bank er Norges sentralbank – den setter styringsrenten, forvalter oljefondet og trykker penger. Lær hva den gjør, hvem som leder, og hvorfor den er viktig."
 keywords: ["Norges Bank", "sentralbank", "sentralbanksjef", "pengepolitikk", "Ida Wolden Bache"]
 date: "2026-03-07"

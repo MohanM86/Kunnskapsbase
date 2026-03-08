@@ -2,7 +2,7 @@
 title: "Hva er BNP (bruttonasjonalprodukt)?"
 slug: "hva-er-bnp"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "BNP måler verdien av alt som produseres i et land – det er den viktigste indikatoren for økonomisk vekst. Lær hva BNP er, Norges BNP, og hva tallene betyr."
 keywords: ["BNP", "bruttonasjonalprodukt", "økonomisk vekst", "Norges BNP", "BNP per innbygger"]
 date: "2026-03-07"

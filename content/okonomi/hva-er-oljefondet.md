@@ -2,7 +2,7 @@
 title: "Hva er oljefondet?"
 slug: "hva-er-oljefondet"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Oljefondet (Statens pensjonsfond utland) er verdens største statlige investeringsfond – over 18 000 milliarder kr. Lær hva det er, hva det investerer i, og handlingsregelen."
 keywords: ["oljefondet", "Statens pensjonsfond utland", "SPU", "NBIM", "handlingsregelen"]
 date: "2026-03-07"

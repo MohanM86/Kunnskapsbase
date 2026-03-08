@@ -2,7 +2,7 @@
 title: "Hva er styringsrenten?"
 slug: "hva-er-styringsrente"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Styringsrenten er Norges Banks viktigste verktøy – den påvirker boliglånsrenten din, kronekursen og hele økonomien. Lær hva den er, hvordan den settes, og hva den er nå."
 keywords: ["styringsrente", "Norges Bank rente", "foliorente", "rentebeslutning", "rentemøte"]
 date: "2026-03-07"

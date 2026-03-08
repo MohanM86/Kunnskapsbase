@@ -2,7 +2,7 @@
 title: "Hva er inflasjon?"
 slug: "hva-er-inflasjon"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Inflasjon er at prisene stiger over tid – pengene dine blir mindre verdt. Lær hva inflasjon er, hvorfor det skjer, inflasjonsmålet på 2 %, og hva det betyr for din økonomi."
 keywords: ["inflasjon", "prisstigning", "KPI", "inflasjonsmål", "pengeverdien synker"]
 date: "2026-03-07"

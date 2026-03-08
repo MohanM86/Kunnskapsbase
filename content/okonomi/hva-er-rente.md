@@ -2,7 +2,7 @@
 title: "Hva er rente?"
 slug: "hva-er-rente"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "personlig okonomi"
 description: "Rente er prisen for å låne penger – og belønningen for å spare. Lær hva rente er, effektiv vs nominell, og hvorfor renten påvirker hele økonomien din."
 keywords: ["rente", "lånerente", "sparerente", "effektiv rente", "nominell rente"]
 date: "2026-03-07"

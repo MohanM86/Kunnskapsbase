@@ -2,7 +2,7 @@
 title: "Hva er konjunkturer?"
 slug: "hva-er-konjunkturer"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Konjunkturer er de naturlige opp- og nedturene i økonomien – fra boom til resesjon. Lær hva det er, de fire fasene, og hva det betyr for din økonomi."
 keywords: ["konjunkturer", "økonomisk syklus", "høykonjunktur", "lavkonjunktur", "boom bust"]
 date: "2026-03-07"

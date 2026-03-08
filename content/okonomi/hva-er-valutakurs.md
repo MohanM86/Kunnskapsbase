@@ -2,7 +2,7 @@
 title: "Hva er valutakurs?"
 slug: "hva-er-valutakurs"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Valutakurs er prisen på en valuta målt i en annen – f.eks. hvor mange kroner du betaler for en dollar. Lær hva som påvirker kronekursen og hva det betyr for deg."
 keywords: ["valutakurs", "kronekurs", "NOK USD", "NOK EUR", "svak krone"]
 date: "2026-03-07"

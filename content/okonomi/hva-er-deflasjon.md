@@ -2,7 +2,7 @@
 title: "Hva er deflasjon?"
 slug: "hva-er-deflasjon"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Deflasjon er det motsatte av inflasjon – prisene faller. Lær hva det er, hvorfor det er farligere enn inflasjon, og hvorfor sentralbanker frykter det."
 keywords: ["deflasjon", "prisfall", "negativ inflasjon", "deflasjonsspiral", "Japan deflasjon"]
 date: "2026-03-07"

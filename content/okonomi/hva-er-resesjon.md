@@ -2,7 +2,7 @@
 title: "Hva er resesjon?"
 slug: "hva-er-resesjon"
 category: "okonomi"
-subcategory: "grunnleggende"
+subcategory: "makrookonomi"
 description: "Resesjon er en økonomisk nedgang der BNP faller to kvartaler på rad. Lær hva det er, hva som utløser det, norske resesjoner, og hvordan du beskytter deg."
 keywords: ["resesjon", "økonomisk nedgang", "BNP-fall", "resesjon Norge", "lavkonjunktur"]
 date: "2026-03-07"
