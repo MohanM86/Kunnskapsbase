@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -22,7 +23,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="nb">
       <head><JsonLd schema={buildWebSiteSchema()} /></head>
-      <body><div className="page-wrapper"><Header /><main>{children}</main><Footer /></div></body>
+      <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-C7P0F9X31J"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-C7P0F9X31J');
+          `}
+        </Script>
+        <div className="page-wrapper"><Header /><main>{children}</main><Footer /></div>
+      </body>
     </html>
   );
 }
