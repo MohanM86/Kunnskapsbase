@@ -1,9 +1,9 @@
 ---
-title: "Hva er fotosyntese?"
-slug: "hva-er-fotosyntese"
+title: "Hva er fagfellevurdering?"
+slug: "hva-er-fagfellevurdering"
 category: "vitenskap"
 subcategory: "grunnleggende"
-description: "Hva er fotosyntese? Laer det grunnleggende."
+description: "Hva er fagfellevurdering? Laer det grunnleggende."
 keywords: ["vitenskap"]
 date: "2026-03-08"
 lastReviewed: "2026-03-08"
@@ -11,7 +11,7 @@ author: "Kunnskapsbase"
 readingTime: 3
 draft: false
 entityType: "Concept"
-topic: "Hva er fotosyntese?"
+topic: "Hva er fagfellevurdering?"
 aliases: []
 related: []
 seeAlso: []
@@ -22,13 +22,13 @@ contentType: "knowledge-article"
 difficulty: "beginner"
 ---
 
-# Hva er fotosyntese?
+# Hva er fagfellevurdering?
 
-Hva er fotosyntese? Laer det grunnleggende om dette temaet.
+Hva er fagfellevurdering? Laer det grunnleggende om dette temaet.
 
 > **Kort forklart**
-> Hva er fotosyntese? Her faar du en enkel forklaring.
+> Hva er fagfellevurdering? Her faar du en enkel forklaring.
 
 ## Oppsummering
 
-Hva er fotosyntese?
+Hva er fagfellevurdering?

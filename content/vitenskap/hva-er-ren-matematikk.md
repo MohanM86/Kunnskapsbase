@@ -1,9 +1,9 @@
 ---
-title: "Hva er fotosyntese?"
-slug: "hva-er-fotosyntese"
+title: "Hva er ren-matematikk?"
+slug: "hva-er-ren-matematikk"
 category: "vitenskap"
 subcategory: "grunnleggende"
-description: "Hva er fotosyntese? Laer det grunnleggende."
+description: "Hva er ren-matematikk? Laer det grunnleggende."
 keywords: ["vitenskap"]
 date: "2026-03-08"
 lastReviewed: "2026-03-08"
@@ -11,7 +11,7 @@ author: "Kunnskapsbase"
 readingTime: 3
 draft: false
 entityType: "Concept"
-topic: "Hva er fotosyntese?"
+topic: "Hva er ren-matematikk?"
 aliases: []
 related: []
 seeAlso: []
@@ -22,13 +22,13 @@ contentType: "knowledge-article"
 difficulty: "beginner"
 ---
 
-# Hva er fotosyntese?
+# Hva er ren-matematikk?
 
-Hva er fotosyntese? Laer det grunnleggende om dette temaet.
+Hva er ren-matematikk? Laer det grunnleggende om dette temaet.
 
 > **Kort forklart**
-> Hva er fotosyntese? Her faar du en enkel forklaring.
+> Hva er ren-matematikk? Her faar du en enkel forklaring.
 
 ## Oppsummering
 
-Hva er fotosyntese?
+Hva er ren-matematikk?

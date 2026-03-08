@@ -1,9 +1,9 @@
 ---
-title: "Hva er antikkens-hellas?"
-slug: "hva-er-antikkens-hellas"
+title: "Hva er sovjetunionens-fall?"
+slug: "hva-er-sovjetunionens-fall"
 category: "historie"
 subcategory: "grunnleggende"
-description: "Hva er antikkens-hellas? Laer det grunnleggende."
+description: "Hva er sovjetunionens-fall? Laer det grunnleggende."
 keywords: ["historie"]
 date: "2026-03-08"
 lastReviewed: "2026-03-08"
@@ -11,7 +11,7 @@ author: "Kunnskapsbase"
 readingTime: 3
 draft: false
 entityType: "Concept"
-topic: "Hva er antikkens-hellas?"
+topic: "Hva er sovjetunionens-fall?"
 aliases: []
 related: []
 seeAlso: []
@@ -22,13 +22,13 @@ contentType: "knowledge-article"
 difficulty: "beginner"
 ---
 
-# Hva er antikkens-hellas?
+# Hva er sovjetunionens-fall?
 
-Hva er antikkens-hellas? Laer det grunnleggende om dette temaet.
+Hva er sovjetunionens-fall? Laer det grunnleggende om dette temaet.
 
 > **Kort forklart**
-> Hva er antikkens-hellas? Her faar du en enkel forklaring.
+> Hva er sovjetunionens-fall? Her faar du en enkel forklaring.
 
 ## Oppsummering
 
-Hva er antikkens-hellas?
+Hva er sovjetunionens-fall?

@@ -1,9 +1,9 @@
 ---
-title: "Hva er antikkens-hellas?"
-slug: "hva-er-antikkens-hellas"
+title: "Hva er samenes-historie?"
+slug: "hva-er-samenes-historie"
 category: "historie"
 subcategory: "grunnleggende"
-description: "Hva er antikkens-hellas? Laer det grunnleggende."
+description: "Hva er samenes-historie? Laer det grunnleggende."
 keywords: ["historie"]
 date: "2026-03-08"
 lastReviewed: "2026-03-08"
@@ -11,7 +11,7 @@ author: "Kunnskapsbase"
 readingTime: 3
 draft: false
 entityType: "Concept"
-topic: "Hva er antikkens-hellas?"
+topic: "Hva er samenes-historie?"
 aliases: []
 related: []
 seeAlso: []
@@ -22,13 +22,13 @@ contentType: "knowledge-article"
 difficulty: "beginner"
 ---
 
-# Hva er antikkens-hellas?
+# Hva er samenes-historie?
 
-Hva er antikkens-hellas? Laer det grunnleggende om dette temaet.
+Hva er samenes-historie? Laer det grunnleggende om dette temaet.
 
 > **Kort forklart**
-> Hva er antikkens-hellas? Her faar du en enkel forklaring.
+> Hva er samenes-historie? Her faar du en enkel forklaring.
 
 ## Oppsummering
 
-Hva er antikkens-hellas?
+Hva er samenes-historie?

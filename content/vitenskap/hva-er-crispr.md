@@ -1,9 +1,9 @@
 ---
-title: "Hva er fotosyntese?"
-slug: "hva-er-fotosyntese"
+title: "Hva er crispr?"
+slug: "hva-er-crispr"
 category: "vitenskap"
 subcategory: "grunnleggende"
-description: "Hva er fotosyntese? Laer det grunnleggende."
+description: "Hva er crispr? Laer det grunnleggende."
 keywords: ["vitenskap"]
 date: "2026-03-08"
 lastReviewed: "2026-03-08"
@@ -11,7 +11,7 @@ author: "Kunnskapsbase"
 readingTime: 3
 draft: false
 entityType: "Concept"
-topic: "Hva er fotosyntese?"
+topic: "Hva er crispr?"
 aliases: []
 related: []
 seeAlso: []
@@ -22,13 +22,13 @@ contentType: "knowledge-article"
 difficulty: "beginner"
 ---
 
-# Hva er fotosyntese?
+# Hva er crispr?
 
-Hva er fotosyntese? Laer det grunnleggende om dette temaet.
+Hva er crispr? Laer det grunnleggende om dette temaet.
 
 > **Kort forklart**
-> Hva er fotosyntese? Her faar du en enkel forklaring.
+> Hva er crispr? Her faar du en enkel forklaring.
 
 ## Oppsummering
 
-Hva er fotosyntese?
+Hva er crispr?
