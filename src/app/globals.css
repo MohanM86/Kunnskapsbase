@@ -680,3 +680,36 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sidebar-sublabel:not(.sidebar-sublabel-btn) {
   margin-top: 6px;
 }
+
+/* ── Kommune page ── */
+.kommune-page { max-width: var(--page-max); margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.kommune-hero { text-align: center; padding: 2rem 0 2.5rem; }
+.kommune-title { font-size: 2rem; font-weight: 800; color: var(--color-text); margin-bottom: 0.5rem; }
+.kommune-subtitle { font-size: 1.05rem; color: var(--color-text-muted); max-width: 560px; margin: 0 auto; line-height: 1.6; }
+.kommune-content { max-width: 900px; margin: 0 auto; }
+.kommune-section { margin-bottom: 3rem; }
+.kommune-section-title { font-size: 1.15rem; font-weight: 700; color: var(--color-text); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; }
+.kommune-section-icon { font-size: 1.1rem; }
+.kommune-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+.kommune-card { display: flex; flex-direction: column; gap: 0.15rem; padding: 1rem 1.15rem; border: 1px solid var(--color-border-light); border-radius: var(--radius); transition: all 150ms ease; text-decoration: none; }
+.kommune-card:hover { border-color: var(--color-accent); background: var(--color-accent-light); }
+.kommune-card-soon { opacity: 0.5; cursor: default; }
+.kommune-card-soon:hover { border-color: var(--color-border-light); background: transparent; }
+.kommune-card-name { font-size: 0.95rem; font-weight: 650; color: var(--color-text); }
+.kommune-card-fylke { font-size: 0.78rem; color: var(--color-text-muted); }
+.kommune-card-pop { font-size: 0.78rem; color: var(--color-text-light); margin-top: 0.25rem; }
+.fylke-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.fylke-accordion { border: 1px solid var(--color-border-light); border-radius: var(--radius); overflow: hidden; }
+.fylke-summary { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; cursor: pointer; list-style: none; }
+.fylke-summary::-webkit-details-marker { display: none; }
+.fylke-summary > div { display: flex; flex-direction: column; gap: 0.1rem; }
+.fylke-name { font-size: 0.95rem; font-weight: 650; color: var(--color-text); }
+.fylke-count { font-size: 0.78rem; color: var(--color-text-muted); }
+.fylke-chevron { color: var(--color-text-light); transition: transform 200ms ease; }
+details[open] .fylke-chevron { transform: rotate(180deg); }
+.fylke-kommuner { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.4rem 1rem; padding: 0 1.25rem 1.25rem; }
+.fylke-kommune-link { font-size: 0.85rem; color: var(--color-accent); text-decoration: none; padding: 0.2rem 0; }
+.fylke-kommune-link:hover { text-decoration: underline; }
+.fylke-kommune-name { font-size: 0.85rem; color: var(--color-text-light); padding: 0.2rem 0; }
+@media (max-width: 768px) { .kommune-grid { grid-template-columns: repeat(2, 1fr); } .fylke-kommuner { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .kommune-grid { grid-template-columns: 1fr; } }
