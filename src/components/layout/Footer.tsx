@@ -26,6 +26,7 @@ const MORE_LINKS = [
 ];
 
 const EXPLORE_LINKS = [
+  { href: '/kommune', label: 'Alle kommuner' },
   { href: '/tema', label: 'Tema' },
   { href: '/artikler', label: 'Alle artikler' },
   { href: '/ordbok', label: 'Ordbok' },

@@ -46,6 +46,7 @@ const MEGA_MENU_CATS = [
   { href: '/jus', label: 'Jus', desc: 'Lover og rettigheter' },
   { href: '/klima', label: 'Klima', desc: 'Klimaendringer og energi' },
   { href: '/hobby', label: 'Hobby', desc: 'Fritid og kreativitet' },
+  { href: '/kommune', label: 'Kommune', desc: 'Fakta om alle norske kommuner' },
 ];
 
 const SYSTEM_NAV = [

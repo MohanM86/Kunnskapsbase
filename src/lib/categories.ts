@@ -134,6 +134,12 @@ export const CATEGORIES: CategoryConfig[] = [
     introText: 'Hobbyer gir glede, mestring og kreativitet. Her finner du artikler om sjakk, fotografi, friluftsliv, hagearbeid, strikking og 3D-printing.',
     subcategories: [{ slug: 'friluftsliv', label: 'Friluftsliv' }, { slug: 'kreativt', label: 'Kreativt' }, { slug: 'spill-hobby', label: 'Spill og brettspill' }],
   },
+  {
+    slug: 'kommune', label: 'Kommune',
+    description: 'Alle norske kommuner – befolkning, areal, politikk, næringsliv og historie.',
+    introText: 'Norge har 356 kommuner fordelt på 15 fylker. Her finner du faktaartikler om hver kommune – befolkning, geografi, politikk, næringsliv, utdanning, helse og historie. Strukturert kunnskap om lokalsamfunnet ditt.',
+    subcategories: [{ slug: 'oslo-fylke', label: 'Oslo' }, { slug: 'akershus', label: 'Akershus' }, { slug: 'buskerud', label: 'Buskerud' }, { slug: 'oestfold', label: 'Østfold' }, { slug: 'vestland', label: 'Vestland' }, { slug: 'rogaland', label: 'Rogaland' }, { slug: 'troendelag', label: 'Trøndelag' }, { slug: 'agder', label: 'Agder' }],
+  },
 ];
 
 /* ── Dynamic categories without config get auto-descriptions ── */

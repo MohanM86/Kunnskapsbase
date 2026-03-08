@@ -1,4 +1,4 @@
-export type EntityType = 'Concept' | 'Protocol' | 'Technology' | 'Process' | 'Tool' | 'Standard' | 'Service' | 'Guide';
+export type EntityType = 'Concept' | 'Protocol' | 'Technology' | 'Process' | 'Tool' | 'Standard' | 'Service' | 'Guide' | 'Municipality';
 
 export interface ArticleFrontmatter {
   title: string;
