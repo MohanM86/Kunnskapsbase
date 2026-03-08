@@ -1,105 +1,106 @@
 ---
 title: "Hva er inflasjon?"
 slug: "hva-er-inflasjon"
-category: "okonomi"
-subcategory: "makrookonomi"
-description: "Inflasjon er at prisene stiger over tid – pengene dine blir mindre verdt. Lær hva inflasjon er, hvorfor det skjer, inflasjonsmålet på 2 %, og hva det betyr for din økonomi."
-keywords: ["inflasjon", "prisstigning", "KPI", "inflasjonsmål", "pengeverdien synker"]
-date: "2026-03-07"
-lastReviewed: "2026-03-07"
+category: "Økonomi"
+subcategory: "Makroøkonomi"
+description: "Inflasjon er den generelle økningen i prisnivået over tid som gjør at pengene dine kjøper mindre. Lær hva inflasjon er, hvorfor det skjer og hvordan det påvirker deg."
+keywords: ["inflasjon", "prisstigning", "konsumprisindeks", "KPI", "pengeverdi"]
+date: "2026-03-05"
+lastReviewed: "2026-03-05"
 author: "Kunnskapsbase"
-readingTime: 5
+readingTime: 6
 draft: false
 entityType: "Concept"
 topic: "Inflasjon"
-aliases: ["prisstigning", "prisøkning"]
-related: ["hva-er-rente", "hva-er-styringsrente", "hva-er-norges-bank", "hva-er-pengepolitikk", "hva-er-deflasjon"]
-seeAlso: ["hva-er-rente", "hva-er-styringsrente"]
-tags: ["inflasjon", "okonomi", "grunnleggende"]
-updatedAt: "2026-03-07"
-featured: true
+aliases: ["prisstigning", "prisøkning", "inflation"]
+related: ["hva-er-rente", "hva-er-bruttonasjonalprodukt", "hva-er-budsjettering", "hva-er-aksjer"]
+seeAlso: ["hva-er-rente", "hva-er-bruttonasjonalprodukt"]
+tags: ["inflasjon", "makroøkonomi", "prisnivå", "sentralbank"]
+updatedAt: "2026-03-05"
+featured: false
 contentType: "knowledge-article"
 difficulty: "beginner"
 ---
 
 # Hva er inflasjon?
 
-Inflasjon er den generelle prisstigningen i samfunnet over tid – at varer og tjenester blir dyrere, noe som betyr at pengene dine kjøper mindre enn før.
+Inflasjon er en vedvarende økning i det generelle prisnivået i en økonomi over tid, som fører til at pengenes kjøpekraft reduseres.
 
 > **Kort forklart**
-> En liter melk kostet 8 kr i 2000 og ~22 kr i 2026. Det er inflasjon – prisene stiger, pengeverdien synker. Norges Bank har et inflasjonsmål på 2 prosent per år – nok til å holde økonomien i gang, men ikke så mye at det gjør vondt. I 2022–2023 slo inflasjonen i taket (6–7 prosent i Norge) pga energikrise og ettervirkninger av pandemien. Norges Bank svarte med å heve styringsrenten – som gjør lån dyrere, demper forbruk, og bremser inflasjonen. Inflasjon påvirker ALT: lån, sparing, lønn, boligpriser og dagligvarer.
+> Inflasjon betyr at ting blir dyrere over tid. Hvis inflasjonen er 3 prosent i året, vil en vare som koster 100 kroner i dag koste 103 kroner om et år. Pengene dine kjøper altså litt mindre for hvert år.
 
 ## Hva betyr begrepet
 
-Inflasjon måles typisk med KPI (Konsumprisindeksen) – SSBs månedlige måling av prisendringer på en «handlekurv» med ~650 varer og tjenester norske husholdninger kjøper. KPI-JAE (justert for avgiftsendringer og energipriser) er Norges Banks foretrukne mål – den filtrerer ut midlertidige svingninger.
+«Inflasjon» kommer fra det latinske ordet «inflare», som betyr å blåse opp. I økonomisk sammenheng beskriver det at prisnivået «blåses opp» – ikke at én enkelt vare blir dyrere, men at det generelle prisnivået i samfunnet stiger.
 
-Årsaker til inflasjon er etterspørselsinfasjon der folk vil kjøpe mer enn det produseres (pandemi-ettereffekt – oppdemmet etterspørsel), kostnadsinfasjon der produksjonskostnadene stiger (energipriser, råvarer, lønn), og pengeinflasjon der sentralbanken trykker for mye penger (øker pengemengden).
+Det motsatte av inflasjon kalles deflasjon, der prisnivået synker. Selv om billigere varer høres positivt ut, kan deflasjon være svært skadelig for økonomien fordi forbrukere utsetter kjøp og bedrifter taper inntekter.
 
-Norges Banks inflasjonsmål er 2 prosent per år. Under 2 prosent betyr at økonomien kan være for svak. Over 2 prosent betyr at prisene stiger for raskt. Nøyaktig 2 prosent er «gullsonen» – nok vekst, ikke for mye prisstigning.
+I Norge måles inflasjon med konsumprisindeksen (KPI), som følger prisutviklingen på en kurv av varer og tjenester som representerer et typisk norsk forbruk.
 
 ## Hvordan fungerer det
 
-Inflasjon er en balanse mellom priser, lønn og renter.
+Inflasjon oppstår når det er ubalanse mellom tilbud og etterspørsel i økonomien. Det finnes flere mekanismer som driver prisvekst.
 
 ```
-Normal inflasjon (2 %):
-  Priser stiger 2 % → Lønn stiger 3 % → Du har litt mer kjøpekraft → Økonomien vokser
-
-Høy inflasjon (6–7 %, 2022–2023):
-  Priser stiger 7 % → Lønn stiger 4 % → Du har MINDRE kjøpekraft
-  → Norges Bank hever renten → Lån blir dyrere → Folk bruker mindre
-  → Etterspørselen faller → Prisene stabiliseres (med forsinkelse)
-
-Deflasjon (negativt):
-  Priser FALLER → Folk venter med å kjøpe (det blir billigere i morgen)
-  → Bedrifter selger mindre → Oppsigelser → Økonomien krymper
-  → Deflasjon er VERRE enn moderat inflasjon
+Økt pengemengde / økt etterspørsel / økte kostnader → Prisene stiger → Kjøpekraften faller → Sentralbanken justerer renten → Inflasjonen stabiliseres
 ```
+
+**Etterspørselsinflasjonen** oppstår når forbrukere og bedrifter vil kjøpe mer enn det som produseres. Når etterspørselen overstiger tilbudet, presses prisene opp. Dette skjer typisk i perioder med sterk økonomisk vekst.
+
+**Kostnadsinflasjonen** oppstår når produksjonskostnadene øker – for eksempel på grunn av dyrere råvarer, høyere lønninger eller forstyrrelser i leverandørkjeder. Bedriftene velter de økte kostnadene over på forbrukerne gjennom høyere priser.
+
+**Pengemengdeinflasjonen** oppstår når sentralbanken trykker for mye penger. Når det er mer penger i omløp uten at produksjonen øker tilsvarende, blir hver krone mindre verdt.
+
+Norges Bank har et inflasjonsmål på 2 prosent årlig. Dette anses som et nivå som gir stabil og forutsigbar prisvekst uten å skade økonomien.
 
 ## Hvorfor er det viktig
 
-Inflasjon påvirker din økonomi direkte. Boliglån blir dyrere når renten heves for å bekjempe inflasjon. Sparepenger mister verdi hvis renten er lavere enn inflasjonen (negativ realrente). Lønn stiger typisk med inflasjon – men ikke alltid like raskt. Dagligvarer, drivstoff og strøm blir dyrere. Og aksjer og eiendom kan stige med inflasjonen (inflasjonsbeskyttelse).
+Inflasjon påvirker alle som har penger – det vil si alle. Når prisene stiger raskere enn lønningene, reduseres den reelle kjøpekraften. Sparepenger som bare ligger på en vanlig konto taper verdi over tid hvis renten er lavere enn inflasjonen.
 
-I 2022–2024 opplevde nordmenn den kraftigste inflasjonen på 30+ år – matpriser steg 10+ prosent, strøm eksploderte, og boliglånrenten gikk fra 1,5 til 5+ prosent.
+For låntakere kan moderat inflasjon være gunstig fordi gjelden blir relativt mindre over tid. For pensjonister og andre med fast inntekt kan inflasjon derimot være en stor utfordring.
+
+Høy og uforutsigbar inflasjon skaper usikkerhet som hemmer investeringer og økonomisk vekst. Derfor bruker sentralbanker styringsrenten som sitt viktigste verktøy for å holde inflasjonen i sjakk.
 
 ## Eksempler
 
-Matpriser: En handlevogn som kostet 1 000 kr i 2020 koster ~1 250 kr i 2026 – 25 prosent inflasjon på 6 år.
+**Dagligvarepriser:** Hvis en liter melk kostet 18 kroner i 2020 og koster 22 kroner i 2026, har prisen steget med over 22 prosent. Denne typen prisøkning på hverdagsvarer er inflasjon i praksis.
 
-Boliglån: Et lån på 3 millioner med 1,5 prosent rente kostet 3 750 kr/mnd i renter. Med 5 prosent: 12 500 kr/mnd. Rentehevingen (inflasjonskamp) tredoblet rentekostnaden.
+**Boligpriser:** Norske boligpriser har steget kraftig over flere tiår. En leilighet som kostet 1 million kroner i 2000 kan koste 3–4 millioner i dag. Boligprisvekst er delvis drevet av inflasjon, men også av andre faktorer som befolkningsvekst og lav rente.
 
-100-kroners-regelen: 100 kr i 2000 har kjøpekraften til ~60 kr i dag (2 prosent inflasjon i 26 år). Penger på konto mister verdi – du MÅ spare/investere for å beholde kjøpekraft.
+**Hyperinflasjon:** Zimbabwe opplevde hyperinflasjon i 2008 der prisene doblet seg nesten daglig. Folk trengte trillebårer med sedler for å kjøpe brød. Venezuela opplevde lignende tilstander på 2010-tallet. Dette er ekstreme eksempler på hva som skjer når inflasjonen kommer helt ut av kontroll.
+
+**Perioden 2022–2023:** Etter pandemien og energikrisen opplevde Norge og resten av Europa uvanlig høy inflasjon. Matpriser, strøm og drivstoff steg kraftig, noe som førte til at Norges Bank hevet renten flere ganger.
 
 ## Vanlige spørsmål
 
-### Er inflasjon alltid dårlig?
-Nei – moderat inflasjon (2 prosent) er ønskelig. Det holder økonomien i gang. Deflasjon (fallende priser) er mye verre. Høy inflasjon (5+ prosent) er skadelig.
-
-### Hvordan beskytter jeg meg mot inflasjon?
-Invester i aksjer/fond (stiger typisk med inflasjon over tid), eiendom (verdien stiger), og unngå store kontantbeholdninger (pengene taper verdi). Fastrentelån beskytter mot rentehevinger.
-
-### Hva er forskjellen på KPI og kjerneinflasjon?
-KPI måler alt inkludert energi og avgifter. KPI-JAE (kjerneinflasjon) filtrerer ut energi og avgifter – gir bedre bilde av underliggende pristrend.
+### Hva er forskjellen på inflasjon og prisstigning?
+Inflasjon refererer til den generelle prisøkningen i hele økonomien. En enkeltvare kan bli dyrere uten at det er inflasjon – for eksempel på grunn av dårlig avling. Inflasjon betyr at det store bildet av priser stiger, målt gjennom konsumprisindeksen.
 
 ### Hvem bestemmer inflasjonen?
-Ingen «bestemmer» – det er et resultat av tilbud, etterspørsel, energipriser, lønn og pengepolitikk. Norges Bank PÅVIRKER inflasjonen gjennom styringsrenten.
+Ingen bestemmer inflasjonen direkte. Den er et resultat av tilbud og etterspørsel i økonomien. Norges Bank påvirker inflasjonen indirekte gjennom styringsrenten – høyere rente demper etterspørselen og bremser prisveksten.
 
-### Hva er hyperinflasjon?
-Ekstremt høy inflasjon (50+ prosent per måned). Zimbabwe (2008), Venezuela (2018). Pengene blir verdiløse. Norge har aldri opplevd det.
+### Er inflasjon alltid dårlig?
+Nei. Moderat inflasjon på rundt 2 prosent anses som sunt for økonomien. Det oppmuntrer til forbruk og investering i stedet for å hamstre kontanter. Problemet oppstår når inflasjonen er for høy, for uforutsigbar eller negativ (deflasjon).
+
+### Hvordan beskytter jeg sparepengene mot inflasjon?
+Penger på en vanlig bankkonto taper kjøpekraft hvis renten er lavere enn inflasjonen. Investeringer i aksjer, obligasjoner, eiendom eller indeksfond har historisk gitt avkastning over inflasjonen på lang sikt, men innebærer risiko.
+
+### Hva er kjerneinflasjonen?
+Kjerneinflasjonen (KPI-JAE) er inflasjon justert for endringer i avgifter og energipriser. Den gir et tydeligere bilde av den underliggende pristrenden fordi den fjerner midlertidige svingninger i strøm- og bensinpriser.
 
 ## Relaterte begreper
 
-- [Rente](/okonomi/hva-er-rente) – verktøyet mot inflasjon
-- [Styringsrente](/okonomi/hva-er-styringsrente) – Norges Banks hovedvåpen
-- [Norges Bank](/okonomi/hva-er-norges-bank) – setter styringsrenten
-- [Pengepolitikk](/okonomi/hva-er-pengepolitikk) – den overordnede strategien
-- [Deflasjon](/okonomi/hva-er-deflasjon) – det motsatte
+- [Rente](/oekonomi/hva-er-rente) – sentralbankens viktigste verktøy for å styre inflasjonen
+- [Bruttonasjonalprodukt](/oekonomi/hva-er-bruttonasjonalprodukt) – mål på økonomisk aktivitet som påvirkes av inflasjon
+- [Aksjer](/oekonomi/hva-er-aksjer) – en investeringsform som historisk har gitt beskyttelse mot inflasjon
+- [Budsjettering](/oekonomi/hva-er-budsjettering) – verktøy for å håndtere økte kostnader i perioder med høy inflasjon
+- [Kjøpekraft](https://snl.no/kjøpekraft) – evnen pengene dine har til å kjøpe varer og tjenester
 
 ## Se også
 
-- [Hva er rente?](/okonomi/hva-er-rente)
-- [Hva er styringsrente?](/okonomi/hva-er-styringsrente)
+- [Hva er rente?](/oekonomi/hva-er-rente)
+- [Hva er bruttonasjonalprodukt?](/oekonomi/hva-er-bruttonasjonalprodukt)
 
 ## Oppsummering
 
-Inflasjon er generell prisstigning – pengene kjøper mindre over tid. Norges Banks mål er 2 prosent per år. Måles med KPI. Årsaker: etterspørsel, kostnader, pengemengde. Høy inflasjon (2022–2023: 6–7 prosent) bekjempes med rentehevinger. Påvirker alt: lån, sparing, lønn, dagligvarer. Beskytt deg: invester i aksjer/fond/eiendom – ikke la pengene ligge på konto.
+Inflasjon er en generell økning i prisnivået som reduserer kjøpekraften til pengene dine over tid. Norges Bank styrer inflasjonen gjennom renten og sikter mot 2 prosent årlig prisvekst. Moderat inflasjon er sunt for økonomien, men høy inflasjon kan være svært skadelig for både husholdninger og bedrifter.
