@@ -12,7 +12,7 @@ function LogoIcon() {
 const CATEGORY_LINKS = [
   { href: '/teknologi', label: 'Teknologi' },
   { href: '/ai', label: 'AI' },
-  { href: '/oekonomi', label: 'Økonomi' },
+  { href: '/okonomi', label: 'Økonomi' },
   { href: '/helse', label: 'Helse' },
   { href: '/vitenskap', label: 'Vitenskap' },
 ];

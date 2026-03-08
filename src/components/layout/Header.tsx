@@ -24,7 +24,7 @@ function ChevronDown() {
 const PRIMARY_NAV = [
   { href: '/teknologi', label: 'Teknologi' },
   { href: '/ai', label: 'AI' },
-  { href: '/oekonomi', label: 'Økonomi' },
+  { href: '/okonomi', label: 'Økonomi' },
   { href: '/helse', label: 'Helse' },
   { href: '/sport', label: 'Sport' },
 ];
