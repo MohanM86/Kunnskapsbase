@@ -1,110 +1,166 @@
 ---
-title: "Asker kommune – Fakta, befolkning og nøkkeltall"
-slug: "asker"
+title: "Asker kommune – Akershus' vestlige storkommune"
+description: "Alt du trenger å vite om Asker kommune: befolkning, areal, boligpriser, eiendomsskatt, historie, ordførere og nøkkeltall. Oppdatert guide til en av Norges mest attraktive kommuner."
+keywords: ["Asker kommune", "Asker", "Akershus", "kommune", "boligpriser Asker", "innbyggere Asker"]
 category: "kommune"
 subcategory: "akershus"
-description: "Alt du trenger å vite om Asker kommune – befolkning, areal, politikk, næringsliv og historie. Stor kommune i Akershus vest for Oslo."
-keywords: ["Asker kommune", "Asker befolkning", "Asker fakta", "Akershus", "Asker nøkkeltall"]
-date: "2026-03-08"
-lastReviewed: "2026-03-08"
-author: "Kunnskapsbase"
-readingTime: 6
-draft: false
 entityType: "Municipality"
-topic: "Asker"
-aliases: []
-related: ["baerums", "oslo", "drammen", "lier", "lillestroem"]
-seeAlso: ["baerums", "drammen"]
-tags: ["kommune", "akershus", "østlandet"]
+slug: "asker"
+municipalityNumber: "3203"
+county: "Akershus"
 updatedAt: "2026-03-08"
-featured: false
-contentType: "knowledge-article"
-difficulty: "beginner"
 ---
 
-# Asker kommune
+# Asker kommune – Fra fjordidyll til storkommune
 
-Asker er en stor kommune i Akershus fylke med omtrent 96 000 innbyggere (2025), beliggende mellom Oslo og Drammen.
+Asker kommune er en av Norges mest attraktive boligkommuner, strategisk plassert mellom Oslo og Drammen langs Oslofjordens vestside. Med over 100 000 innbyggere er Asker landets åttende største kommune og et knutepunkt der urban bekvemmelighet møter naturskjønne omgivelser med kystlinje, skogsområder og kulturlandskap.
 
-> **Kort forklart**
-> Asker ble betydelig utvidet i 2020 ved sammenslåing med Røyken og Hurum, og er nå en av Norges mest folkerike kommuner med kystlinje langs Oslofjorden og Drammensfjorden.
+Det som gjør Asker virkelig unik blant norske kommuner er den dramatiske transformasjonen kommunen gjennomgikk 1. januar 2020, da tidligere Asker, Røyken og Hurum ble slått sammen til én storkommune. Denne sammenslåingen skapte en kommune med enorm geografisk variasjon – fra tettbygde forstadsområder i nord til den frodige Hurum-halvøya med kystlandskap og industrihistorie i sør.
 
-## Grunnfakta
+## Kort forklart
 
-Nye Asker kommune ble etablert 1. januar 2020 ved sammenslåing av gamle Asker, Røyken og Hurum. Kommunen strekker seg fra Oslofjorden til Drammensfjorden og har et variert landskap.
+> Asker er en kommune i Akershus fylke vest for Oslo, dannet i 2020 ved sammenslåing av Asker, Røyken og Hurum. Kommunen har over 101 000 innbyggere, et areal på 377 km², og er kjent for høy livskvalitet, sterke boligpriser og nærhet til både hovedstaden og naturen. Ordfører er Lene Conradi (H).
 
-```
-Kommunenummer:  3203
-Fylke:          Akershus
-Areal:          377 km²
-Befolkning:     ~96 000 (2025)
-Tetthet:        255 innbyggere per km²
-Ordfører:       Lene Conradi (H)
-Styringsform:   Formannskapsmodellen
-```
+## Nøkkeltall for Asker kommune
 
-## Befolkning og demografi
+| Nøkkeltall | Verdi |
+|---|---|
+| **Befolkning** | 101 509 (4. kvartal 2025, SSB) |
+| **Areal** | 376,61 km² |
+| **Befolkningstetthet** | 276 innbyggere per km² |
+| **Kommunenummer** | 3203 |
+| **Fylke** | Akershus |
+| **Ordfører (2023–2027)** | Lene Conradi (H) |
+| **Administrasjonssenter** | Asker sentrum |
+| **Eiendomsskatt bolig** | Nei – Asker har ikke eiendomsskatt på bolig |
+| **Gjennomsnittlig kvm-pris** | ca. 57 000 kr (Eiendom Norge / Finn.no, 2025) |
+| **Andel bosatt i tettsted** | 95 % |
 
-Asker har omtrent 96 000 innbyggere fordelt over et stort areal. Befolkningen er konsentrert rundt Asker sentrum, Heggedal, Røyken og Sætre. Kommunen har høy gjennomsnittsinntekt og utdanningsnivå.
+## Geografi og beliggenhet
 
-## Geografi og natur
+Asker kommune strekker seg fra Bærumsgrensen i nordøst til Drammen og Lier i vest, med Indre Oslofjord og Drammensfjorden som naturlige grenser i sør og øst. Terrenget varierer betydelig: fra kystlinjen langs fjorden hever landskapet seg opp mot Vestmarka, Kjekstadmarka og Hurumlandet.
 
-Asker strekker seg fra Oslofjorden i øst til Drammensfjorden i vest og inkluderer halvøya Hurum. Kommunen har lang kystlinje, skog, jordbruksland og flere populære bade- og friluftssteder. Oslofjorden og Drammensfjorden gir gode muligheter for båtliv og sjøbasert friluftsliv.
+Kommunen har en lang og variert kystlinje med populære badestrender, småbåthavner og øyer som Nesøya, Brønnøya og Børsholmen. Hurumlandet, den sørlige delen av kommunen, er en halvøy med distinkt kystklima – milde vintre og hyppig vind – mens de høyereliggende områdene har et mer kontinentalt preg.
 
-## Politikk og styring
+Sentrale tettsteder inkluderer Asker sentrum, Holmen, Nesbru, Slemmestad, Heggedal, Røyken (Midtbygda), Sætre og Tofte. Hvert av disse har sin egen identitet og historie fra de tidligere kommunene.
 
-Lene Conradi fra Høyre er ordfører. Kommunestyret styres etter formannskapsmodellen.
+## Kommunesammenslåingen i 2020
 
-## Næringsliv og økonomi
+Den kanskje viktigste hendelsen i nyere tid var sammenslåingen 1. januar 2020. Tidligere Asker kommune (ca. 62 000 innbyggere), Røyken (ca. 23 000) og Hurum (ca. 9 500) ble til én storkommune. Denne prosessen var del av den landsomfattende kommunereformen.
 
-Asker har et variert næringsliv med mange kunnskapsbedrifter. Kommunen er attraktiv for pendlere til Oslo og Drammen takket være god kollektivforbindelse. Asker sentrum er et handels- og servicesentrum.
+Sammenslåingen var spesiell fordi Røyken og Hurum hørte til Buskerud fylke, mens Asker tilhørte Akershus. Dermed krysset den nye kommunen en fylkesgrense. Lene Conradi fra Høyre ble valgt som første ordfører i den nye storkommunen i 2019, og ble gjenvalgt i 2023 for perioden 2023–2027.
 
-## Utdanning
+## Ordfører og politisk ledelse
 
-Asker har et bredt skoletilbud med mange grunnskoler og videregående skoler. Kommunen er kjent for gode skoleresultater.
+Lene Conradi (Høyre) har vært ordfører i Asker siden 2007, først i den gamle Asker kommune og deretter i den nye storkommunen fra 2020. Hun er Askers første kvinnelige ordfører og er utdannet jurist. Conradi er kjent for innovative kommunikasjonsformer med innbyggerne, blant annet den månedlige «Lene-timen» der innbyggere kan møte ordføreren til en uformell prat.
 
-## Helse
+Asker styres i perioden 2023–2027 av et borgerlig samarbeid med Høyre i spissen, sammen med Fremskrittspartiet og andre borgerlige partier.
 
-Innbyggerne betjenes av Bærum sykehus og Drammen sykehus, avhengig av bosted. Kommunen har et godt utbygd primærhelsetilbud.
+## Bolig og eiendomsskatt
 
-## Samferdsel
+Asker er en av de relativt få store kommunene i Norge som ikke har eiendomsskatt på boliger. Kommunen har bevisst valgt å ikke innføre dette, selv i perioder med stramme budsjetter. I 2024 vurderte kommunedirektøren muligheten for eiendomsskatt som ett av flere tiltak for å håndtere et omstillingsbehov på 470 millioner kroner over tre år, men det ble besluttet å ikke fremme forslag om eiendomsskatt.
 
-Asker har jernbanestasjon på Drammensbanen med hyppige avganger til Oslo (20 minutter) og Drammen. E18 går gjennom kommunen. Oslofjordforbindelsen og Hurumlandet gir tilgang til vestsiden av fjorden.
+Boligprisene i Asker er blant de høyeste i landet utenfor Oslo. Gjennomsnittlig kvadratmeterpris ligger på rundt 57 000 kroner ifølge Eiendom Norge og Finn.no. Prisene varierer betydelig etter beliggenhet – fra de mest eksklusive villastrøkene i gamle Asker og på Nesøya til rimeligere alternativer i Hurum og deler av Røyken.
 
-## Historie
+Over 80 prosent av boligene i kommunen er familieboliger, mens kun omtrent 40 prosent av husholdningene er barnefamilier. Kommunen arbeider aktivt med å få et mer variert boligtilbud som matcher den faktiske befolkningssammensetningen.
 
-Asker har en lang historie som jordbrukskommune med mange store gårder. Kommunen ble et populært bosted for pendlere til Oslo på 1900-tallet. I 2020 ble Asker slått sammen med Røyken og Hurum til nye Asker kommune.
+## Næringsliv og arbeidsliv
 
-## Vanlige spørsmål
+Asker er preget av høy utpendling mot Oslo – over halvparten av yrkestakerne jobber utenfor kommunen. E18 og Drammensbanen er hovedferdselsårene som knytter kommunen til Oslo sentrum med henholdsvis bil og tog.
 
-### Hvor mange bor det i Asker?
-Asker har omtrent 96 000 innbyggere per 2025.
+Kommunen har flere viktige næringsområder, med kjøpesentrene Trekanten (Asker sentrum), Holmensenteret og Rortunet (Slemmestad) som sentrale handelssentre. Billingstad er et viktig næringsområde med kontorbygg og lett industri.
 
-### Hvem er ordfører i Asker?
-Lene Conradi fra Høyre er ordfører i Asker.
+Det pågår store infrastrukturprosjekter i kommunen, spesielt knyttet til ny E18 i Vestkorridoren, som vil gå i tunnel gjennom store deler av Asker og dermed frigjøre arealer på overflaten.
 
-### Når ble nye Asker kommune til?
-Nye Asker kommune ble etablert 1. januar 2020 ved sammenslåing av gamle Asker, Røyken og Hurum.
+## Kultur og fritid
 
-### Hvor langt er det fra Asker til Oslo?
-Det er omtrent 25 km fra Asker til Oslo sentrum, og reisetiden med tog er rundt 20 minutter.
+Asker har et rikt kulturliv med sterke tradisjoner. Asker kulturhus er et viktig samlingspunkt, og kommunen har et aktivt musikkskole- og kulturskoletilbud. Oslofjordmuseet i Vollen har en unik trebåtsamling og planer om å huse polarskipet Maud.
 
-### Hva inkluderer nye Asker kommune?
-Nye Asker inkluderer de tidligere kommunene Asker, Røyken og Hurum, med kystlinje langs både Oslofjorden og Drammensfjorden.
+Friluftsmulighetene er mange – fra Vestmarka i nord til kystlinjen i sør. Kommunen har et omfattende nett av turstier, og Kyststien langs Oslofjorden er populær for turgåere. Hvalstrand Bad og en rekke andre badeplasser langs fjorden gir sommertilbud av høy kvalitet.
 
-## Relaterte kommuner
+Askerkretsen rundt forfatterne Arne og Hulda Garborg på Labråten (nå Asker museum) var en kulturpolitisk maktfaktor i Norge tidlig på 1900-tallet, og denne kulturarven lever videre i kommunens identitet.
 
-- [Bærum](/kommune/baerums) – nabokommune i øst
-- [Oslo](/kommune/oslo) – Norges hovedstad
-- [Drammen](/kommune/drammen) – naboby i Buskerud
-- [Lier](/kommune/lier) – nabokommune i Buskerud
-- [Lillestrøm](/kommune/lillestroem) – kommune i Akershus
+## Historisk tidslinje
 
-## Se også
+### Ca. 5000 f.Kr. – Tidlig bosetning
+Vollen-området ble bosatt for over 7000 år siden, med boplasser fra bronsealderen på Guivarvet og Gisletoppen.
 
-- [Bærum](/kommune/baerums)
-- [Drammen](/kommune/drammen)
+### 1837 – Kommunalt selvstyre
+Asker ble opprettet som herredskommune da det kommunale selvstyret ble innført i Norge.
 
-## Oppsummering
+### 1872 – Drammensbanen åpner
+Hvalstad stasjon og Asker stasjon åpnet på Drammensbanen, og koblet bygda til Oslo og Drammen med jernbane.
 
-Asker er en stor kommune i Akershus med rundt 96 000 innbyggere, dannet i 2020 ved sammenslåing av Asker, Røyken og Hurum. Kommunen kombinerer forstadsliv med nærhet til Oslo, lang kystlinje og gode friluftsmuligheter.
+### 1963 – Nesøya-ulykken
+14. april 1963 omkom tolv personer da et Icelandair-fly av typen Vickers Viscount styrtet under innflygning til Fornebu.
+
+### 2007 – Første kvinnelige ordfører
+Lene Conradi (H) ble valgt som Askers første kvinnelige ordfører – en posisjon hun har beholdt siden.
+
+### 2020 – Kommunesammenslåing
+Asker, Røyken og Hurum ble slått sammen til ny storkommune 1. januar 2020, og ble Norges åttende største kommune.
+
+### 2024 – 100 000 innbyggere
+I september 2024 passerte Asker 100 000 innbyggere da lille Maja ble født som innbygger nummer 100 000 på Frydendal.
+
+## Visste du at …
+
+1. **Norges korteste fergestrekning** går fra Verket i Asker til Svelvik, med en overfartstid på bare fem minutter.
+
+2. **Skaugum** i Asker er den offisielle residensen til Norges kronprinspar, Haakon og Mette-Marit, og har vært kronprinsbolig siden 1937.
+
+3. **Asker velodrom** er Norges første innendørs velodrom og åpnet i januar 2024, noe som gjør kommunen til et senter for banesykling i Norge.
+
+4. **Dikemark sykehus** i Asker var en av Norges største psykiatriske institusjoner gjennom det meste av 1900-tallet og har i dag delvis blitt omgjort til bo- og aktivitetssenter.
+
+5. **Slemmestad** i Røyken-delen av kommunen hadde et av Nord-Europas største sementfabrikker (Norcem) som var i drift fra 1892 til 1989. Området er nå under transformasjon til bolig- og næringsområde.
+
+## Ofte stilte spørsmål
+
+### Har Asker kommune eiendomsskatt?
+
+Nei, Asker har per 2025 ikke eiendomsskatt på boliger eller fritidsboliger. Kommunen har bevisst valgt å ikke innføre dette. Det borgerlige flertallet i kommunestyret, ledet av Høyre, har vært tydelig på at de ikke ønsker eiendomsskatt, selv om kommunen står overfor betydelige økonomiske omstillingsbehov.
+
+### Hvordan er det å pendle fra Asker til Oslo?
+
+Asker har svært gode pendlermuligheter til Oslo. Med tog fra Asker stasjon tar det rundt 25 minutter til Oslo S. E18 gir veiforbindelse, men er kjent for rushtrafikk. Det pågår store utbyggingsprosjekter av ny E18 i Vestkorridoren som vil bedre kapasiteten betydelig. Bussforbindelser til Oslo opereres av Ruter.
+
+### Hva skjedde ved kommunesammenslåingen i 2020?
+
+Asker, Røyken og Hurum ble slått sammen til ny Asker kommune 1. januar 2020 som del av kommunereformen. Sammenslåingen var spesiell fordi den krysset fylkesgrensen mellom Akershus og Buskerud. Den nye kommunen fikk ca. 94 000 innbyggere og et areal på nesten 377 km².
+
+### Hva koster det å kjøpe bolig i Asker?
+
+Gjennomsnittlig kvadratmeterpris i Asker ligger på rundt 57 000 kroner. I 2022 var medianprisen på en enebolig i Asker 8,6 millioner kroner og en leilighet 4,2 millioner. Prisene varierer betydelig etter beliggenhet, med de høyeste prisene i sentrale Asker og på øyene, og lavere priser i Hurum-området.
+
+### Hvilke skoler og barnehager finnes i Asker?
+
+Asker kommune har et omfattende tilbud av både offentlige og private skoler og barnehager. Kommunen har grunnskoler fordelt på 12 lokalområder, videregående skoler som Nesbru videregående og Bleiker videregående, samt Rudolf Steinerskolen på Billingstad.
+
+### Hva er de viktigste friluftsområdene i Asker?
+
+Asker har et mangfold av friluftsområder: Vestmarka i nord byr på utstrakte skogs- og fjellområder, Kjekstadmarka og Hurumsmarka i sør er populære turområder, og kystlinjen langs Oslofjorden har badeplasser, Kyststien og båtliv. Semsvannet er et populært rekreasjonsområde, og 95 % av innbyggerne bor i tettsteder med god tilgang til nærturterreng.
+
+## Nabokommuner
+
+Asker grenser mot følgende kommuner:
+
+- [Bærum](/kommune/baerum) i nordøst
+- [Drammen](/kommune/drammen) i vest
+- [Lier](/kommune/lier) i vest
+
+Kommunen har sjøgrense mot flere kommuner i Oslofjorden.
+
+## Relaterte begreper
+
+- [Akershus fylke](/fylke/akershus)
+- [Kommunesammenslåing](/wiki/kommunesammenslaing)
+- [Eiendomsskatt](/wiki/eiendomsskatt)
+- [Oslofjorden](/wiki/oslofjorden)
+
+## Kilder
+
+- [SSB – Kommunefakta Asker](https://www.ssb.no/kommunefakta/asker)
+- [Asker kommune – offisiell nettside](https://www.asker.kommune.no)
+- [SNL – Asker](https://snl.no/Asker)
+- [Eiendom Norge – Boligprisstatistikk](https://eiendomnorge.no/boligprisstatistikk/)
