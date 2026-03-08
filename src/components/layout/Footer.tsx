@@ -120,6 +120,7 @@ export default function Footer() {
           <p className="footer-copyright">
             &copy; {year} kunnskapsbase.no
           </p>
+          <Link href="/personvern" className="footer-privacy-link">Personvern</Link>
           <p className="footer-license">
             Innhold lisensiert under <a href="https://creativecommons.org/licenses/by/4.0/deed.no" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>
           </p>
