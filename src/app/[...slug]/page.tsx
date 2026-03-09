@@ -4,6 +4,7 @@ import { getAllArticleSlugs, getArticleBySlug, getAllArticlesMeta, getCategoryTr
 import { CATEGORIES, LEGACY_IT_SLUGS, CATEGORY_LABEL, DYNAMIC_CAT_INTROS } from '@/lib/categories';
 import { buildBreadcrumbs } from '@/lib/breadcrumbs';
 import { buildArticleSchema, buildBreadcrumbSchema, buildCollectionPageSchema } from '@/lib/schema';
+import { wrapFaqHtml } from '@/lib/wrapFaqHtml';
 import Sidebar from '@/components/wiki/Sidebar';
 import Breadcrumbs from '@/components/wiki/Breadcrumbs';
 import RelatedArticles from '@/components/wiki/RelatedArticles';
@@ -63,6 +64,8 @@ export default async function ContentPage({ params }: PageProps) {
       if (!isNaN(d.getTime())) dateStr = d.toLocaleDateString('nb-NO', { year: 'numeric', month: 'long', day: 'numeric' });
     }
 
+    const processedHtml = wrapFaqHtml(article.htmlContent);
+
     return (
       <><JsonLd schema={schemas} />
         <div className="wiki-layout">
@@ -84,7 +87,7 @@ export default async function ContentPage({ params }: PageProps) {
                   {article.frontmatter.tags?.length > 0 && (<div className="article-tags">{article.frontmatter.tags.map((tag) => (<span key={tag} className="tag">{tag}</span>))}</div>)}
                 </header>
                 <hr className="article-divider" />
-                <div className="article-content" dangerouslySetInnerHTML={{ __html: article.htmlContent }} />
+                <div className="article-content" dangerouslySetInnerHTML={{ __html: processedHtml }} />
               </article>
               <aside className="toc-sidebar">
                 <TableOfContents />

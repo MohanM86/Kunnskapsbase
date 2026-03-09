@@ -150,7 +150,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-text); line-height: 1.35; }
 .related-desc { font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; }
 
-/* FAQ */
+/* FAQ – FAQSection component */
 .faq-section { margin-top: 3rem; padding: 2rem 1.75rem 1.75rem; background: linear-gradient(165deg, #f0f7f2 0%, #e8f3ec 100%); border: 1px solid #c8dece; border-left: 4px solid var(--color-accent); border-radius: var(--radius); }
 .faq-section h2 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1.25rem; color: var(--color-accent-dark, #1a5c34); }
 .faq-list { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -162,6 +162,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .faq-chevron { font-size: 0.7rem; color: var(--color-accent); transition: transform 0.2s ease; }
 .faq-item.open .faq-chevron { transform: rotate(90deg); }
 .faq-answer { padding: 0 1.2rem 1rem; font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.7; border-top: 1px solid #d5e5da; padding-top: 0.85rem; }
+
+/* FAQ – Markdown-rendered (H2 "Vanlige spørsmål" / "Ofte stilte spørsmål" + H3s in .article-content) */
+.article-content .faq-wrapper { margin-top: 2.5rem; padding: 2rem 1.75rem 1.5rem; background: linear-gradient(165deg, #f0f7f2 0%, #e8f3ec 100%); border: 1px solid #c8dece; border-left: 4px solid var(--color-accent); border-radius: var(--radius); }
+.article-content .faq-wrapper > h2 { font-family: var(--font-serif); font-size: 1.3rem; margin: 0 0 1.25rem 0; padding: 0; color: var(--color-accent-dark, #1a5c34); border: none; }
+.article-content .faq-wrapper > h3 { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 600; color: var(--color-text); margin: 0; padding: 1rem 1.2rem; background: rgba(255,255,255,0.75); border: 1px solid #c8dece; border-radius: var(--radius); cursor: default; }
+.article-content .faq-wrapper > h3:hover { box-shadow: 0 2px 8px rgba(29,106,58,0.08); }
+.article-content .faq-wrapper > h3 + p { margin: 0; padding: 0.85rem 1.2rem 1rem; font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.7; background: rgba(255,255,255,0.95); border: 1px solid #c8dece; border-top: 1px solid #d5e5da; border-radius: 0 0 var(--radius) var(--radius); margin-top: -1px; margin-bottom: 0.5rem; }
+.article-content .faq-wrapper > h3:has(+ p) { border-radius: var(--radius) var(--radius) 0 0; margin-bottom: 0; }
 
 /* Search box */
 .search-box { position: relative; }
