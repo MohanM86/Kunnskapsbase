@@ -8,14 +8,16 @@ interface FAQSectionProps {
   title?: string;
 }
 
-export default function FAQSection({ items, title = 'Ofte stilte spørsmål' }: FAQSectionProps) {
+export default function FAQSection({ items, title }: FAQSectionProps) {
   const [open, setOpen] = useState<number | null>(null);
 
   if (!items || items.length === 0) return null;
 
+  const sectionTitle = title || (items.length > 0 ? 'Ofte stilte spørsmål' : '');
+
   return (
     <section className="faq-section">
-      <h2>{title}</h2>
+      <h2>{sectionTitle}</h2>
       <div className="faq-list">
         {items.map((item, i) => (
           <div key={i} className={`faq-item ${open === i ? 'open' : ''}`}>
@@ -25,7 +27,23 @@ export default function FAQSection({ items, title = 'Ofte stilte spørsmål' }: 
               aria-expanded={open === i}
             >
               <span>{item.question}</span>
-              <span className="faq-chevron" aria-hidden="true">{open === i ? '▾' : '▸'}</span>
+              <svg
+                className="faq-chevron"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4.5 2.5L8 6L4.5 9.5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </button>
             {open === i && (
               <div className="faq-answer">
